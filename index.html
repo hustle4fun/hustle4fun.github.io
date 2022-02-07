@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="记录每一次的学习">
@@ -102,6 +102,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,19 +129,46 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -159,6 +187,318 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/" class="post-title-link" itemprop="url">Hexo博客完善</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-07 21:27:13 / 修改时间：21:28:37" itemprop="dateCreated datePublished" datetime="2022-02-07T21:27:13+08:00">2022-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>727</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Hexo-博客的完善"><a href="#Hexo-博客的完善" class="headerlink" title="Hexo 博客的完善"></a>Hexo 博客的完善</h1><hr>
+<h2 id="对于Markdown中的图片上传方法："><a href="#对于Markdown中的图片上传方法：" class="headerlink" title="对于Markdown中的图片上传方法："></a>对于Markdown中的图片上传方法：</h2><p>格式   <code>![图片描述]（图片的地址网络、本地）</code></p>
+<ol>
+<li>使用本地地址在Markdown日志编辑的过程中静态上传，但是对于电脑经常更换，不稳定的环境 这种方法不是最好的</li>
+<li>使用网页中的图片地址 </li>
+</ol>
+<ol start="3">
+<li>自动连接 </li>
+</ol>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。</p>
+<hr>
+<h2 id="对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。"><a href="#对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。" class="headerlink" title="对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。"></a>对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。</h2><p>原因是没有配置相应的页面 “categories” “tags” “about” </p>
+<p>因此解决方法便是在博客配置中增加相应页面</p>
+<ul>
+<li><p>“分类的处理” :<br><code>Hexo new page categories </code><br>配置其中内容<code>“ type ：”categories”</code></p>
+</li>
+<li><p>“关于”的处理<br><code>Hexo new page “about”</code><br>配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Categories: </span><br><span class="line">	- 日志</span><br><span class="line">	- 二级目录</span><br><span class="line">tags: </span><br><span class="line">	- 关于</span><br></pre></td></tr></table></figure></li>
+<li><p>“标签的处理”<br><code>Hexo new page tags</code><br>配置添加： <code> type: “tags”</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="Hexo-博客添加搜索功能"><a href="#Hexo-博客添加搜索功能" class="headerlink" title="Hexo 博客添加搜索功能"></a>Hexo 博客添加搜索功能</h2><ol>
+<li><p>在博客更目录下，执行命令<br><code> npm install Hexo-generator-searchd —save</code> </p>
+</li>
+<li><p>修改站点配置文件 在_config.yml中添加（原本没有设置）配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#search</span><br><span class="line">Search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure></li>
+<li><p>修改主题配置文件<br>修改themes_config.yml配置文件 用’/’搜索local_search,修改enable为true</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_serach::</span><br><span class="line">	enable: true</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Java异常处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-07 21:26:50 / 修改时间：21:27:51" itemprop="dateCreated datePublished" datetime="2022-02-07T21:26:50+08:00">2022-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>883</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
+<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
+<p>从大体来分异常为两块：</p>
+<ol>
+<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
+<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
+<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
+</li>
+<li><p>NullpointException（空指针异常</p>
+</li>
+<li><p>ClassCastException（类型转换异常）</p>
+</li>
+<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
+</li>
+<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
+</li>
+<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
+</li>
+<li><p>throw跟throws的区别:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
+<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/07/Java%E7%BB%A7%E6%89%BF/" class="post-title-link" itemprop="url">Java继承</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-07 21:25:41 / 修改时间：21:26:23" itemprop="dateCreated datePublished" datetime="2022-02-07T21:25:41+08:00">2022-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>693</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h1><hr>
+<h2 id="1-为什么使用继承"><a href="#1-为什么使用继承" class="headerlink" title="1. 为什么使用继承"></a>1. 为什么使用继承</h2><p>从已有的类派生出新的类，称为继承。<br>在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。<br>因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。<br>继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。 </p>
+<hr>
+<h2 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h2><pre><code>•    子类拥有父类非 private 的属性、方法。
+•    子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
+•    子类可以用自己的方式实现父类的方法。
+•    Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
+•    提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
+</code></pre>
+<hr>
+<h2 id="继承关键字-extends-和-implements"><a href="#继承关键字-extends-和-implements" class="headerlink" title="继承关键字   extends 和 implements"></a>继承关键字   extends 和 implements</h2><h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
+<h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
+<h2 id="super-与-this-关键字"><a href="#super-与-this-关键字" class="headerlink" title="super 与 this 关键字"></a>super 与 this 关键字</h2><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
+<h3 id="this关键字：指向自己的引用"><a href="#this关键字：指向自己的引用" class="headerlink" title="this关键字：指向自己的引用"></a>this关键字：指向自己的引用</h3><h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写：</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -997,215 +1337,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">1.27JAVA学习日志</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-01-28 21:35:51 / 修改时间：21:36:55" itemprop="dateCreated datePublished" datetime="2022-01-28T21:35:51+08:00">2022-01-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">JAVA学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>534</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#1.27JAVA学习日志</p>
-<hr>
-<pre><code>1. Java中没有无符号整数存储方式
-2. 算数移位 “&gt;&gt; &lt;&lt;”  / 逻辑移位（带符号位）“&gt;&gt;&gt; &lt;&lt;&lt;”
-3. vscode 中的配置设置快捷键 ctrl + ,
-4. jdk查看版本 /usr/libexec/java_home -V
-5. 整数与浮点数计算时 整数自动转换为浮点数
-6. 整数运算在除数为0时会报错，而浮点数运算在除数为0时，不会报     错，但会返回几个特殊值：
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NaN表示Not a Number</span><br><span class="line"></span><br><span class="line">Infinity表示无穷大</span><br><span class="line">-Infinity表示负无穷大</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>7. String[] args 表示的是调用main()时候的传递的字符串参数 可以使用args[x]调用   
-8. 一个java程序必须有且仅有一个main方法
-9. java文件在编写时带上package包一行 在terminal之中直接编译 将无法找到主类，可以的选择A：注释掉packag行 B：运行是返回到java类的包的上一级目录之中
-10. java是大小写敏感的    类名应该使用首字母大写开头（每个单词的首字母都需要大写） 方法吗名：首字母必须小写字母开头
-11. java的枚举。enum 只能是事先设置好的
-12. java中的注释： //(单行）。  /*（多行注释）*/
-</code></pre>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/" class="post-title-link" itemprop="url">记录Mac系统结合Github搭建个人博客之中遇到的一些坑</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-01-28 21:31:00 / 修改时间：21:32:45" itemprop="dateCreated datePublished" datetime="2022-01-28T21:31:00+08:00">2022-01-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">个人学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>642</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
-<hr>
-<p>##hexo的安装</p>
-<ol>
-<li>使用homebrew 或者npm安装node.js 也可以直接下载node.pkg包来安装</li>
-</ol>
-<hr>
-<p>##GitHub与个人pc之间 如果使用hexo来部署自己的博客 Github在21年9月左右已经不支持博客内容通过push来推送：</p>
-<p><strong>解决方法</strong>：</p>
-<p>使用ssh配置 在本地<code>$ ls -al ~/.ssh</code></p>
-<ol>
-<li>生成 ssh key:</li>
-</ol>
-<p><code>$ ssh-keygen -t rsa -C&quot;你的github注册时邮箱“</code></p>
-<ol start="2">
-<li>来生成 id_rsa.pub 和 id_dsa.pub</li>
-</ol>
-<p>将id_rsa.pub之中的内容添加到个人Github主页的settings-&gt;SSH and GPG keys之中</p>
-<p>new SSH key添加之中的内容即可</p>
-<hr>
-<h2 id="hexo的常用命令："><a href="#hexo的常用命令：" class="headerlink" title="hexo的常用命令："></a>hexo的常用命令：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot;==hexo new &quot;我的博客&quot;#新建文章</span><br><span class="line"></span><br><span class="line">hexo p==hexo publish</span><br><span class="line"></span><br><span class="line">hexo g==hexo generate#生成</span><br><span class="line"></span><br><span class="line">hexo s==hexo server#启动服务预览</span><br><span class="line"></span><br><span class="line">hexo d==hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo clean#清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>##Markdown编写时的细节：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">title:(文章的标题)</span><br><span class="line"></span><br><span class="line">mp3:所配置音乐的绝对地址</span><br><span class="line"></span><br><span class="line">cover:配置封面(绝对地址)</span><br><span class="line"></span><br><span class="line">date：日期</span><br><span class="line"></span><br><span class="line">categories:&quot;(分类)&quot;</span><br><span class="line"></span><br><span class="line">tags&quot;(标签)&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1272,17 +1408,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -1318,13 +1458,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">12k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -1395,6 +1535,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

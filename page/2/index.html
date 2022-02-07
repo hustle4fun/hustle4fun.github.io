@@ -23,27 +23,27 @@
   <meta name="description" content="记录每一次的学习">
 <meta property="og:type" content="website">
 <meta property="og:title" content="hustle4fun的博客">
-<meta property="og:url" content="http://example.com/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="hustle4fun的博客">
 <meta property="og:description" content="记录每一次的学习">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="谭仕麟">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
+    isHome : true,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: Java初级学习 | hustle4fun的博客</title>
+  <title>hustle4fun的博客</title>
   
 
 
@@ -185,172 +185,220 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
 
-  
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Java初级学习
-          <small>分类</small>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">1.27JAVA学习日志</a>
         </h2>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-28 21:35:51 / 修改时间：21:36:55" itemprop="dateCreated datePublished" datetime="2022-01-28T21:35:51+08:00">2022-01-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">JAVA学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>534</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+          <p>#1.27JAVA学习日志</p>
+<hr>
+<pre><code>1. Java中没有无符号整数存储方式
+2. 算数移位 “&gt;&gt; &lt;&lt;”  / 逻辑移位（带符号位）“&gt;&gt;&gt; &lt;&lt;&lt;”
+3. vscode 中的配置设置快捷键 ctrl + ,
+4. jdk查看版本 /usr/libexec/java_home -V
+5. 整数与浮点数计算时 整数自动转换为浮点数
+6. 整数运算在除数为0时会报错，而浮点数运算在除数为0时，不会报     错，但会返回几个特殊值：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NaN表示Not a Number</span><br><span class="line"></span><br><span class="line">Infinity表示无穷大</span><br><span class="line">-Infinity表示负无穷大</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>7. String[] args 表示的是调用main()时候的传递的字符串参数 可以使用args[x]调用   
+8. 一个java程序必须有且仅有一个main方法
+9. java文件在编写时带上package包一行 在terminal之中直接编译 将无法找到主类，可以的选择A：注释掉packag行 B：运行是返回到java类的包的上一级目录之中
+10. java是大小写敏感的    类名应该使用首字母大写开头（每个单词的首字母都需要大写） 方法吗名：首字母必须小写字母开头
+11. java的枚举。enum 只能是事先设置好的
+12. java中的注释： //(单行）。  /*（多行注释）*/
+</code></pre>
+<hr>
+
+      
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-07T21:26:50+08:00"
-              content="2022-02-07">
-          02-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" itemprop="url">
-            <span itemprop="name">Java异常处理</span>
-          </a>
-      </div>
-
-    </header>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
   </article>
+  
+  
+  
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/">
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-07T21:25:41+08:00"
-              content="2022-02-07">
-          02-07
-        </time>
-      </div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/07/Java%E7%BB%A7%E6%89%BF/" itemprop="url">
-            <span itemprop="name">Java继承</span>
-          </a>
-      </div>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/" class="post-title-link" itemprop="url">记录Mac系统结合Github搭建个人博客之中遇到的一些坑</a>
+        </h2>
 
-    </header>
-  </article>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+              <time title="创建时间：2022-01-28 21:31:00 / 修改时间：21:32:45" itemprop="dateCreated datePublished" datetime="2022-01-28T21:31:00+08:00">2022-01-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">个人学习</span></a>
+                </span>
+            </span>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-06T21:02:01+08:00"
-              content="2022-02-06">
-          02-06
-        </time>
-      </div>
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>642</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/" itemprop="url">
-            <span itemprop="name">Java的流Stream、文件和IO</span>
-          </a>
-      </div>
+        </div>
+      </header>
 
-    </header>
-  </article>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+          <p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
+<hr>
+<p>##hexo的安装</p>
+<ol>
+<li>使用homebrew 或者npm安装node.js 也可以直接下载node.pkg包来安装</li>
+</ol>
+<hr>
+<p>##GitHub与个人pc之间 如果使用hexo来部署自己的博客 Github在21年9月左右已经不支持博客内容通过push来推送：</p>
+<p><strong>解决方法</strong>：</p>
+<p>使用ssh配置 在本地<code>$ ls -al ~/.ssh</code></p>
+<ol>
+<li>生成 ssh key:</li>
+</ol>
+<p><code>$ ssh-keygen -t rsa -C&quot;你的github注册时邮箱“</code></p>
+<ol start="2">
+<li>来生成 id_rsa.pub 和 id_dsa.pub</li>
+</ol>
+<p>将id_rsa.pub之中的内容添加到个人Github主页的settings-&gt;SSH and GPG keys之中</p>
+<p>new SSH key添加之中的内容即可</p>
+<hr>
+<h2 id="hexo的常用命令："><a href="#hexo的常用命令：" class="headerlink" title="hexo的常用命令："></a>hexo的常用命令：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot;==hexo new &quot;我的博客&quot;#新建文章</span><br><span class="line"></span><br><span class="line">hexo p==hexo publish</span><br><span class="line"></span><br><span class="line">hexo g==hexo generate#生成</span><br><span class="line"></span><br><span class="line">hexo s==hexo server#启动服务预览</span><br><span class="line"></span><br><span class="line">hexo d==hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo clean#清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-06T21:00:36+08:00"
-              content="2022-02-06">
-          02-06
-        </time>
-      </div>
+<p>##Markdown编写时的细节：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">title:(文章的标题)</span><br><span class="line"></span><br><span class="line">mp3:所配置音乐的绝对地址</span><br><span class="line"></span><br><span class="line">cover:配置封面(绝对地址)</span><br><span class="line"></span><br><span class="line">date：日期</span><br><span class="line"></span><br><span class="line">categories:&quot;(分类)&quot;</span><br><span class="line"></span><br><span class="line">tags&quot;(标签)&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" itemprop="url">
-            <span itemprop="name">2.6.2022Java学习日志</span>
-          </a>
-      </div>
+<hr>
 
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-04T21:41:58+08:00"
-              content="2022-02-04">
-          02-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" itemprop="url">
-            <span itemprop="name">2.4.2022Java学习日志</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-04T21:24:47+08:00"
-              content="2022-02-04">
-          02-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/" itemprop="url">
-            <span itemprop="name">JAVA运算符</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-02-04T21:12:46+08:00"
-              content="2022-02-04">
-          02-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/04/JAVA%E4%BF%AE%E9%A5%B0%E7%AC%A6/" itemprop="url">
-            <span itemprop="name">JAVA修饰符</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+      
     </div>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
   
   
 
+
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
