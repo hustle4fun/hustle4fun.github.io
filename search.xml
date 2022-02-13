@@ -31,6 +31,92 @@
       </tags>
   </entry>
   <entry>
+    <title>2.6.2022Java学习日志</title>
+    <url>/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
+<h2 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h2><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。<br>代码： <code>Thread.sleep(1000*3)   </code></p>
+<hr>
+<h2 id="Java-Calendar"><a href="#Java-Calendar" class="headerlink" title="Java Calendar"></a>Java Calendar</h2><ol>
+<li><p>创建一个代表系统的当前日期的Calendar对象 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    calender作为一个抽象类，实际使用的时候是子类的对象，不需要 单独的声明</span><br><span class="line"></span><br><span class="line">        Calendar c = Calendar.getInstance(); //</span><br><span class="line">        </span><br><span class="line">2. 创建制定日期的Calendar对象</span><br></pre></td></tr></table></figure>
+<p> Calendar c = Calender.getInstance();<br> C.set(year, month, day)</p>
+</li>
+<li><p>Calendar类对象信息的设置<br>Set设置<br>如：<br><code>Calendar c1 = Calendar.getInstance();</code></p>
+</li>
+</ol>
+<p>调用：<br><code>public final void set(int year,int month,int date)</code><br><code>c1.set(2009, 6, 12);//</code><br>把Calendar对象c1的年月日分别设这为：2009、6、12n</p>
+<ol start="4">
+<li>public void set(int field,int value)</li>
+</ol>
+<hr>
+<h2 id="GregorianCalendar类"><a href="#GregorianCalendar类" class="headerlink" title="GregorianCalendar类"></a>GregorianCalendar类</h2><p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。<br>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。 </p>
+<hr>
+<h2 id="程序报错积累："><a href="#程序报错积累：" class="headerlink" title="程序报错积累："></a>程序报错积累：</h2><p>在跟随菜鸟教程gregianCalender练习的过程之中 报错：<code>The method get(int) is undefined for the type GregorianCalendarJava(67108964) </code></p>
+<p>一般报错这种类型：，三种情况：</p>
+<ol>
+<li>倒错包了（一般编译器会提示）</li>
+<li> 在项目中导入的Jar包不是当前版本的jar 无法支持当前方法</li>
+<li>导入了不同版本的同一个Jar包（重要） </li>
+</ol>
+<p><strong>在拷贝别人的项目的过程中，需要注意，会继续使用项目中的Jar。本次本人遇到的问题属于第三种错误原因。</strong></p>
+<hr>
+<h2 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h2><h3 id="Java方法的重载："><a href="#Java方法的重载：" class="headerlink" title="Java方法的重载："></a>Java方法的重载：</h3><p>方法重载：一个类的两个方法拥有相同的名字，但是有不同的参数列表。<br>Java编译器根据方法签名判断哪个方法应该被调用。 </p>
+<hr>
+<h3 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h3><p>当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，但构造方法没有返回值。 </p>
+<p>通常会使用构造方法给一个类的实例变量赋初值，或者执行其它必要的步骤来创建一个完整的对象。 </p>
+<hr>
+<h2 id="Java-Scanner类"><a href="#Java-Scanner类" class="headerlink" title="Java Scanner类"></a>Java Scanner类</h2><p>创建Scanner 对象的基本语法：<br><code>Scanner scan = new Scanner(System.in) //(调用system.in是控制台输入调用)</code><br>并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客完善</title>
+    <url>/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/</url>
+    <content><![CDATA[<h1 id="Hexo-博客的完善"><a href="#Hexo-博客的完善" class="headerlink" title="Hexo 博客的完善"></a>Hexo 博客的完善</h1><hr>
+<h2 id="对于Markdown中的图片上传方法："><a href="#对于Markdown中的图片上传方法：" class="headerlink" title="对于Markdown中的图片上传方法："></a>对于Markdown中的图片上传方法：</h2><p>格式   <code>![图片描述]（图片的地址网络、本地）</code></p>
+<ol>
+<li>使用本地地址在Markdown日志编辑的过程中静态上传，但是对于电脑经常更换，不稳定的环境 这种方法不是最好的</li>
+<li>使用网页中的图片地址 </li>
+</ol>
+<ol start="3">
+<li>自动连接 </li>
+</ol>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。</p>
+<hr>
+<h2 id="对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。"><a href="#对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。" class="headerlink" title="对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。"></a>对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。</h2><p>原因是没有配置相应的页面 “categories” “tags” “about” </p>
+<p>因此解决方法便是在博客配置中增加相应页面</p>
+<ul>
+<li><p>“分类的处理” :<br><code>Hexo new page categories </code><br>配置其中内容<code>“ type ：”categories”</code></p>
+</li>
+<li><p>“关于”的处理<br><code>Hexo new page “about”</code><br>配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Categories: </span><br><span class="line">	- 日志</span><br><span class="line">	- 二级目录</span><br><span class="line">tags: </span><br><span class="line">	- 关于</span><br></pre></td></tr></table></figure></li>
+<li><p>“标签的处理”<br><code>Hexo new page tags</code><br>配置添加： <code> type: “tags”</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="Hexo-博客添加搜索功能"><a href="#Hexo-博客添加搜索功能" class="headerlink" title="Hexo 博客添加搜索功能"></a>Hexo 博客添加搜索功能</h2><ol>
+<li><p>在博客更目录下，执行命令<br><code> npm install Hexo-generator-searchd —save</code> </p>
+</li>
+<li><p>修改站点配置文件 在_config.yml中添加（原本没有设置）配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#search</span><br><span class="line">Search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure></li>
+<li><p>修改主题配置文件<br>修改themes_config.yml配置文件 用’/’搜索local_search,修改enable为true</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_serach::</span><br><span class="line">	enable: true</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.29JAVA学习日志</title>
     <url>/2022/02/02/1-29JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h2 id="1-29学习日志"><a href="#1-29学习日志" class="headerlink" title="1.29学习日志"></a>1.29学习日志</h2><h2 id="Hexo博客在写Hexo-Deploy之后GitHub界面没有更新"><a href="#Hexo博客在写Hexo-Deploy之后GitHub界面没有更新" class="headerlink" title="Hexo博客在写Hexo Deploy之后GitHub界面没有更新"></a>Hexo博客在写Hexo Deploy之后GitHub界面没有更新</h2><h3 id="1-通过"><a href="#1-通过" class="headerlink" title="1. 通过"></a>1. 通过</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">通过 hexo clean清理hexo的缓存</span><br><span class="line">通过 hexo g</span><br><span class="line">Hexo d 之后同步</span><br></pre></td></tr></table></figure>
@@ -144,6 +230,109 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA运算符</title>
+    <url>/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
+<p>| 操作符 | 描述 | 例子 |</p>
+<p>| ＆（与）| 如果相对应位都是1，则结果为1，否则为0 |A＆B）得到12，即0000 1100 |</p>
+<p>|（或）| 如果相对应位都是 0，则结果为 0，否则为 1 |（A | B）得到61，即 0011 1101 |</p>
+<p>| ^（非） |    如果相对应位值相同，则结果为0，否则为1 | （A ^ B）得到49，即 0011 0001 |</p>
+<p>| 〜（取反) | 按位取反运算符翻转操作数的每一位，即0变成1，1变成0。 | （〜A）得到-61，即1100 0011 |</p>
+<p>| &lt;&lt; | 按位左移运算符。左操作数按位左移右操作数指定的位数。|     A &lt;&lt; 2得到240，即 1111 0000 |</p>
+<p>| &gt;&gt; |    按位右移运算符。左操作数按位右移右操作数指定的位数。 | A &gt;&gt; 2得到15即 1111 |</p>
+<p>| &gt;&gt;&gt; | 按位右移补零操作符。左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充。 |     A&gt;&gt;&gt;2得到15即0000 1111 |</p>
+<hr>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假<br>| 操作符  |    描述 | 例子 |<br>|&amp;&amp; | 称为逻辑与运算符。当且仅当两个操作数都为真，条件才为真。| </p>
+<p>|（A &amp;&amp; B）为假。 | 称为逻辑或操作符。如果任何两个操作数任何一个为真，条件为真。     |</p>
+<p>| （A | | B）为真。 |</p>
+<p>| ！ | 称为逻辑非运算符。用来反转操作数的逻辑状态。如果条件为true，则逻辑非运算符将得到false。 |</p>
+<h2 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h2><p>** 条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。 **</p>
+<p>variable x = (expression) ? value if true : value if false</p>
+<hr>
+<h2 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h2><p>该运算符用于操作对象实例，检查该对象是否是一个特定类型（类类型或接口类型）。</p>
+<p>instanceof运算符使用格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">( Object reference variable ) instanceof  (class/interface type)</span><br></pre></td></tr></table></figure>
+
+<p>子类是父类的类型，但父类不是子类的类型。</p>
+<p>子类的实例可以声明为父类型，但父类的实例不能声明为子类型。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA修饰符</title>
+    <url>/2022/02/04/JAVA%E4%BF%AE%E9%A5%B0%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="JAVA修饰符的总结"><a href="#JAVA修饰符的总结" class="headerlink" title="JAVA修饰符的总结"></a>JAVA修饰符的总结</h1><hr>
+<h2 id="JAVA-的类（外部类）有-2-种访问权限-public、default-而方法和变量有-4-种：public、default、protected、private。其中默认访问权限和-protected-很相似，有着细微的差别。"><a href="#JAVA-的类（外部类）有-2-种访问权限-public、default-而方法和变量有-4-种：public、default、protected、private。其中默认访问权限和-protected-很相似，有着细微的差别。" class="headerlink" title="JAVA 的类（外部类）有 2 种访问权限: public、default,而方法和变量有 4 种：public、default、protected、private。其中默认访问权限和 protected 很相似，有着细微的差别。"></a>JAVA 的类（外部类）有 2 种访问权限: public、default,而方法和变量有 4 种：public、default、protected、private。其中默认访问权限和 protected 很相似，有着细微的差别。</h2><pre><code>•    public 意味着任何地方的其他类都能访问。
+•    default 则是同一个包的类可以访问。
+•    protected 表示同一个包的类可以访问，其他的包的该类的子类也可以访问。
+•    private 表示只有自己类能访问。
+</code></pre>
+<h3 id="修饰符：abstract、static、final"><a href="#修饰符：abstract、static、final" class="headerlink" title="修饰符：abstract、static、final"></a>修饰符：abstract、static、final</h3><pre><code>•    abstract: 表示是抽象类。 使用对象：类、接口、方法
+•    static: 可以当做普通类使用，而不用先实例化一个外部类。（用他修饰后，就成了静态内部类了）。 使用对象：类、变量、方法、初始化函数（注意：修饰类时只能修饰 内部类 ）
+•    final: 表示类不可以被继承。 使用对象：类、变量、方法
+</code></pre>
+<hr>
+<h2 id="非访问权限修控制修饰符："><a href="#非访问权限修控制修饰符：" class="headerlink" title="非访问权限修控制修饰符："></a>非访问权限修控制修饰符：</h2><h3 id="final"><a href="#final" class="headerlink" title="final:"></a>final:</h3><ul>
+<li>修饰在类上：类不能被继承；</li>
+<li>修饰在方法上：方法继承下来不能被重写；</li>
+<li>修饰在属性上：属性只能被赋值一次，没有给默认值，必须在构造方法中赋值。</li>
+</ul>
+<h3 id="static"><a href="#static" class="headerlink" title="static:"></a>static:</h3><p>修饰在成员变量和方法上，被其修饰的方法和变量从属于类优先加载在方法区，使其能被在堆内存中未加载的对象进行共享访问，static 不能修饰在局部语句块中的变量，因为无法共享该数据，被static修饰的方法不能在该方法里访问该类的对象属性和方法，因为当初始化static修饰的方法和成员变量语句块时，对象还未加载在堆内存，就还没有this对象的引用，就无法访问对象的方法和属性。如需访问必须先把对象new出来。</p>
+<h3 id="abstract-类似于类模版"><a href="#abstract-类似于类模版" class="headerlink" title="abstract:(类似于类模版)"></a>abstract:(类似于类模版)</h3><p>abstract修饰类与方法上，修饰在类上就是是抽象类，抽象类中的方法可以被abstract修饰不写花括号以分号结尾，就是抽象方法；</p>
+<h3 id="synchronize："><a href="#synchronize：" class="headerlink" title="synchronize："></a>synchronize：</h3><p>synchronize关键字修饰在方法上，在多线程中使用，该方法同一时间只能被一个线程访问，锁就是this</p>
+<h3 id="transient"><a href="#transient" class="headerlink" title="transient:"></a>transient:</h3><p>修饰在包含定义变量的语句中将不会被序列化存储在硬盘</p>
+<h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>修饰在成员变量上，在多线程中访问该变量，都会重新从线程中获取，使真实数据可见。</p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java异常处理</title>
+    <url>/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
+<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
+<p>从大体来分异常为两块：</p>
+<ol>
+<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
+<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
+<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
+</li>
+<li><p>NullpointException（空指针异常</p>
+</li>
+<li><p>ClassCastException（类型转换异常）</p>
+</li>
+<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
+</li>
+<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
+</li>
+<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
+</li>
+<li><p>throw跟throws的区别:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
+<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.4.2022Java学习日志</title>
     <url>/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h1 id="2-4-2022-JAVA学习日志"><a href="#2-4-2022-JAVA学习日志" class="headerlink" title="2.4.2022 JAVA学习日志"></a>2.4.2022 JAVA学习日志</h1><hr>
@@ -201,109 +390,164 @@
       </tags>
   </entry>
   <entry>
-    <title>2.6.2022Java学习日志</title>
-    <url>/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
-<h2 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h2><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。<br>代码： <code>Thread.sleep(1000*3)   </code></p>
-<hr>
-<h2 id="Java-Calendar"><a href="#Java-Calendar" class="headerlink" title="Java Calendar"></a>Java Calendar</h2><ol>
-<li><p>创建一个代表系统的当前日期的Calendar对象 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    calender作为一个抽象类，实际使用的时候是子类的对象，不需要 单独的声明</span><br><span class="line"></span><br><span class="line">        Calendar c = Calendar.getInstance(); //</span><br><span class="line">        </span><br><span class="line">2. 创建制定日期的Calendar对象</span><br></pre></td></tr></table></figure>
-<p> Calendar c = Calender.getInstance();<br> C.set(year, month, day)</p>
+    <title>java转型问题</title>
+    <url>/2022/02/13/java%E8%BD%AC%E5%9E%8B%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="Java-转型问题"><a href="#Java-转型问题" class="headerlink" title="Java 转型问题"></a>Java 转型问题</h1><p>其实并不复杂，只要记住一句话：<code>父类引用指向子类对象。</code></p>
+<p>什么叫父类引用指向子类对象</p>
+<p>从 2 个名词开始说起：<em>向上转型(upcasting) 、向下转型(downcasting)。</em></p>
+<p>举个例子：有2个类，Father 是父类，Son 类继承自 Father。<br><code>Father f1 = new Son();  </code> // 这就叫 upcasting （向上转型)<br>// 现在 f1 引用指向一个Son对象</p>
+<p><code>Son s1 = (Son)f1;   // 这就叫 downcasting (向下转型) //</code><br>现在f1 还是指向 Son对象<br>第2个例子：<br><code>Father f2 = new Father(); Son s2 = (Son)f2;  </code>     // 出错，子类引用不能指向父类对象</p>
+<p>你或许会问，第1个例子中：Son s1 = (Son)f1; 为什么是正确的呢。</p>
+<p>很简单因为 f1 指向一个子类对象，Father f1 = new Son(); 子类 s1 引用当然可以指向子类对象了。<br>而 f2 被传给了一个 Father 对象，Father f2 = new Father(); 子类 s1 引用不能指向父类对象。</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
+<li><p>父类引用指向子类对象，而子类引用不能指向父类对象。</p>
 </li>
-<li><p>Calendar类对象信息的设置<br>Set设置<br>如：<br><code>Calendar c1 = Calendar.getInstance();</code></p>
+<li><p>把子类对象直接赋给父类引用叫upcasting向上转型，向上转型不用强制转换吗，如：<br>Father f1 = new Son();</p>
+</li>
+<li><p>把指向子类对象的父类引用赋给子类引用叫向下转型(downcasting)，要强制转换，如：<br>f1 就是一个指向子类对象的父类引用。把f1赋给子类引用 s1 即 Son s1 = (Son)f1;<br>其中 f1 前面的(Son)必须加上，进行强制转换</p>
 </li>
 </ol>
-<p>调用：<br><code>public final void set(int year,int month,int date)</code><br><code>c1.set(2009, 6, 12);//</code><br>把Calendar对象c1的年月日分别设这为：2009、6、12n</p>
-<ol start="4">
-<li>public void set(int field,int value)</li>
-</ol>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录Mac系统结合Github搭建个人博客之中遇到的一些坑</title>
+    <url>/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
+    <content><![CDATA[<p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
 <hr>
-<h2 id="GregorianCalendar类"><a href="#GregorianCalendar类" class="headerlink" title="GregorianCalendar类"></a>GregorianCalendar类</h2><p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。<br>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。 </p>
-<hr>
-<h2 id="程序报错积累："><a href="#程序报错积累：" class="headerlink" title="程序报错积累："></a>程序报错积累：</h2><p>在跟随菜鸟教程gregianCalender练习的过程之中 报错：<code>The method get(int) is undefined for the type GregorianCalendarJava(67108964) </code></p>
-<p>一般报错这种类型：，三种情况：</p>
+<p>##hexo的安装</p>
 <ol>
-<li>倒错包了（一般编译器会提示）</li>
-<li> 在项目中导入的Jar包不是当前版本的jar 无法支持当前方法</li>
-<li>导入了不同版本的同一个Jar包（重要） </li>
+<li>使用homebrew 或者npm安装node.js 也可以直接下载node.pkg包来安装</li>
 </ol>
-<p><strong>在拷贝别人的项目的过程中，需要注意，会继续使用项目中的Jar。本次本人遇到的问题属于第三种错误原因。</strong></p>
 <hr>
-<h2 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h2><h3 id="Java方法的重载："><a href="#Java方法的重载：" class="headerlink" title="Java方法的重载："></a>Java方法的重载：</h3><p>方法重载：一个类的两个方法拥有相同的名字，但是有不同的参数列表。<br>Java编译器根据方法签名判断哪个方法应该被调用。 </p>
+<p>##GitHub与个人pc之间 如果使用hexo来部署自己的博客 Github在21年9月左右已经不支持博客内容通过push来推送：</p>
+<p><strong>解决方法</strong>：</p>
+<p>使用ssh配置 在本地<code>$ ls -al ~/.ssh</code></p>
+<ol>
+<li>生成 ssh key:</li>
+</ol>
+<p><code>$ ssh-keygen -t rsa -C&quot;你的github注册时邮箱“</code></p>
+<ol start="2">
+<li>来生成 id_rsa.pub 和 id_dsa.pub</li>
+</ol>
+<p>将id_rsa.pub之中的内容添加到个人Github主页的settings-&gt;SSH and GPG keys之中</p>
+<p>new SSH key添加之中的内容即可</p>
 <hr>
-<h3 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h3><p>当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，但构造方法没有返回值。 </p>
-<p>通常会使用构造方法给一个类的实例变量赋初值，或者执行其它必要的步骤来创建一个完整的对象。 </p>
-<hr>
-<h2 id="Java-Scanner类"><a href="#Java-Scanner类" class="headerlink" title="Java Scanner类"></a>Java Scanner类</h2><p>创建Scanner 对象的基本语法：<br><code>Scanner scan = new Scanner(System.in) //(调用system.in是控制台输入调用)</code><br>并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA修饰符</title>
-    <url>/2022/02/04/JAVA%E4%BF%AE%E9%A5%B0%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="JAVA修饰符的总结"><a href="#JAVA修饰符的总结" class="headerlink" title="JAVA修饰符的总结"></a>JAVA修饰符的总结</h1><hr>
-<h2 id="JAVA-的类（外部类）有-2-种访问权限-public、default-而方法和变量有-4-种：public、default、protected、private。其中默认访问权限和-protected-很相似，有着细微的差别。"><a href="#JAVA-的类（外部类）有-2-种访问权限-public、default-而方法和变量有-4-种：public、default、protected、private。其中默认访问权限和-protected-很相似，有着细微的差别。" class="headerlink" title="JAVA 的类（外部类）有 2 种访问权限: public、default,而方法和变量有 4 种：public、default、protected、private。其中默认访问权限和 protected 很相似，有着细微的差别。"></a>JAVA 的类（外部类）有 2 种访问权限: public、default,而方法和变量有 4 种：public、default、protected、private。其中默认访问权限和 protected 很相似，有着细微的差别。</h2><pre><code>•    public 意味着任何地方的其他类都能访问。
-•    default 则是同一个包的类可以访问。
-•    protected 表示同一个包的类可以访问，其他的包的该类的子类也可以访问。
-•    private 表示只有自己类能访问。
-</code></pre>
-<h3 id="修饰符：abstract、static、final"><a href="#修饰符：abstract、static、final" class="headerlink" title="修饰符：abstract、static、final"></a>修饰符：abstract、static、final</h3><pre><code>•    abstract: 表示是抽象类。 使用对象：类、接口、方法
-•    static: 可以当做普通类使用，而不用先实例化一个外部类。（用他修饰后，就成了静态内部类了）。 使用对象：类、变量、方法、初始化函数（注意：修饰类时只能修饰 内部类 ）
-•    final: 表示类不可以被继承。 使用对象：类、变量、方法
-</code></pre>
-<hr>
-<h2 id="非访问权限修控制修饰符："><a href="#非访问权限修控制修饰符：" class="headerlink" title="非访问权限修控制修饰符："></a>非访问权限修控制修饰符：</h2><h3 id="final"><a href="#final" class="headerlink" title="final:"></a>final:</h3><ul>
-<li>修饰在类上：类不能被继承；</li>
-<li>修饰在方法上：方法继承下来不能被重写；</li>
-<li>修饰在属性上：属性只能被赋值一次，没有给默认值，必须在构造方法中赋值。</li>
-</ul>
-<h3 id="static"><a href="#static" class="headerlink" title="static:"></a>static:</h3><p>修饰在成员变量和方法上，被其修饰的方法和变量从属于类优先加载在方法区，使其能被在堆内存中未加载的对象进行共享访问，static 不能修饰在局部语句块中的变量，因为无法共享该数据，被static修饰的方法不能在该方法里访问该类的对象属性和方法，因为当初始化static修饰的方法和成员变量语句块时，对象还未加载在堆内存，就还没有this对象的引用，就无法访问对象的方法和属性。如需访问必须先把对象new出来。</p>
-<h3 id="abstract-类似于类模版"><a href="#abstract-类似于类模版" class="headerlink" title="abstract:(类似于类模版)"></a>abstract:(类似于类模版)</h3><p>abstract修饰类与方法上，修饰在类上就是是抽象类，抽象类中的方法可以被abstract修饰不写花括号以分号结尾，就是抽象方法；</p>
-<h3 id="synchronize："><a href="#synchronize：" class="headerlink" title="synchronize："></a>synchronize：</h3><p>synchronize关键字修饰在方法上，在多线程中使用，该方法同一时间只能被一个线程访问，锁就是this</p>
-<h3 id="transient"><a href="#transient" class="headerlink" title="transient:"></a>transient:</h3><p>修饰在包含定义变量的语句中将不会被序列化存储在硬盘</p>
-<h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>修饰在成员变量上，在多线程中访问该变量，都会重新从线程中获取，使真实数据可见。</p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA运算符</title>
-    <url>/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
-<p>| 操作符 | 描述 | 例子 |</p>
-<p>| ＆（与）| 如果相对应位都是1，则结果为1，否则为0 |A＆B）得到12，即0000 1100 |</p>
-<p>|（或）| 如果相对应位都是 0，则结果为 0，否则为 1 |（A | B）得到61，即 0011 1101 |</p>
-<p>| ^（非） |    如果相对应位值相同，则结果为0，否则为1 | （A ^ B）得到49，即 0011 0001 |</p>
-<p>| 〜（取反) | 按位取反运算符翻转操作数的每一位，即0变成1，1变成0。 | （〜A）得到-61，即1100 0011 |</p>
-<p>| &lt;&lt; | 按位左移运算符。左操作数按位左移右操作数指定的位数。|     A &lt;&lt; 2得到240，即 1111 0000 |</p>
-<p>| &gt;&gt; |    按位右移运算符。左操作数按位右移右操作数指定的位数。 | A &gt;&gt; 2得到15即 1111 |</p>
-<p>| &gt;&gt;&gt; | 按位右移补零操作符。左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充。 |     A&gt;&gt;&gt;2得到15即0000 1111 |</p>
-<hr>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假<br>| 操作符  |    描述 | 例子 |<br>|&amp;&amp; | 称为逻辑与运算符。当且仅当两个操作数都为真，条件才为真。| </p>
-<p>|（A &amp;&amp; B）为假。 | 称为逻辑或操作符。如果任何两个操作数任何一个为真，条件为真。     |</p>
-<p>| （A | | B）为真。 |</p>
-<p>| ！ | 称为逻辑非运算符。用来反转操作数的逻辑状态。如果条件为true，则逻辑非运算符将得到false。 |</p>
-<h2 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h2><p>** 条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。 **</p>
-<p>variable x = (expression) ? value if true : value if false</p>
-<hr>
-<h2 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h2><p>该运算符用于操作对象实例，检查该对象是否是一个特定类型（类类型或接口类型）。</p>
-<p>instanceof运算符使用格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">( Object reference variable ) instanceof  (class/interface type)</span><br></pre></td></tr></table></figure>
+<h2 id="hexo的常用命令："><a href="#hexo的常用命令：" class="headerlink" title="hexo的常用命令："></a>hexo的常用命令：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot;==hexo new &quot;我的博客&quot;#新建文章</span><br><span class="line"></span><br><span class="line">hexo p==hexo publish</span><br><span class="line"></span><br><span class="line">hexo g==hexo generate#生成</span><br><span class="line"></span><br><span class="line">hexo s==hexo server#启动服务预览</span><br><span class="line"></span><br><span class="line">hexo d==hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo clean#清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>子类是父类的类型，但父类不是子类的类型。</p>
-<p>子类的实例可以声明为父类型，但父类的实例不能声明为子类型。</p>
+<p>##Markdown编写时的细节：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">title:(文章的标题)</span><br><span class="line"></span><br><span class="line">mp3:所配置音乐的绝对地址</span><br><span class="line"></span><br><span class="line">cover:配置封面(绝对地址)</span><br><span class="line"></span><br><span class="line">date：日期</span><br><span class="line"></span><br><span class="line">categories:&quot;(分类)&quot;</span><br><span class="line"></span><br><span class="line">tags&quot;(标签)&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <hr>
+]]></content>
+      <categories>
+        <category>个人学习</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重写与重载</title>
+    <url>/2022/02/13/%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="overload与override"><a href="#overload与override" class="headerlink" title="overload与override"></a>overload与override</h1><ol>
+<li>父类引用指向子类对象，而子类引用不能指向父类对象。</li>
+<li>把子类对象直接赋给父类引用叫 <strong>upcasting向上转型</strong> ，向上转型不用强制转换吗，如：<br><code>Father f1 = new Son();</code></li>
+<li>把指向子类对象的父类引用赋给子类引用叫**向下转型(downcasting)**，要强制转换，如：<br>f1 就是一个指向子类对象的父类引用。把f1赋给子类引用 s1 即 <code>Son s1 = (Son)f1;</code><br>其中 f1 前面的(Son)必须加上，进行强制转换。</li>
+</ol>
+<hr>
+<h2 id="重写-Override"><a href="#重写-Override" class="headerlink" title="重写(Override)"></a>重写(Override)</h2><p><strong>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！</strong> </p>
+<p>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。</p>
+<hr>
+<h3 id="方法的重写规则"><a href="#方法的重写规则" class="headerlink" title="方法的重写规则"></a>方法的重写规则</h3><p>•    参数列表与被重写方法的参数列表必须完全相同。</p>
+<p>•    返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</p>
+<p>•    访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</p>
+<p>•    父类的成员方法只能被它的子类重写。</p>
+<p>•    声明为 final 的方法不能被重写。</p>
+<p>•    声明为 static 的方法不能被重写，但是能够被再次声明。</p>
+<p>•    子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</p>
+<p>•    子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</p>
+<p>•    重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</p>
+<p>•    构造方法不能被重写。</p>
+<p>•    如果不能继承一个类，则不能重写该类的方法。</p>
+<hr>
+<h2 id="重载-Overload"><a href="#重载-Overload" class="headerlink" title="重载(Overload)"></a>重载(Overload)</h2><p><strong>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</strong></p>
+<p>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</p>
+<p>最常用的地方就是构造器的重载。<br>重载规则:</p>
+<p>•    被重载的方法必须改变参数列表(参数个数或类型不一样（包括参数的传递顺序）)； </p>
+<p>•    被重载的方法可以改变返回类型；</p>
+<p>•    被重载的方法可以改变访问修饰符；</p>
+<p>•    被重载的方法可以声明新的或更广的检查异常；</p>
+<p>•    方法能够在同一个类中或者在一个子类中被重载。</p>
+<p>•    无法以返回值类型作为重载函数的区分标准。 </p>
+<hr>
+<p><em>重载就是同样的一个方法能够根据输入数据的不同，做出不同的处理<br>重写就是当子类继承自父类的相同方法，输入数据一样，但要做出有别于父类的响应时，你就要覆盖父类方法</em></p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java继承</title>
+    <url>/2022/02/07/Java%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<h1 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h1><hr>
+<h2 id="1-为什么使用继承"><a href="#1-为什么使用继承" class="headerlink" title="1. 为什么使用继承"></a>1. 为什么使用继承</h2><p>从已有的类派生出新的类，称为继承。<br>在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。<br>因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。<br>继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。 </p>
+<hr>
+<h2 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h2><pre><code>•    子类拥有父类非 private 的属性、方法。
+•    子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
+•    子类可以用自己的方式实现父类的方法。
+•    Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
+•    提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
+</code></pre>
+<hr>
+<h2 id="继承关键字-extends-和-implements"><a href="#继承关键字-extends-和-implements" class="headerlink" title="继承关键字   extends 和 implements"></a>继承关键字   extends 和 implements</h2><h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
+<h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
+<h2 id="super-与-this-关键字"><a href="#super-与-this-关键字" class="headerlink" title="super 与 this 关键字"></a>super 与 this 关键字</h2><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
+<h3 id="this关键字：指向自己的引用"><a href="#this关键字：指向自己的引用" class="headerlink" title="this关键字：指向自己的引用"></a>this关键字：指向自己的引用</h3><h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写：</p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象类与接口总结</title>
+    <url>/2022/02/13/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="抽象类总结规定"><a href="#抽象类总结规定" class="headerlink" title="抽象类总结规定"></a>抽象类总结规定</h1><ol>
+<li>抽象类不能被实例化(初学者很容易犯的错)，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li>
+<li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li>
+<li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。  </li>
+<li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li>
+<li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。 </li>
+</ol>
+<hr>
+<h2 id="抽象类和接口的区别"><a href="#抽象类和接口的区别" class="headerlink" title="抽象类和接口的区别"></a>抽象类和接口的区别</h2><h3 id="1-语法层面上的区别"><a href="#1-语法层面上的区别" class="headerlink" title="1. 语法层面上的区别"></a>1. 语法层面上的区别</h3><pre><code>1）抽象类可以提供成员方法的实现细节，而接口中只能存在public abstract 方法； 
+2）抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是public static final类型的； 
+3）接口中不能含有静态代码块以及静态方法，而抽象类可以有静态代码块和静态方法； 
+4）一个类只能继承一个抽象类，而一个类却可以实现多个接口。 
+</code></pre>
+<h2 id="2-设计层面上的区别"><a href="#2-设计层面上的区别" class="headerlink" title="2. 设计层面上的区别"></a>2. 设计层面上的区别</h2><ul>
+<li><p>抽象类是对一种事物的抽象，即对类抽象，而接口是对行为的抽象。抽象类是对整个类整体进行抽象，包括属性、行为，但是接口却是对类局部（行为）进行抽象。举个简单的例子，飞机和鸟是不同类的事物，但是它们都有一个共性，就是都会飞。那么在设计的时候，可以将飞机设计为一个类 Airplane，将鸟设计为一个类 Bird，但是不能将 飞行 这个特性也设计为类，因此它只是一个行为特性，并不是对一类事物的抽象描述。此时可以将 飞行 设计为一个接口Fly，包含方法fly( )，然后Airplane和Bird分别根据自己的需要实现Fly这个接口。然后至于有不同种类的飞机，比如战斗机、民用飞机等直接继承Airplane即可，对于鸟也是类似的，不同种类的鸟直接继承Bird类即可。从这里可以看出，继承是一个 “是不是”的关系，而 接口 实现则是 “有没有”的关系。如果一个类继承了某个抽象类，则子类必定是抽象类的种类，而接口实现则是有没有、具备不具备的关系，比如鸟是否能飞（或者是否具备飞行这个特点），能飞行则可以实现这个接口，不能飞行就不实现这个接口。</p>
+</li>
+<li><p>设计层面不同，抽象类作为很多子类的父类，它是一种模板式设计。而接口是一种行为规范，它是一种辐射式设计。什么是模板式设计？最简单例子，大家都用过 ppt 里面的模板，如果用模板 A 设计了 ppt B 和 ppt C，ppt B 和 ppt C 公共的部分就是模板 A 了，如果它们的公共部分需要改动，则只需要改动模板 A 就可以了，不需要重新对 ppt B 和 ppt C 进行改动。而辐射式设计，比如某个电梯都装了某种报警器，一旦要更新报警器，就必须全部更新。也就是说对于抽象类，如果需要添加新的方法，可以直接在抽象类中添加具体的实现，子类可以不进行变更；而对于接口则不行，如果接口进行了变更，则所有实现这个接口的类都必须进行相应的改动。<br>下面看一个网上流传最广泛的例子：门和警报的例子：门都有 open() 和 close() 两个动作，此时我们可以定义通过抽象类和接口来定义这个抽象概念：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">abstract class Door &#123;</span><br><span class="line">    public abstract void open();</span><br><span class="line">    public abstract void close();</span><br><span class="line">&#125;</span><br><span class="line">或者：</span><br><span class="line">interface Door &#123;</span><br><span class="line">    public abstract void open();</span><br><span class="line">    public abstract void close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是现在如果我们需要门具有报警 的功能，那么该如何实现？下面提供两种思路：</p>
+</li>
+<li><p>将这三个功能都放在抽象类里面，但是这样一来所有继承于这个抽象类的子类都具备了报警功能，但是有的门并不一定具备报警功能；</p>
+</li>
+<li><p>将这三个功能都放在接口里面，需要用到报警功能的类就需要实现这个接口中的 open( ) 和 close( )，也许这个类根本就不具备 open( ) 和 close( ) 这两个功能，比如火灾报警器。<br>从这里可以看出， Door 的 open() 、close() 和 alarm() 根本就属于两个不同范畴内的行为，open() 和 close() 属于门本身固有的行为特性，而 alarm() 属于延伸的附加行为。因此最好的解决办法是单独将报警设计为一个接口，包含 alarm() 行为，Door 设计为单独的一个抽象类，包含 open 和 close 两种行为。再设计一个报警门继承 Door 类和实现 Alarm 接口。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Alram &#123;</span><br><span class="line">    void alarm();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">abstract class Door &#123;</span><br><span class="line">    void open();</span><br><span class="line">    void close();</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class AlarmDoor extends Door implements Alarm &#123;</span><br><span class="line">    void oepn() &#123;</span><br><span class="line">      //....</span><br><span class="line">    &#125;</span><br><span class="line">    void close() &#123;</span><br><span class="line">      //....</span><br><span class="line">    &#125;</span><br><span class="line">    void alarm() &#123;</span><br><span class="line">      //....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>Java初级学习</category>
@@ -370,145 +614,6 @@
 <p>可以通过调用该对象上的  <code>list() </code> 方法，来提取它包含的文件和文件夹的列表。 </p>
 <hr>
 <h2 id="删除目录或文件"><a href="#删除目录或文件" class="headerlink" title="删除目录或文件"></a>删除目录或文件</h2><p>删除文件可以使用 java.io.File.delete() 方法。</p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录Mac系统结合Github搭建个人博客之中遇到的一些坑</title>
-    <url>/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
-    <content><![CDATA[<p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
-<hr>
-<p>##hexo的安装</p>
-<ol>
-<li>使用homebrew 或者npm安装node.js 也可以直接下载node.pkg包来安装</li>
-</ol>
-<hr>
-<p>##GitHub与个人pc之间 如果使用hexo来部署自己的博客 Github在21年9月左右已经不支持博客内容通过push来推送：</p>
-<p><strong>解决方法</strong>：</p>
-<p>使用ssh配置 在本地<code>$ ls -al ~/.ssh</code></p>
-<ol>
-<li>生成 ssh key:</li>
-</ol>
-<p><code>$ ssh-keygen -t rsa -C&quot;你的github注册时邮箱“</code></p>
-<ol start="2">
-<li>来生成 id_rsa.pub 和 id_dsa.pub</li>
-</ol>
-<p>将id_rsa.pub之中的内容添加到个人Github主页的settings-&gt;SSH and GPG keys之中</p>
-<p>new SSH key添加之中的内容即可</p>
-<hr>
-<h2 id="hexo的常用命令："><a href="#hexo的常用命令：" class="headerlink" title="hexo的常用命令："></a>hexo的常用命令：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot;==hexo new &quot;我的博客&quot;#新建文章</span><br><span class="line"></span><br><span class="line">hexo p==hexo publish</span><br><span class="line"></span><br><span class="line">hexo g==hexo generate#生成</span><br><span class="line"></span><br><span class="line">hexo s==hexo server#启动服务预览</span><br><span class="line"></span><br><span class="line">hexo d==hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo clean#清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>##Markdown编写时的细节：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">title:(文章的标题)</span><br><span class="line"></span><br><span class="line">mp3:所配置音乐的绝对地址</span><br><span class="line"></span><br><span class="line">cover:配置封面(绝对地址)</span><br><span class="line"></span><br><span class="line">date：日期</span><br><span class="line"></span><br><span class="line">categories:&quot;(分类)&quot;</span><br><span class="line"></span><br><span class="line">tags&quot;(标签)&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-]]></content>
-      <categories>
-        <category>个人学习</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客完善</title>
-    <url>/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/</url>
-    <content><![CDATA[<h1 id="Hexo-博客的完善"><a href="#Hexo-博客的完善" class="headerlink" title="Hexo 博客的完善"></a>Hexo 博客的完善</h1><hr>
-<h2 id="对于Markdown中的图片上传方法："><a href="#对于Markdown中的图片上传方法：" class="headerlink" title="对于Markdown中的图片上传方法："></a>对于Markdown中的图片上传方法：</h2><p>格式   <code>![图片描述]（图片的地址网络、本地）</code></p>
-<ol>
-<li>使用本地地址在Markdown日志编辑的过程中静态上传，但是对于电脑经常更换，不稳定的环境 这种方法不是最好的</li>
-<li>使用网页中的图片地址 </li>
-</ol>
-<ol start="3">
-<li>自动连接 </li>
-</ol>
-<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。</p>
-<hr>
-<h2 id="对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。"><a href="#对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。" class="headerlink" title="对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。"></a>对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。</h2><p>原因是没有配置相应的页面 “categories” “tags” “about” </p>
-<p>因此解决方法便是在博客配置中增加相应页面</p>
-<ul>
-<li><p>“分类的处理” :<br><code>Hexo new page categories </code><br>配置其中内容<code>“ type ：”categories”</code></p>
-</li>
-<li><p>“关于”的处理<br><code>Hexo new page “about”</code><br>配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Categories: </span><br><span class="line">	- 日志</span><br><span class="line">	- 二级目录</span><br><span class="line">tags: </span><br><span class="line">	- 关于</span><br></pre></td></tr></table></figure></li>
-<li><p>“标签的处理”<br><code>Hexo new page tags</code><br>配置添加： <code> type: “tags”</code></p>
-</li>
-</ul>
-<hr>
-<h2 id="Hexo-博客添加搜索功能"><a href="#Hexo-博客添加搜索功能" class="headerlink" title="Hexo 博客添加搜索功能"></a>Hexo 博客添加搜索功能</h2><ol>
-<li><p>在博客更目录下，执行命令<br><code> npm install Hexo-generator-searchd —save</code> </p>
-</li>
-<li><p>修改站点配置文件 在_config.yml中添加（原本没有设置）配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#search</span><br><span class="line">Search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure></li>
-<li><p>修改主题配置文件<br>修改themes_config.yml配置文件 用’/’搜索local_search,修改enable为true</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_serach::</span><br><span class="line">	enable: true</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java异常处理</title>
-    <url>/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
-<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
-<p>从大体来分异常为两块：</p>
-<ol>
-<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
-<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
-<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
-</li>
-<li><p>NullpointException（空指针异常</p>
-</li>
-<li><p>ClassCastException（类型转换异常）</p>
-</li>
-<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
-</li>
-<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
-</li>
-<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
-</li>
-<li><p>throw跟throws的区别:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
-<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java继承</title>
-    <url>/2022/02/07/Java%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<h1 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h1><hr>
-<h2 id="1-为什么使用继承"><a href="#1-为什么使用继承" class="headerlink" title="1. 为什么使用继承"></a>1. 为什么使用继承</h2><p>从已有的类派生出新的类，称为继承。<br>在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。<br>因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。<br>继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。 </p>
-<hr>
-<h2 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h2><pre><code>•    子类拥有父类非 private 的属性、方法。
-•    子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
-•    子类可以用自己的方式实现父类的方法。
-•    Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
-•    提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
-</code></pre>
-<hr>
-<h2 id="继承关键字-extends-和-implements"><a href="#继承关键字-extends-和-implements" class="headerlink" title="继承关键字   extends 和 implements"></a>继承关键字   extends 和 implements</h2><h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
-<h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
-<h2 id="super-与-this-关键字"><a href="#super-与-this-关键字" class="headerlink" title="super 与 this 关键字"></a>super 与 this 关键字</h2><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
-<h3 id="this关键字：指向自己的引用"><a href="#this关键字：指向自己的引用" class="headerlink" title="this关键字：指向自己的引用"></a>this关键字：指向自己的引用</h3><h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写：</p>
 ]]></content>
       <categories>
         <category>Java初级学习</category>
