@@ -134,7 +134,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -187,6 +187,353 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">2.6.2022Java学习日志</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-06 21:00:36 / 修改时间：21:01:34" itemprop="dateCreated datePublished" datetime="2022-02-06T21:00:36+08:00">2022-02-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
+<h2 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h2><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。<br>代码： <code>Thread.sleep(1000*3)   </code></p>
+<hr>
+<h2 id="Java-Calendar"><a href="#Java-Calendar" class="headerlink" title="Java Calendar"></a>Java Calendar</h2><ol>
+<li><p>创建一个代表系统的当前日期的Calendar对象 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    calender作为一个抽象类，实际使用的时候是子类的对象，不需要 单独的声明</span><br><span class="line"></span><br><span class="line">        Calendar c = Calendar.getInstance(); //</span><br><span class="line">        </span><br><span class="line">2. 创建制定日期的Calendar对象</span><br></pre></td></tr></table></figure>
+<p> Calendar c = Calender.getInstance();<br> C.set(year, month, day)</p>
+</li>
+<li><p>Calendar类对象信息的设置<br>Set设置<br>如：<br><code>Calendar c1 = Calendar.getInstance();</code></p>
+</li>
+</ol>
+<p>调用：<br><code>public final void set(int year,int month,int date)</code><br><code>c1.set(2009, 6, 12);//</code><br>把Calendar对象c1的年月日分别设这为：2009、6、12n</p>
+<ol start="4">
+<li>public void set(int field,int value)</li>
+</ol>
+<hr>
+<h2 id="GregorianCalendar类"><a href="#GregorianCalendar类" class="headerlink" title="GregorianCalendar类"></a>GregorianCalendar类</h2><p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。<br>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。 </p>
+<hr>
+<h2 id="程序报错积累："><a href="#程序报错积累：" class="headerlink" title="程序报错积累："></a>程序报错积累：</h2><p>在跟随菜鸟教程gregianCalender练习的过程之中 报错：<code>The method get(int) is undefined for the type GregorianCalendarJava(67108964) </code></p>
+<p>一般报错这种类型：，三种情况：</p>
+<ol>
+<li>倒错包了（一般编译器会提示）</li>
+<li> 在项目中导入的Jar包不是当前版本的jar 无法支持当前方法</li>
+<li>导入了不同版本的同一个Jar包（重要） </li>
+</ol>
+<p><strong>在拷贝别人的项目的过程中，需要注意，会继续使用项目中的Jar。本次本人遇到的问题属于第三种错误原因。</strong></p>
+<hr>
+<h2 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h2><h3 id="Java方法的重载："><a href="#Java方法的重载：" class="headerlink" title="Java方法的重载："></a>Java方法的重载：</h3><p>方法重载：一个类的两个方法拥有相同的名字，但是有不同的参数列表。<br>Java编译器根据方法签名判断哪个方法应该被调用。 </p>
+<hr>
+<h3 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h3><p>当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，但构造方法没有返回值。 </p>
+<p>通常会使用构造方法给一个类的实例变量赋初值，或者执行其它必要的步骤来创建一个完整的对象。 </p>
+<hr>
+<h2 id="Java-Scanner类"><a href="#Java-Scanner类" class="headerlink" title="Java Scanner类"></a>Java Scanner类</h2><p>创建Scanner 对象的基本语法：<br><code>Scanner scan = new Scanner(System.in) //(调用system.in是控制台输入调用)</code><br>并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">2.4.2022Java学习日志</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-04 21:41:58 / 修改时间：21:42:39" itemprop="dateCreated datePublished" datetime="2022-02-04T21:41:58+08:00">2022-02-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2-4-2022-JAVA学习日志"><a href="#2-4-2022-JAVA学习日志" class="headerlink" title="2.4.2022 JAVA学习日志"></a>2.4.2022 JAVA学习日志</h1><hr>
+<p>Markdown表格的书写方式<br>|A｜B｜C｜D|</p>
+<hr>
+<h2 id="1-Java-增强-for-循环"><a href="#1-Java-增强-for-循环" class="headerlink" title="1. Java 增强 for 循环"></a>1. Java 增强 for 循环</h2><p>Java5 引入了一种主要用于数组的增强型 for 循环。</p>
+<p>Java 增强 for 循环语法格式如下:</p>
+<pre><code>for(声明语句 : 表达式) &#123; //代码句子 &#125;
+</code></pre>
+<h3 id="声明语句：声明新的局部变量，该变量的类型必须和数组元素的类型匹配。"><a href="#声明语句：声明新的局部变量，该变量的类型必须和数组元素的类型匹配。" class="headerlink" title="声明语句：声明新的局部变量，该变量的类型必须和数组元素的类型匹配。"></a>声明语句：声明新的局部变量，该变量的类型必须和数组元素的类型匹配。</h3><p>其作用域限定在循环语句块，其值与此时数组元素的值相等。 </p>
+<h3 id="表达式：表达式是要访问的数组名，或者是返回值为数组的方法。"><a href="#表达式：表达式是要访问的数组名，或者是返回值为数组的方法。" class="headerlink" title="表达式：表达式是要访问的数组名，或者是返回值为数组的方法。"></a>表达式：表达式是要访问的数组名，或者是返回值为数组的方法。</h3><hr>
+<h3 id="JAVA-Number类"><a href="#JAVA-Number类" class="headerlink" title="JAVA Number类"></a>JAVA Number类</h3><h3 id="通常使用内置数据类型，如：byte、int、long、double等"><a href="#通常使用内置数据类型，如：byte、int、long、double等" class="headerlink" title="通常使用内置数据类型，如：byte、int、long、double等"></a>通常使用内置数据类型，如：byte、int、long、double等</h3><p>在实际开发过程中，我们经常会遇到需要使用对象，而不是内置数据类型的情形。为了解决这个问题，Java 语言为每一个内置数据类型提供了对应的包装类。<br>所有的包装类（Integer、Long、Byte、Double、Float、Short）都是抽象类 Number 的子类。<br><strong>（即java包装类的声明就是Java基本类型的首写字母大写方式)</strong></p>
+<hr>
+<h3 id="Number-amp-Math-类方法"><a href="#Number-amp-Math-类方法" class="headerlink" title="Number &amp; Math 类方法"></a>Number &amp; Math 类方法</h3><p>下面的表中列出的是 Number &amp; Math 类常用的一些方法：<br>序号方法与描述</p>
+<h4 id="1-xxxValue"><a href="#1-xxxValue" class="headerlink" title="1. xxxValue()"></a>1. xxxValue()</h4><p>将 Number 对象转换为xxx数据类型的值并返回。</p>
+<h4 id="2-compareTo"><a href="#2-compareTo" class="headerlink" title="2.compareTo()"></a>2.compareTo()</h4><p>将number对象与参数比较。</p>
+<h4 id="3-equals"><a href="#3-equals" class="headerlink" title="3.equals()"></a>3.equals()</h4><p>判断number对象是否与参数相等。</p>
+<h4 id="4-valueOf"><a href="#4-valueOf" class="headerlink" title="4.valueOf()"></a>4.valueOf()</h4><p>返回一个 Number 对象指定的内置数据类型</p>
+<h4 id="5-toString"><a href="#5-toString" class="headerlink" title="5.toString()"></a>5.toString()</h4><p>以字符串形式返回值。</p>
+<h4 id="6-parseInt"><a href="#6-parseInt" class="headerlink" title="6.parseInt()"></a>6.parseInt()</h4><p>将字符串解析为int类型。</p>
+<h4 id="7-abs"><a href="#7-abs" class="headerlink" title="7.abs()"></a>7.abs()</h4><p>返回参数的绝对值。</p>
+<h4 id="8-ceil"><a href="#8-ceil" class="headerlink" title="8.ceil()"></a>8.ceil()</h4><p>返回大于等于( &gt;= )给定参数的的最小整数，类型为双精度浮点型。</p>
+<h4 id="9-floor"><a href="#9-floor" class="headerlink" title="9.floor()"></a>9.floor()</h4><p>返回小于等于（&lt;=）给定参数的最大整数 。</p>
+<h4 id="10-rint"><a href="#10-rint" class="headerlink" title="10.rint()"></a>10.rint()</h4><p>返回与参数最接近的整数。返回类型为double。</p>
+<p>####11.round()<br>它表示四舍五入，算法为 Math.floor(x+0.5)，即将原来的数字加上 0.5 后再向下取整，所以，Math.round(11.5) 的结果为12，Math.round(-11.5) 的结果为-11。</p>
+<hr>
+<h3 id="String-类是不可改变的解析"><a href="#String-类是不可改变的解析" class="headerlink" title="String 类是不可改变的解析"></a>String 类是不可改变的解析</h3><p>实例中的 s 只是一个 String 对象的引用，并不是对象本身，当执行 s = “Runoob”; 创建了一个新的对象 “Runoob”，而原来的 “Google” 还存在于内存中。</p>
+<h2 id="Java：String、StringBuffer-和-StringBuilder-的区别"><a href="#Java：String、StringBuffer-和-StringBuilder-的区别" class="headerlink" title="Java：String、StringBuffer 和 StringBuilder 的区别"></a><strong>Java：String、StringBuffer 和 StringBuilder 的区别</strong></h2><ul>
+<li>String：字符串常量，字符串长度不可变。Java中String是immutable（不可变）的。用于存放字符的数组被声明为final的，因此只能赋值一次，不可再更改。</li>
+</ul>
+<ul>
+<li>StringBuffer：字符串变量（Synchronized，即线程安全）。如果要频繁对字符串内容进行修改，出于效率考虑最好使用 StringBuffer，如果想转成 String 类型，可以调用 StringBuffer 的 toString() 方法。Java.lang.StringBuffer 线程安全的可变字符序列。在任意时间点上它都包含某种特定的字符序列，但通过某些方法调用可以改变该序列的长度和内容。可将字符串缓冲区安全地用于多个线程。</li>
+<li>StringBuilder：字符串变量（非线程安全）。在内部 StringBuilder 对象被当作是一个包含字符序列的变长数组。</li>
+</ul>
+<p>基本原则：</p>
+<pre><code>•    如果要操作少量的数据用 String ；
+•    单线程操作大量数据用StringBuilder ；（多数情况下使用的StringBuilder方便String类的操作）
+•    多线程操作大量数据，用StringBuffer。(需要线程安全的时候使用)
+</code></pre>
+<hr>
+<h2 id="JAVA数组"><a href="#JAVA数组" class="headerlink" title="JAVA数组"></a>JAVA数组</h2><h4 id="数组的使用："><a href="#数组的使用：" class="headerlink" title="数组的使用："></a>数组的使用：</h4><ol>
+<li><p>声明数组变量<br> dataType[] arrayRefVar; // 首选的方法</p>
+</li>
+<li><p>创建数组<br>Java语言使用new操作符来创建数组，语法如下：<br><code> arrayRefVar = new dataType[arraySize]; </code></p>
+</li>
+</ol>
+<p><strong>数组变量的声明，和创建数组可以用一条语句完成，如下所示：</strong><br><code>dataType[] arrayRefVar = new dataType[arraySize];</code></p>
+<p>另外，你还可以使用如下的方式创建数组。<br><code>dataType[] arrayRefVar = &#123;value0, value1, ..., valuek&#125;;</code><br>数组的元素是通过索引访问的。数组索引从 0 开始，所以索引值从 0 到 arrayRefVar.length-1。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">JAVA运算符</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-04 21:24:47 / 修改时间：21:26:01" itemprop="dateCreated datePublished" datetime="2022-02-04T21:24:47+08:00">2022-02-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>916</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
+<p>| 操作符 | 描述 | 例子 |</p>
+<p>| ＆（与）| 如果相对应位都是1，则结果为1，否则为0 |A＆B）得到12，即0000 1100 |</p>
+<p>|（或）| 如果相对应位都是 0，则结果为 0，否则为 1 |（A | B）得到61，即 0011 1101 |</p>
+<p>| ^（非） |    如果相对应位值相同，则结果为0，否则为1 | （A ^ B）得到49，即 0011 0001 |</p>
+<p>| 〜（取反) | 按位取反运算符翻转操作数的每一位，即0变成1，1变成0。 | （〜A）得到-61，即1100 0011 |</p>
+<p>| &lt;&lt; | 按位左移运算符。左操作数按位左移右操作数指定的位数。|     A &lt;&lt; 2得到240，即 1111 0000 |</p>
+<p>| &gt;&gt; |    按位右移运算符。左操作数按位右移右操作数指定的位数。 | A &gt;&gt; 2得到15即 1111 |</p>
+<p>| &gt;&gt;&gt; | 按位右移补零操作符。左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充。 |     A&gt;&gt;&gt;2得到15即0000 1111 |</p>
+<hr>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假<br>| 操作符  |    描述 | 例子 |<br>|&amp;&amp; | 称为逻辑与运算符。当且仅当两个操作数都为真，条件才为真。| </p>
+<p>|（A &amp;&amp; B）为假。 | 称为逻辑或操作符。如果任何两个操作数任何一个为真，条件为真。     |</p>
+<p>| （A | | B）为真。 |</p>
+<p>| ！ | 称为逻辑非运算符。用来反转操作数的逻辑状态。如果条件为true，则逻辑非运算符将得到false。 |</p>
+<h2 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h2><p>** 条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。 **</p>
+<p>variable x = (expression) ? value if true : value if false</p>
+<hr>
+<h2 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h2><p>该运算符用于操作对象实例，检查该对象是否是一个特定类型（类类型或接口类型）。</p>
+<p>instanceof运算符使用格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( Object reference variable ) instanceof  (class/interface type)</span><br></pre></td></tr></table></figure>
+
+<p>子类是父类的类型，但父类不是子类的类型。</p>
+<p>子类的实例可以声明为父类型，但父类的实例不能声明为子类型。</p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -820,7 +1167,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -870,13 +1217,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">16k</span>
+    <span title="站点总字数">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">15 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
