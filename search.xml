@@ -817,4 +817,101 @@
         <tag>Blog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Java HashSet|HashMap</title>
+    <url>/2022/02/15/Java-HashSet-HashMap/</url>
+    <content><![CDATA[<h1 id="Java-HashSet"><a href="#Java-HashSet" class="headerlink" title="Java HashSet"></a>Java HashSet</h1><p>HashSet 基于 HashMap 来实现的，是一个不允许有重复元素的集合。</p>
+<p>HashSet 允许有 null 值。<br>HashSet 是无序的，即不会记录插入的顺序。</p>
+<p>HashSet 不是线程安全的， 如果多个线程尝试同时修改 HashSet，则最终结果是不确定的。 您必须在多线程访问时显式同步对 HashSet 的并发访问。 </p>
+<h2 id="主要特点：-无序、可为null、不可重复、多线程不安全"><a href="#主要特点：-无序、可为null、不可重复、多线程不安全" class="headerlink" title="主要特点： 无序、可为null、不可重复、多线程不安全"></a>主要特点： 无序、可为null、不可重复、多线程不安全</h2><h1 id="Java-HashMap"><a href="#Java-HashMap" class="headerlink" title="Java HashMap"></a>Java HashMap</h1><p>HashMap 是一个散列表，它存储的内容是键值对(key-value)映射。<br>HashMap 实现了 Map 接口，根据键的 HashCode 值存储数据，具有很快的访问速度，最多允许一条记录的键为 null，不支持线程同步。<br>HashMap 是无序的，即不会记录插入的顺序。</p>
+<h3 id="Java-HashMap的常用方法"><a href="#Java-HashMap的常用方法" class="headerlink" title="Java HashMap的常用方法"></a>Java HashMap的常用方法</h3><ol>
+<li><code>clear()</code>  删除 hashMap 中的所有键/值对 </li>
+<li><code> clone()</code> 复制一份 hashMap</li>
+<li><code>isEmpty()</code> 判断 hashMap 是否为空</li>
+<li><code>size()</code>  计算 hashMap 中键/值对的数量</li>
+<li><code>put()</code>  将键/值对添加到 hashMap 中</li>
+<li><code>putAll()</code>  将所有键/值对添加到 hashMap 中</li>
+<li><code>putIfAbsent()</code>  如果 hashMap 中不存在指定的键，则将指定的键/值对插入到 hashMap 中</li>
+<li><code>remove()</code> 删除 hashMap 中指定键 key 的映射关系</li>
+<li><code>containsKey()</code> 检查 hashMap 中是否存在指定的 key 对应的映射关系。</li>
+<li><code>containsValue()</code>  检查 hashMap 中是否存在指定的 value 对应的映射关系</li>
+<li><code>replace()</code> 替换 hashMap 中是指定的 key 对应的 value。</li>
+<li><code>replaceAll()</code>  将 hashMap 中的所有映射关系替换成给定的函数所执行的结果</li>
+<li><code>getOrDefault()</code> 获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值</li>
+<li><code>forEach()</code>  对 hashMap 中的每个映射执行指定的操作。</li>
+<li><code>enstrySet()</code>  返回 hashMap 中所有映射项的集合集合视图</li>
+<li><code>keySet()</code>  返回 hashMap 中所有 key 组成的集合视图</li>
+<li><code>values()</code>  返回 hashMap 中存在的所有 value 值</li>
+<li><code>merge()</code> 添加键值对到 hashMap 中</li>
+<li><code>compute()</code> 对 hashMap 中指定 key 的值进行重新计算</li>
+<li><code>computeifAbsent()</code> 对 hashMap 中指定 key 的值进行重新计算，如果不存在这个 key，则添加到 hasMap 中</li>
+<li><code>computeifPresent()</code> 对 hashMap 中指定 key 的值进行重新计算，前提是该 key 存在于 hashMap 中</li>
+</ol>
+<hr>
+<h3 id="有关于-map-entrySet-和-keySet"><a href="#有关于-map-entrySet-和-keySet" class="headerlink" title="有关于 map.entrySet() 和 keySet():"></a>有关于 map.entrySet() 和 keySet():</h3><ol>
+<li><p>如果遍历 hashMap() 时 entrySet() 方法是将 key 和 value 全部取出来,所以性能开销是可以预计的, 而<code> keySet()</code> 方法进行遍历的时候是根据取出的 key 值去查询对应的 value 值, 所以如果 key 值是比较简单的结构(如 1,2,3…)的话性能消耗上是比 <code>entrySet()</code> 方法低, 但随着 key 值得复杂度提高 <code>entrySet()</code> 的优势就会显露出来。</p>
+</li>
+<li><p>综合比较在只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法, 在遍历 key-value 的时候使用 <code>entrySet()</code> 是比较合理的选择。</p>
+</li>
+<li><p>如果遍历 TreeMap 的时候, 不同于 HashMap 在遍历 ThreeMap 的 key-value 时候务必使用 <code>entrySet()</code> 它要远远高于其他两个的性能, 同样只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法对于 TreeMap 也同样适用。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java列表｜链表</title>
+    <url>/2022/02/15/Java%E5%88%97%E8%A1%A8%EF%BD%9C%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="Java-ArrayList-数组列表"><a href="#Java-ArrayList-数组列表" class="headerlink" title="Java ArrayList (数组列表)"></a>Java ArrayList (数组列表)</h1><p>ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。</p>
+<p>ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：<br>`import java.util.ArrayList; // 引入 ArrayList 类</p>
+<p>ArrayList<E> objectName =new ArrayList&lt;&gt;();　 // 初始化`</p>
+<hr>
+<ol>
+<li><p>添加元素<br>ArrayList 类提供了很多有用的方法，添加元素到 ArrayList 可以使用 add() 方法:</p>
+</li>
+<li><p>访问元素<br>访问 ArrayList 中的元素可以使用 get() 方法：</p>
+</li>
+<li><p>修改元素<br>如果要修改 ArrayList 中的元素可以使用 set() 方法：</p>
+</li>
+<li><p>删除元素<br>如果要删除 ArrayList 中的元素可以使用 remove() 方法：</p>
+</li>
+<li><p>计算大小<br>如果要计算 ArrayList 中的元素数量可以使用 size() 方法：</p>
+</li>
+<li><p>ArrayList 排序<br>Collections 类也是一个非常有用的类，位于 java.util 包中，提供的 sort() 方法可以对字符或数字列表进行排序。</p>
+</li>
+</ol>
+<hr>
+<h1 id="Java-LinkedList-链表"><a href="#Java-LinkedList-链表" class="headerlink" title="Java LinkedList (链表)"></a>Java LinkedList (链表)</h1><p>链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的地址。  </p>
+<p>Java LinkedList（链表） 类似于 ArrayList，是一种常用的数据容器。 </p>
+<p>与 ArrayList 相比，LinkedList 的增加和删除的操作效率更高，而查找和修改的操作效率较低。</p>
+<p>以下情况使用 ArrayList :</p>
+<pre><code>•    频繁访问列表中的某一个元素。
+•    只需要在列表末尾进行添加和删除元素操作。
+</code></pre>
+<p>以下情况使用 LinkedList :</p>
+<pre><code>•    你需要通过循环迭代来访问列表中的某些元素。
+•    需要频繁的在列表开头、中间、末尾等位置进行添加和删除元素操作。
+•    
+</code></pre>
+<p>LinkedList 类位于 java.util 包中，使用前需要引入它，语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 引入 LinkedList 类</span><br><span class="line">import java.util.LinkedList; </span><br><span class="line"></span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList&lt;E&gt;();   // 普通创建方法</span><br><span class="line">或者</span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList(Collection&lt;? extends E&gt; c); // 使用集合创建链表`</span><br></pre></td></tr></table></figure>
+
+<p>在列表开头添加元素：<br><code>sites.addFirst(&quot;Wiki&quot;);</code></p>
+<p>在列表结尾添加元素：<br><code>sites.addLast(&quot;Wiki&quot;); </code><br>在列表开头移除元素： <code>sites.removeFirst();</code></p>
+<p>在列表结尾移除元素： <code>sites.removeLast();</code></p>
+<p>获取列表开头的元素：// 使用 <code>getFirst()</code> 获取头部元素</p>
+<p>获取列表结尾的元素：// 使用 <code>getLast()</code> 获取尾部元素</p>
+]]></content>
+      <categories>
+        <category>java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
 </search>

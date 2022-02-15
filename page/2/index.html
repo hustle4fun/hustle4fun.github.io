@@ -129,12 +129,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">20</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -187,6 +187,237 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/07/Java%E7%BB%A7%E6%89%BF/" class="post-title-link" itemprop="url">Java继承</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-07 21:25:41 / 修改时间：21:26:23" itemprop="dateCreated datePublished" datetime="2022-02-07T21:25:41+08:00">2022-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>693</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h1><hr>
+<h2 id="1-为什么使用继承"><a href="#1-为什么使用继承" class="headerlink" title="1. 为什么使用继承"></a>1. 为什么使用继承</h2><p>从已有的类派生出新的类，称为继承。<br>在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。<br>因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。<br>继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。 </p>
+<hr>
+<h2 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h2><pre><code>•    子类拥有父类非 private 的属性、方法。
+•    子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
+•    子类可以用自己的方式实现父类的方法。
+•    Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
+•    提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
+</code></pre>
+<hr>
+<h2 id="继承关键字-extends-和-implements"><a href="#继承关键字-extends-和-implements" class="headerlink" title="继承关键字   extends 和 implements"></a>继承关键字   extends 和 implements</h2><h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
+<h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
+<h2 id="super-与-this-关键字"><a href="#super-与-this-关键字" class="headerlink" title="super 与 this 关键字"></a>super 与 this 关键字</h2><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
+<h3 id="this关键字：指向自己的引用"><a href="#this关键字：指向自己的引用" class="headerlink" title="this关键字：指向自己的引用"></a>this关键字：指向自己的引用</h3><h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写：</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/" class="post-title-link" itemprop="url">Java的流Stream、文件和IO</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-06 21:02:01 / 修改时间：21:09:25" itemprop="dateCreated datePublished" datetime="2022-02-06T21:02:01+08:00">2022-02-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java的流Stream、文件和IO"><a href="#Java的流Stream、文件和IO" class="headerlink" title="Java的流Stream、文件和IO"></a>Java的流Stream、文件和IO</h1><hr>
+<p>流可以理解为一个数据的序列。输入流表示从一个源读取数据，输出流表示向一个目标写数据。 </p>
+<hr>
+<h2 id="读取控制台输入"><a href="#读取控制台输入" class="headerlink" title="读取控制台输入"></a>读取控制台输入</h2><p>Java 的控制台输入由 System.in 完成。<br>为了获得一个绑定到控制台的字符流，你可以把 System.in 包装在一个 BufferedReader 对象中来创建一个字符流。<br>创建BufferedReader的基本语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedRreader name = new BufferedReader(new inputStreamReader(System.in)) //System.in控制着控制台的输入。将System.in包装在BufferedReader之中</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="读取的方法"><a href="#读取的方法" class="headerlink" title="读取的方法:"></a>读取的方法:</h2><ol>
+<li> 使用<code>read()</code> 方法从控制台获取一个字符</li>
+<li>使用<code>readLine() </code> 方法从控制台之中获取一个字符串</li>
+</ol>
+<hr>
+<h2 id="从控制台输出"><a href="#从控制台输出" class="headerlink" title="从控制台输出"></a>从控制台输出</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print()</span><br><span class="line">Printf()</span><br><span class="line">println()</span><br><span class="line">System.out.write();</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="/Users/loverboy98/Documents/Blog/source/_posts/1.png" alt="读取文件"></p>
+<hr>
+<h2 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h2><p>该流用于从文件读取数据，它的对象可以用关键字 new 来创建。<br>构造方法：</p>
+<ol>
+<li><p>字符串类型的文件名来创建一个输入流对象来读取文件：<br><code>InputStream f = new FileInputStream(&quot;C:/java/hello&quot;);</code></p>
+</li>
+<li><p>使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File f = new File(&quot;C:/java/hello&quot;); </span><br><span class="line">InputStream in = new FileInputStream(f);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="对创建对象可以使用的方法："><a href="#对创建对象可以使用的方法：" class="headerlink" title="对创建对象可以使用的方法："></a>对创建对象可以使用的方法：</h3><ol>
+<li><p><code>public void close() throws IOException&#123;&#125;</code><br>关闭此文件输入流并释放与此流有关的所有系统资源。抛出IOException异常。</p>
+</li>
+<li><p><code>protected void finalize()throws IOException &#123;&#125; </code><br>这个方法清除与该文件的连接。确保在不再引用文件输入流时调用其 close 方法。抛出IOException异常。</p>
+</li>
+<li><p><code>public int read(int r)throws IOException&#123;&#125;</code><br>这个方法从 InputStream 对象读取指定字节的数据。返回为整数值。返回下一字节数据，如果已经到结尾则返回-1。</p>
+</li>
+<li><p><code>public int read(byte[] r) throws IOException&#123;&#125;</code><br>这个方法从输入流读取r.length长度的字节。返回读取的字节数。如果是文件结尾则返回-1。</p>
+</li>
+</ol>
+<ol start="5">
+<li><code>public int available() throws IOException&#123;&#125; </code><br>返回下一次对此输入流调用的方法可以不受阻塞地从此输入流读取的字节数。返回一个整数值。</li>
+</ol>
+<h2 id="FileOutPutStream"><a href="#FileOutPutStream" class="headerlink" title="FileOutPutStream"></a>FileOutPutStream</h2><p> 创建一个文件并向文件中写入数据 如果该流在打开文件进行输出前，目标文件不存在，那么该流会创建该文件。<br>两种创建输出流对象的方法：</p>
+<ol>
+<li><code> OutputStream name = new FileOutputStream(“locate”)</code></li>
+<li><code> File file =new File(“Locate”) OutputStream fOut = new FileOutputStream(f)</code></li>
+</ol>
+<hr>
+<h2 id="Java中的目录"><a href="#Java中的目录" class="headerlink" title="Java中的目录"></a>Java中的目录</h2><h3 id="创建目录："><a href="#创建目录：" class="headerlink" title="创建目录："></a>创建目录：</h3><p>File类中有两个方法可以用来创建文件夹：</p>
+<ul>
+<li><p>mkdir( )方法创建一个文件夹，成功则返回true，失败则返回false。失败表明File对象指定的路径已经存在，或者由于整个路径还不存在，该文件夹不能被创建。</p>
+</li>
+<li><p>mkdirs()方法创建一个文件夹和它的所有父文件夹。</p>
+</li>
+</ul>
+<hr>
+<h3 id="读取目录"><a href="#读取目录" class="headerlink" title="读取目录"></a>读取目录</h3><p>一个目录其实就是一个 File 对象，它包含其他文件和文件夹。<br>如果创建一个 File 对象并且它是一个目录，那么调用 <code>isDirectory() </code>方法会返回 true。 </p>
+<p>可以通过调用该对象上的  <code>list() </code> 方法，来提取它包含的文件和文件夹的列表。 </p>
+<hr>
+<h2 id="删除目录或文件"><a href="#删除目录或文件" class="headerlink" title="删除目录或文件"></a>删除目录或文件</h2><p>删除文件可以使用 java.io.File.delete() 方法。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1167,14 +1398,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1217,13 +1448,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">22k</span>
+    <span title="站点总字数">24k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
