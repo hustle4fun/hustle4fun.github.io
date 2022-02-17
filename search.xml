@@ -31,6 +31,89 @@
       </tags>
   </entry>
   <entry>
+    <title>2.2.2022JAVA学习日志</title>
+    <url>/2022/02/02/2-2-2022JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<hr>
+<h2 id="过年中间空闲了3天-放假-哈哈-现在重新整理学习的节奏激情"><a href="#过年中间空闲了3天-放假-哈哈-现在重新整理学习的节奏激情" class="headerlink" title="过年中间空闲了3天 放假 哈哈 现在重新整理学习的节奏激情"></a>过年中间空闲了3天 放假 哈哈 现在重新整理学习的节奏激情</h2><hr>
+<h2 id="2-2-2022-学习日志"><a href="#2-2-2022-学习日志" class="headerlink" title="2.2.2022 学习日志"></a>2.2.2022 学习日志</h2><h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>1.JAVA是大小写敏感的</p>
+<ol start="2">
+<li><p>类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass </p>
+</li>
+<li><p>方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</p>
+</li>
+</ol>
+<p>4.主方法入口：所有的 Java 程序由 public static void main(String[] args) 方法开始执行</p>
+<hr>
+<p>#访问实例变量和方法</p>
+<p> 通过已创建的对象来访问成员变量和成员方法，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 实例化对象 */</span><br><span class="line">Object referenceVariable = new Constructor();</span><br><span class="line">/* 访问类中的变量 */</span><br><span class="line">referenceVariable.variableName; (变量的使用 对象.变量)</span><br><span class="line">/* 访问类中的方法 */</span><br><span class="line">referenceVariable.methodName(); (方法的使用 对象.方法)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="JAVA基本数据类型"><a href="#JAVA基本数据类型" class="headerlink" title="JAVA基本数据类型"></a>JAVA基本数据类型</h1><h2 id="JAVA常量"><a href="#JAVA常量" class="headerlink" title="JAVA常量"></a>JAVA常量</h2><p>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似</p>
+<hr>
+<h3 id="char-a-‘S’-char-后面赋值要用单引号，因为是字符型数据类型"><a href="#char-a-‘S’-char-后面赋值要用单引号，因为是字符型数据类型" class="headerlink" title="char a = ‘S’; char 后面赋值要用单引号，因为是字符型数据类型"></a>char a = ‘S’; char 后面赋值要用单引号，因为是字符型数据类型</h3><h3 id="String-a-“I-AM-FINE”-String-后面赋值要用双引号，因为是字符串数据类型"><a href="#String-a-“I-AM-FINE”-String-后面赋值要用双引号，因为是字符串数据类型" class="headerlink" title="String a = “I AM FINE”; String 后面赋值要用双引号，因为是字符串数据类型"></a>String a = “I AM FINE”; String 后面赋值要用双引号，因为是字符串数据类型</h3><p>（单字符char 用 ‘’ , 字符串String 用 “”）</p>
+<hr>
+<h1 id="JAVA变量类型"><a href="#JAVA变量类型" class="headerlink" title="JAVA变量类型"></a>JAVA变量类型</h1><p>Java语言支持的变量类型有：</p>
+<pre><code>* 类变量：独立于方法之外的变量，用 static 修饰。
+* 实例变量：独立于方法之外的变量，不过没有 static 修饰。
+* 局部变量：类的方法中的变量。
+</code></pre>
+<p>实例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Variable&#123;</span><br><span class="line">    static int allClicks=0;    // 类变量</span><br><span class="line"> </span><br><span class="line">    String str=&quot;hello world&quot;;  // 实例变量</span><br><span class="line"> </span><br><span class="line">    public void method()&#123;</span><br><span class="line"> </span><br><span class="line">        int i =0;  // 局部变量 （静态变量）</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>** 局部变量没有默认值，所以局部变量被声明后，必须经过初始化，才可以使用。 如果变量没有初始化，所以在编译时会出错**</p>
+<hr>
+<h2 id="Java-中静态变量和实例变量区别"><a href="#Java-中静态变量和实例变量区别" class="headerlink" title="Java 中静态变量和实例变量区别"></a>Java 中静态变量和实例变量区别</h2><pre><code>- 静态变量属于类，该类不生产对象，通过类名就可以调用静态变量。
+- 实例变量属于该类的对象，必须产生该类对象，才能调用实例变量。
+</code></pre>
+<p>在程序运行时的区别：</p>
+<pre><code>- 实例变量属于某个对象的属性，必须创建了实例对象，其中的实例变量才会被分配空间，才能使用这个实例变量。
+- 静态变量不属于某个实例对象，而是属于类，所以也称为类变量，只要程序加载了类的字节码，不用创建任何实例对象，静态变量就会被分配空间，静态变量就可以被使用了。 
+</code></pre>
+<p>总之，实例变量必须创建对象后才可以通过这个对象来使用，静态变量则可以直接使用类名来引用。</p>
+<hr>
+<h1 id="JAVA修饰符"><a href="#JAVA修饰符" class="headerlink" title="JAVA修饰符"></a>JAVA修饰符</h1><p>** 访问控制修饰符 **<br>Java中，可以使用访问控制符来保护对类、变量、方法和构造方法的访问。Java 支持 4 种不同的访问权限。</p>
+<pre><code>- default (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。
+
+- private : 在同一类内可见。使用对象：变量、方法。 注意：不能修饰类（外部类）
+
+- public : 对所有类可见。使用对象：类、接口、变量、方法
+
+- protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。
+</code></pre>
+<hr>
+<h2 id="私有访问修饰符-private"><a href="#私有访问修饰符-private" class="headerlink" title="** 私有访问修饰符-private **"></a>** 私有访问修饰符-private **</h2><p>私有访问修饰符是最严格的访问级别，所以被声明为 private 的方法、变量和构造方法只能被所属类访问， ** 并且类和接口不能声明为 private。 **</p>
+<p>声明为私有访问类型的变量只能通过类中公共的 getter 方法被外部类访问。</p>
+<p>** Private 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。 **</p>
+<hr>
+<h3 id="JAVA的子类"><a href="#JAVA的子类" class="headerlink" title="JAVA的子类"></a>JAVA的子类</h3><p>子类通过extend来继承父类的方法以及变量   Class son extends father;</p>
+<h3 id="JAVA的基类、父类"><a href="#JAVA的基类、父类" class="headerlink" title="JAVA的基类、父类"></a>JAVA的基类、父类</h3><h2 id="访问控制和继承"><a href="#访问控制和继承" class="headerlink" title="访问控制和继承"></a>访问控制和继承</h2><p>请注意以下方法继承的规则：</p>
+<pre><code>- 父类中声明为 public 的方法在子类中也必须为 public。
+
+- 父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public，不能声明为 private。
+
+- 父类中声明为 private 的方法，不能够被子类继承。
+</code></pre>
+<hr>
+<h1 id="非访问修饰符"><a href="#非访问修饰符" class="headerlink" title="非访问修饰符"></a>非访问修饰符</h1><ul>
+<li><p>static 修饰符，用来修饰类方法和类变量。</p>
+</li>
+<li><p>final 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。</p>
+</li>
+<li><p>abstract 修饰符，用来创建抽象类和抽象方法。</p>
+</li>
+<li><p>synchronized 和 volatile 修饰符，主要用于线程的编程。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JAVA学习日志</category>
+      </categories>
+      <tags>
+        <tag>JAVA学习日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.29JAVA学习日志</title>
     <url>/2022/02/02/1-29JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h2 id="1-29学习日志"><a href="#1-29学习日志" class="headerlink" title="1.29学习日志"></a>1.29学习日志</h2><h2 id="Hexo博客在写Hexo-Deploy之后GitHub界面没有更新"><a href="#Hexo博客在写Hexo-Deploy之后GitHub界面没有更新" class="headerlink" title="Hexo博客在写Hexo Deploy之后GitHub界面没有更新"></a>Hexo博客在写Hexo Deploy之后GitHub界面没有更新</h2><h3 id="1-通过"><a href="#1-通过" class="headerlink" title="1. 通过"></a>1. 通过</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">通过 hexo clean清理hexo的缓存</span><br><span class="line">通过 hexo g</span><br><span class="line">Hexo d 之后同步</span><br></pre></td></tr></table></figure>
@@ -118,6 +201,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客完善</title>
+    <url>/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/</url>
+    <content><![CDATA[<h1 id="Hexo-博客的完善"><a href="#Hexo-博客的完善" class="headerlink" title="Hexo 博客的完善"></a>Hexo 博客的完善</h1><hr>
+<h2 id="对于Markdown中的图片上传方法："><a href="#对于Markdown中的图片上传方法：" class="headerlink" title="对于Markdown中的图片上传方法："></a>对于Markdown中的图片上传方法：</h2><p>格式   <code>![图片描述]（图片的地址网络、本地）</code></p>
+<ol>
+<li>使用本地地址在Markdown日志编辑的过程中静态上传，但是对于电脑经常更换，不稳定的环境 这种方法不是最好的</li>
+<li>使用网页中的图片地址 </li>
+</ol>
+<ol start="3">
+<li>自动连接 </li>
+</ol>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。</p>
+<hr>
+<h2 id="对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。"><a href="#对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。" class="headerlink" title="对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。"></a>对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。</h2><p>原因是没有配置相应的页面 “categories” “tags” “about” </p>
+<p>因此解决方法便是在博客配置中增加相应页面</p>
+<ul>
+<li><p>“分类的处理” :<br><code>Hexo new page categories </code><br>配置其中内容<code>“ type ：”categories”</code></p>
+</li>
+<li><p>“关于”的处理<br><code>Hexo new page “about”</code><br>配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Categories: </span><br><span class="line">	- 日志</span><br><span class="line">	- 二级目录</span><br><span class="line">tags: </span><br><span class="line">	- 关于</span><br></pre></td></tr></table></figure></li>
+<li><p>“标签的处理”<br><code>Hexo new page tags</code><br>配置添加： <code> type: “tags”</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="Hexo-博客添加搜索功能"><a href="#Hexo-博客添加搜索功能" class="headerlink" title="Hexo 博客添加搜索功能"></a>Hexo 博客添加搜索功能</h2><ol>
+<li><p>在博客更目录下，执行命令<br><code> npm install Hexo-generator-searchd —save</code> </p>
+</li>
+<li><p>修改站点配置文件 在_config.yml中添加（原本没有设置）配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#search</span><br><span class="line">Search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure></li>
+<li><p>修改主题配置文件<br>修改themes_config.yml配置文件 用’/’搜索local_search,修改enable为true</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_serach::</span><br><span class="line">	enable: true</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.6.2022Java学习日志</title>
     <url>/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
@@ -163,44 +287,135 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客完善</title>
-    <url>/2022/02/07/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84/</url>
-    <content><![CDATA[<h1 id="Hexo-博客的完善"><a href="#Hexo-博客的完善" class="headerlink" title="Hexo 博客的完善"></a>Hexo 博客的完善</h1><hr>
-<h2 id="对于Markdown中的图片上传方法："><a href="#对于Markdown中的图片上传方法：" class="headerlink" title="对于Markdown中的图片上传方法："></a>对于Markdown中的图片上传方法：</h2><p>格式   <code>![图片描述]（图片的地址网络、本地）</code></p>
-<ol>
-<li>使用本地地址在Markdown日志编辑的过程中静态上传，但是对于电脑经常更换，不稳定的环境 这种方法不是最好的</li>
-<li>使用网页中的图片地址 </li>
-</ol>
-<ol start="3">
-<li>自动连接 </li>
-</ol>
-<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。</p>
+    <title>JAVA运算符</title>
+    <url>/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
+<p>| 操作符 | 描述 | 例子 |</p>
+<p>| ＆（与）| 如果相对应位都是1，则结果为1，否则为0 |A＆B）得到12，即0000 1100 |</p>
+<p>|（或）| 如果相对应位都是 0，则结果为 0，否则为 1 |（A | B）得到61，即 0011 1101 |</p>
+<p>| ^（非） |    如果相对应位值相同，则结果为0，否则为1 | （A ^ B）得到49，即 0011 0001 |</p>
+<p>| 〜（取反) | 按位取反运算符翻转操作数的每一位，即0变成1，1变成0。 | （〜A）得到-61，即1100 0011 |</p>
+<p>| &lt;&lt; | 按位左移运算符。左操作数按位左移右操作数指定的位数。|     A &lt;&lt; 2得到240，即 1111 0000 |</p>
+<p>| &gt;&gt; |    按位右移运算符。左操作数按位右移右操作数指定的位数。 | A &gt;&gt; 2得到15即 1111 |</p>
+<p>| &gt;&gt;&gt; | 按位右移补零操作符。左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充。 |     A&gt;&gt;&gt;2得到15即0000 1111 |</p>
 <hr>
-<h2 id="对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。"><a href="#对于博客中的侧边框中-“分类”-“标签”-“关于”-四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot-get-XXX）。" class="headerlink" title="对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。"></a>对于博客中的侧边框中 “分类” “标签” “关于” 四个按钮在刚配置Next主题之后，没有系统的配置其中的文件，因此会出现“404”的网页错误（cannot get XXX）。</h2><p>原因是没有配置相应的页面 “categories” “tags” “about” </p>
-<p>因此解决方法便是在博客配置中增加相应页面</p>
-<ul>
-<li><p>“分类的处理” :<br><code>Hexo new page categories </code><br>配置其中内容<code>“ type ：”categories”</code></p>
-</li>
-<li><p>“关于”的处理<br><code>Hexo new page “about”</code><br>配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Categories: </span><br><span class="line">	- 日志</span><br><span class="line">	- 二级目录</span><br><span class="line">tags: </span><br><span class="line">	- 关于</span><br></pre></td></tr></table></figure></li>
-<li><p>“标签的处理”<br><code>Hexo new page tags</code><br>配置添加： <code> type: “tags”</code></p>
-</li>
-</ul>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假<br>| 操作符  |    描述 | 例子 |<br>|&amp;&amp; | 称为逻辑与运算符。当且仅当两个操作数都为真，条件才为真。| </p>
+<p>|（A &amp;&amp; B）为假。 | 称为逻辑或操作符。如果任何两个操作数任何一个为真，条件为真。     |</p>
+<p>| （A | | B）为真。 |</p>
+<p>| ！ | 称为逻辑非运算符。用来反转操作数的逻辑状态。如果条件为true，则逻辑非运算符将得到false。 |</p>
+<h2 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h2><p>** 条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。 **</p>
+<p>variable x = (expression) ? value if true : value if false</p>
 <hr>
-<h2 id="Hexo-博客添加搜索功能"><a href="#Hexo-博客添加搜索功能" class="headerlink" title="Hexo 博客添加搜索功能"></a>Hexo 博客添加搜索功能</h2><ol>
-<li><p>在博客更目录下，执行命令<br><code> npm install Hexo-generator-searchd —save</code> </p>
+<h2 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h2><p>该运算符用于操作对象实例，检查该对象是否是一个特定类型（类类型或接口类型）。</p>
+<p>instanceof运算符使用格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">( Object reference variable ) instanceof  (class/interface type)</span><br></pre></td></tr></table></figure>
+
+<p>子类是父类的类型，但父类不是子类的类型。</p>
+<p>子类的实例可以声明为父类型，但父类的实例不能声明为子类型。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java HashSet|HashMap</title>
+    <url>/2022/02/15/Java-HashSet-HashMap/</url>
+    <content><![CDATA[<h1 id="Java-HashSet"><a href="#Java-HashSet" class="headerlink" title="Java HashSet"></a>Java HashSet</h1><p>HashSet 基于 HashMap 来实现的，是一个不允许有重复元素的集合。</p>
+<p>HashSet 允许有 null 值。<br>HashSet 是无序的，即不会记录插入的顺序。</p>
+<p>HashSet 不是线程安全的， 如果多个线程尝试同时修改 HashSet，则最终结果是不确定的。 您必须在多线程访问时显式同步对 HashSet 的并发访问。 </p>
+<h2 id="主要特点：-无序、可为null、不可重复、多线程不安全"><a href="#主要特点：-无序、可为null、不可重复、多线程不安全" class="headerlink" title="主要特点： 无序、可为null、不可重复、多线程不安全"></a>主要特点： 无序、可为null、不可重复、多线程不安全</h2><h1 id="Java-HashMap"><a href="#Java-HashMap" class="headerlink" title="Java HashMap"></a>Java HashMap</h1><p>HashMap 是一个散列表，它存储的内容是键值对(key-value)映射。<br>HashMap 实现了 Map 接口，根据键的 HashCode 值存储数据，具有很快的访问速度，最多允许一条记录的键为 null，不支持线程同步。<br>HashMap 是无序的，即不会记录插入的顺序。</p>
+<h3 id="Java-HashMap的常用方法"><a href="#Java-HashMap的常用方法" class="headerlink" title="Java HashMap的常用方法"></a>Java HashMap的常用方法</h3><ol>
+<li><code>clear()</code>  删除 hashMap 中的所有键/值对 </li>
+<li><code> clone()</code> 复制一份 hashMap</li>
+<li><code>isEmpty()</code> 判断 hashMap 是否为空</li>
+<li><code>size()</code>  计算 hashMap 中键/值对的数量</li>
+<li><code>put()</code>  将键/值对添加到 hashMap 中</li>
+<li><code>putAll()</code>  将所有键/值对添加到 hashMap 中</li>
+<li><code>putIfAbsent()</code>  如果 hashMap 中不存在指定的键，则将指定的键/值对插入到 hashMap 中</li>
+<li><code>remove()</code> 删除 hashMap 中指定键 key 的映射关系</li>
+<li><code>containsKey()</code> 检查 hashMap 中是否存在指定的 key 对应的映射关系。</li>
+<li><code>containsValue()</code>  检查 hashMap 中是否存在指定的 value 对应的映射关系</li>
+<li><code>replace()</code> 替换 hashMap 中是指定的 key 对应的 value。</li>
+<li><code>replaceAll()</code>  将 hashMap 中的所有映射关系替换成给定的函数所执行的结果</li>
+<li><code>getOrDefault()</code> 获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值</li>
+<li><code>forEach()</code>  对 hashMap 中的每个映射执行指定的操作。</li>
+<li><code>enstrySet()</code>  返回 hashMap 中所有映射项的集合集合视图</li>
+<li><code>keySet()</code>  返回 hashMap 中所有 key 组成的集合视图</li>
+<li><code>values()</code>  返回 hashMap 中存在的所有 value 值</li>
+<li><code>merge()</code> 添加键值对到 hashMap 中</li>
+<li><code>compute()</code> 对 hashMap 中指定 key 的值进行重新计算</li>
+<li><code>computeifAbsent()</code> 对 hashMap 中指定 key 的值进行重新计算，如果不存在这个 key，则添加到 hasMap 中</li>
+<li><code>computeifPresent()</code> 对 hashMap 中指定 key 的值进行重新计算，前提是该 key 存在于 hashMap 中</li>
+</ol>
+<hr>
+<h3 id="有关于-map-entrySet-和-keySet"><a href="#有关于-map-entrySet-和-keySet" class="headerlink" title="有关于 map.entrySet() 和 keySet():"></a>有关于 map.entrySet() 和 keySet():</h3><ol>
+<li><p>如果遍历 hashMap() 时 entrySet() 方法是将 key 和 value 全部取出来,所以性能开销是可以预计的, 而<code> keySet()</code> 方法进行遍历的时候是根据取出的 key 值去查询对应的 value 值, 所以如果 key 值是比较简单的结构(如 1,2,3…)的话性能消耗上是比 <code>entrySet()</code> 方法低, 但随着 key 值得复杂度提高 <code>entrySet()</code> 的优势就会显露出来。</p>
 </li>
-<li><p>修改站点配置文件 在_config.yml中添加（原本没有设置）配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#search</span><br><span class="line">Search:</span><br><span class="line">	path: search.xml</span><br><span class="line">	field: post</span><br><span class="line">	format: html</span><br><span class="line">	limit: 10000</span><br></pre></td></tr></table></figure></li>
-<li><p>修改主题配置文件<br>修改themes_config.yml配置文件 用’/’搜索local_search,修改enable为true</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_serach::</span><br><span class="line">	enable: true</span><br></pre></td></tr></table></figure></li>
+<li><p>综合比较在只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法, 在遍历 key-value 的时候使用 <code>entrySet()</code> 是比较合理的选择。</p>
+</li>
+<li><p>如果遍历 TreeMap 的时候, 不同于 HashMap 在遍历 ThreeMap 的 key-value 时候务必使用 <code>entrySet()</code> 它要远远高于其他两个的性能, 同样只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法对于 TreeMap 也同样适用。</p>
+</li>
 </ol>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>Java初级学习</category>
       </categories>
       <tags>
-        <tag>Blog</tag>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java列表｜链表</title>
+    <url>/2022/02/15/Java%E5%88%97%E8%A1%A8%EF%BD%9C%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="Java-ArrayList-数组列表"><a href="#Java-ArrayList-数组列表" class="headerlink" title="Java ArrayList (数组列表)"></a>Java ArrayList (数组列表)</h1><p>ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。</p>
+<p>ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：<br>`import java.util.ArrayList; // 引入 ArrayList 类</p>
+<p>ArrayList<E> objectName =new ArrayList&lt;&gt;();　 // 初始化`</p>
+<hr>
+<ol>
+<li><p>添加元素<br>ArrayList 类提供了很多有用的方法，添加元素到 ArrayList 可以使用 add() 方法:</p>
+</li>
+<li><p>访问元素<br>访问 ArrayList 中的元素可以使用 get() 方法：</p>
+</li>
+<li><p>修改元素<br>如果要修改 ArrayList 中的元素可以使用 set() 方法：</p>
+</li>
+<li><p>删除元素<br>如果要删除 ArrayList 中的元素可以使用 remove() 方法：</p>
+</li>
+<li><p>计算大小<br>如果要计算 ArrayList 中的元素数量可以使用 size() 方法：</p>
+</li>
+<li><p>ArrayList 排序<br>Collections 类也是一个非常有用的类，位于 java.util 包中，提供的 sort() 方法可以对字符或数字列表进行排序。</p>
+</li>
+</ol>
+<hr>
+<h1 id="Java-LinkedList-链表"><a href="#Java-LinkedList-链表" class="headerlink" title="Java LinkedList (链表)"></a>Java LinkedList (链表)</h1><p>链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的地址。  </p>
+<p>Java LinkedList（链表） 类似于 ArrayList，是一种常用的数据容器。 </p>
+<p>与 ArrayList 相比，LinkedList 的增加和删除的操作效率更高，而查找和修改的操作效率较低。</p>
+<p>以下情况使用 ArrayList :</p>
+<pre><code>•    频繁访问列表中的某一个元素。
+•    只需要在列表末尾进行添加和删除元素操作。
+</code></pre>
+<p>以下情况使用 LinkedList :</p>
+<pre><code>•    你需要通过循环迭代来访问列表中的某些元素。
+•    需要频繁的在列表开头、中间、末尾等位置进行添加和删除元素操作。
+•    
+</code></pre>
+<p>LinkedList 类位于 java.util 包中，使用前需要引入它，语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 引入 LinkedList 类</span><br><span class="line">import java.util.LinkedList; </span><br><span class="line"></span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList&lt;E&gt;();   // 普通创建方法</span><br><span class="line">或者</span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList(Collection&lt;? extends E&gt; c); // 使用集合创建链表`</span><br></pre></td></tr></table></figure>
+
+<p>在列表开头添加元素：<br><code>sites.addFirst(&quot;Wiki&quot;);</code></p>
+<p>在列表结尾添加元素：<br><code>sites.addLast(&quot;Wiki&quot;); </code><br>在列表开头移除元素： <code>sites.removeFirst();</code></p>
+<p>在列表结尾移除元素： <code>sites.removeLast();</code></p>
+<p>获取列表开头的元素：// 使用 <code>getFirst()</code> 获取头部元素</p>
+<p>获取列表结尾的元素：// 使用 <code>getLast()</code> 获取尾部元素</p>
+]]></content>
+      <categories>
+        <category>java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
       </tags>
   </entry>
   <entry>
@@ -227,6 +442,72 @@
 <h3 id="synchronize："><a href="#synchronize：" class="headerlink" title="synchronize："></a>synchronize：</h3><p>synchronize关键字修饰在方法上，在多线程中使用，该方法同一时间只能被一个线程访问，锁就是this</p>
 <h3 id="transient"><a href="#transient" class="headerlink" title="transient:"></a>transient:</h3><p>修饰在包含定义变量的语句中将不会被序列化存储在硬盘</p>
 <h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><p>修饰在成员变量上，在多线程中访问该变量，都会重新从线程中获取，使真实数据可见。</p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java序列化|反序列化</title>
+    <url>/2022/02/17/Java%E5%BA%8F%E5%88%97%E5%8C%96-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="Java序列化｜反序列化"><a href="#Java序列化｜反序列化" class="headerlink" title="Java序列化｜反序列化"></a>Java序列化｜反序列化</h1><h2 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h2><ol>
+<li><p>什么是序列化和反序列化</p>
+<p> 序列化是指将Java对象转换为字节序列的过程，而反序列化则是将字节序列转换为Java对象的过程。</p>
+<p> Java对象序列化是将实现了Serializable接口的对象转换成一个字节序列，能够通过网络传输、文件存储等方式传输 ，传输过程中却不必担心数据在不同机器、不同环境下发生改变，也不必关心字节的顺序或其他任何细节，并能够在以后将这个字节序列完全恢复为原来的对象(恢复这一过程称之为反序列化)。</p>
+<p> 对象的序列化是非常有趣的，因为利用它可以实现轻量级持久性，“持久性”意味着一个对象的生存周期不单单取决于程序是否正在运行，它可以生存于程序的调用之间。通过将一个序列化对象写入磁盘，然后在重新调用程序时恢复该对象，从而达到实现对象的持久性的效果。</p>
+<p> 本质上讲，序列化就是把实体对象状态按照一定的格式写入到有序字节流，反序列化就是从有序字节流重建对象，恢复对象状态。</p>
+</li>
+<li><p>为什么需要使用序列化和反序列化</p>
+<p>   我们知道，不同进程/程序间进行远程通信时，可以相互发送各种类型的数据，包括文本、图片、音频、视频等，而这些数据都会以二进制序列的形式在网络上传送。</p>
+<p>   那么当两个Java进程进行通信时，能否实现进程间的对象传送呢？当然是可以的！如何做到呢？这就需要使用Java序列化与反序列化了。发送方需要把这个Java对象转换为字节序列，然后在网络上传输，接收方则需要将字节序列中恢复出Java对象。</p>
+<p>  我们清楚了为什么需要使用Java序列化和反序列化后，我们很自然地会想到Java序列化有哪些好处：</p>
+<p> 实现了数据的持久化，通过序列化可以把数据永久地保存到硬盘上（如：存储在文件里），实现永久保存对象。<br> 利用序列化实现远程通信，即：能够在网络上传输对象。</p>
+</li>
+</ol>
+<h2 id="二、如何实现Java序列化和反序列化"><a href="#二、如何实现Java序列化和反序列化" class="headerlink" title="二、如何实现Java序列化和反序列化"></a>二、如何实现Java序列化和反序列化</h2><p>只要对象实现了<code>Serializable、Externalizable</code>接口(该接口仅仅是一个标记接口，并不包含任何方法)，则该对象就实现了序列化。</p>
+<ol>
+<li>具体是如何实现的呢？</li>
+</ol>
+<p>序列化，首先要创建某些OutputStream对象，然后将其封装在一个<code>ObjectOutputStream</code>对象内，这时调用<code>writeObject()</code>方法，即可将对象序列化，并将其发送给<code>OutputStream</code>（对象序列化是基于字节的，因此使用的<code>InputStream和OutputStream继承的类）</code></p>
+<p> 反序列化，即反向进行序列化的过程，需要将一个InputStream封装在ObjectInputStream对象内，然后调用readObject()方法，获得一个对象引用（它是指向一个向上转型的Object），然后进行类型强制转换来得到该对象。</p>
+<p>假定一个User类，它的对象需要序列化，可以有如下三种方法：</p>
+<p>（1）若User类仅仅实现了Serializable接口，则可以按照以下方式进行序列化和反序列化。</p>
+<p>ObjectOutputStream采用默认的序列化方式，对User对象的非transient的实例变量进行序列化。</p>
+<p>ObjcetInputStream采用默认的反序列化方式，对对User对象的非transient的实例变量进行反序列化。</p>
+<p>（2）若User类仅仅实现了Serializable接口，并且还定义了readObject(ObjectInputStream in)和writeObject(ObjectOutputSteam out)，则采用以下方式进行序列化与反序列化。</p>
+<p>ObjectOutputStream调用User对象的writeObject(ObjectOutputStream out)的方法进行序列化。<br>ObjectInputStream会调用User对象的readObject(ObjectInputStream in)的方法进行反序列化。</p>
+<p>（3）若User类实现了Externalnalizable接口，且User类必须实现readExternal(ObjectInput in)和writeExternal(ObjectOutput out)方法，则按照以下方式进行序列化与反序列化。</p>
+<p>ObjectOutputStream调用User对象的writeExternal(ObjectOutput out))的方法进行序列化。<br>ObjectInputStream会调用User对象的readExternal(ObjectInput in)的方法进行反序列化。</p>
+<p>java.io.ObjectOutputStream：对象输出流，它的writeObject(Object obj)方法可以对指定的obj对象进行序列化，把得到的字节序列写到一个目标输出流中。<br>java.io.ObjectInputStream：对象输入流，它的readObject()方法可以将从输入流中读取字节序列，再把它们反序列化成为一个对象，并将其返回。</p>
+<ol start="3">
+<li>什么场景下需要序列化<br> •    当你想把的内存中的对象状态保存到一个文件中或者数据库中时候。<br> •    当你想用套接字在网络上传送对象的时候。<br> •    当你想通过RMI传输对象的时候。</li>
+</ol>
+<p>三、注意事项</p>
+<p>1、当一个父类实现序列化，子类就会自动实现序列化，不需要显式实现Serializable接口。</p>
+<p>2、当一个对象的实例变量引用其他对象，序列化该对象时也把引用对象进行序列化。</p>
+<p>3、并非所有的对象都可以进行序列化，比如：</p>
+<pre><code>  安全方面的原因，比如一个对象拥有private，public等成员变量，对于一个要传输的对象，比如写到文件，或者进行RMI传输等等，在序列化进行传输的过程中，这个对象的private等域是不受保护的；
+
+ 资源分配方面的原因，比如socket，thread类，如果可以序列化，进行传输或者保存，也无法对他们进行重新的资源分配，而且，也是没有必要这样实现。
+</code></pre>
+<ol start="4">
+<li><p>声明为static和transient类型的成员变量不能被序列化。因为static代表类的状态，transient代表对象的临时数据。</p>
+</li>
+<li><p>序列化运行时会使用一个称为 serialVersionUID 的版本号，并与每个可序列化的类相关联，该序列号在反序列化过程中用于验证序列化对象的发送者和接收者是否为该对象加载了与序列化兼容的类。如果接收者加载的该对象的类的 serialVersionUID 与对应的发送者的类的版本号不同，则反序列化将会导致 InvalidClassException。可序列化类可以通过声明名为 “serialVersionUID” 的字段（该字段必须是静态 (static)、最终 (final) 的 long 型字段）显式声明其自己的 serialVersionUID。</p>
+</li>
+</ol>
+<p>如果序列化的类未显式的声明 serialVersionUID，则序列化运行时将基于该类的各个方面计算该类的默认 serialVersionUID 值，如“Java(TM) 对象序列化规范”中所述。不过，强烈建议 所有可序列化类都显式声明 serialVersionUID 值，原因是计算默认的 serialVersionUID 对类的详细信息具有较高的敏感性，根据编译器实现的不同可能千差万别，这样在反序列化过程中可能会导致意外的 InvalidClassException。因此，为保证 serialVersionUID 值跨不同 java 编译器实现的一致性，序列化类必须声明一个明确的 serialVersionUID 值。还强烈建议使用 private 修饰符显示声明 serialVersionUID（如果可能），原因是这种声明仅应用于直接声明类 – serialVersionUID 字段作为继承成员没有用处。数组类不能声明一个明确的 serialVersionUID，因此它们总是具有默认的计算值，但是数组类没有匹配 serialVersionUID 值的要求。</p>
+<ol start="6">
+<li><p>Java有很多基础类已经实现了serializable接口，比如String，Vector等。但是也有一些没有实现serializable接口的。</p>
+</li>
+<li><p>如果一个对象的成员变量是一个对象，那么这个对象的数据成员也会被保存！这是能用序列化解决深拷贝的重要原因。</p>
+</li>
+</ol>
+<hr>
+<p>转载链接：<a href="https://blog.csdn.net/xcbeyond/article/details/100046212">https://blog.csdn.net/xcbeyond/article/details/100046212</a>`</p>
 ]]></content>
       <categories>
         <category>Java初级学习</category>
@@ -331,86 +612,69 @@
       </tags>
   </entry>
   <entry>
-    <title>2.2.2022JAVA学习日志</title>
-    <url>/2022/02/02/2-2-2022JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<hr>
-<h2 id="过年中间空闲了3天-放假-哈哈-现在重新整理学习的节奏激情"><a href="#过年中间空闲了3天-放假-哈哈-现在重新整理学习的节奏激情" class="headerlink" title="过年中间空闲了3天 放假 哈哈 现在重新整理学习的节奏激情"></a>过年中间空闲了3天 放假 哈哈 现在重新整理学习的节奏激情</h2><hr>
-<h2 id="2-2-2022-学习日志"><a href="#2-2-2022-学习日志" class="headerlink" title="2.2.2022 学习日志"></a>2.2.2022 学习日志</h2><h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>1.JAVA是大小写敏感的</p>
-<ol start="2">
-<li><p>类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass </p>
+    <title>Java的流Stream、文件和IO</title>
+    <url>/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/</url>
+    <content><![CDATA[<h1 id="Java的流Stream、文件和IO"><a href="#Java的流Stream、文件和IO" class="headerlink" title="Java的流Stream、文件和IO"></a>Java的流Stream、文件和IO</h1><hr>
+<p>流可以理解为一个数据的序列。输入流表示从一个源读取数据，输出流表示向一个目标写数据。 </p>
+<hr>
+<h2 id="读取控制台输入"><a href="#读取控制台输入" class="headerlink" title="读取控制台输入"></a>读取控制台输入</h2><p>Java 的控制台输入由 System.in 完成。<br>为了获得一个绑定到控制台的字符流，你可以把 System.in 包装在一个 BufferedReader 对象中来创建一个字符流。<br>创建BufferedReader的基本语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BufferedRreader name = new BufferedReader(new inputStreamReader(System.in)) //System.in控制着控制台的输入。将System.in包装在BufferedReader之中</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="读取的方法"><a href="#读取的方法" class="headerlink" title="读取的方法:"></a>读取的方法:</h2><ol>
+<li> 使用<code>read()</code> 方法从控制台获取一个字符</li>
+<li>使用<code>readLine() </code> 方法从控制台之中获取一个字符串</li>
+</ol>
+<hr>
+<h2 id="从控制台输出"><a href="#从控制台输出" class="headerlink" title="从控制台输出"></a>从控制台输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print()</span><br><span class="line">Printf()</span><br><span class="line">println()</span><br><span class="line">System.out.write();</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="/Users/loverboy98/Documents/Blog/source/_posts/1.png" alt="读取文件"></p>
+<hr>
+<h2 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h2><p>该流用于从文件读取数据，它的对象可以用关键字 new 来创建。<br>构造方法：</p>
+<ol>
+<li><p>字符串类型的文件名来创建一个输入流对象来读取文件：<br><code>InputStream f = new FileInputStream(&quot;C:/java/hello&quot;);</code></p>
 </li>
-<li><p>方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</p>
+<li><p>使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象： </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">File f = new File(&quot;C:/java/hello&quot;); </span><br><span class="line">InputStream in = new FileInputStream(f);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="对创建对象可以使用的方法："><a href="#对创建对象可以使用的方法：" class="headerlink" title="对创建对象可以使用的方法："></a>对创建对象可以使用的方法：</h3><ol>
+<li><p><code>public void close() throws IOException&#123;&#125;</code><br>关闭此文件输入流并释放与此流有关的所有系统资源。抛出IOException异常。</p>
+</li>
+<li><p><code>protected void finalize()throws IOException &#123;&#125; </code><br>这个方法清除与该文件的连接。确保在不再引用文件输入流时调用其 close 方法。抛出IOException异常。</p>
+</li>
+<li><p><code>public int read(int r)throws IOException&#123;&#125;</code><br>这个方法从 InputStream 对象读取指定字节的数据。返回为整数值。返回下一字节数据，如果已经到结尾则返回-1。</p>
+</li>
+<li><p><code>public int read(byte[] r) throws IOException&#123;&#125;</code><br>这个方法从输入流读取r.length长度的字节。返回读取的字节数。如果是文件结尾则返回-1。</p>
 </li>
 </ol>
-<p>4.主方法入口：所有的 Java 程序由 public static void main(String[] args) 方法开始执行</p>
+<ol start="5">
+<li><code>public int available() throws IOException&#123;&#125; </code><br>返回下一次对此输入流调用的方法可以不受阻塞地从此输入流读取的字节数。返回一个整数值。</li>
+</ol>
+<h2 id="FileOutPutStream"><a href="#FileOutPutStream" class="headerlink" title="FileOutPutStream"></a>FileOutPutStream</h2><p> 创建一个文件并向文件中写入数据 如果该流在打开文件进行输出前，目标文件不存在，那么该流会创建该文件。<br>两种创建输出流对象的方法：</p>
+<ol>
+<li><code> OutputStream name = new FileOutputStream(“locate”)</code></li>
+<li><code> File file =new File(“Locate”) OutputStream fOut = new FileOutputStream(f)</code></li>
+</ol>
 <hr>
-<p>#访问实例变量和方法</p>
-<p> 通过已创建的对象来访问成员变量和成员方法，如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 实例化对象 */</span><br><span class="line">Object referenceVariable = new Constructor();</span><br><span class="line">/* 访问类中的变量 */</span><br><span class="line">referenceVariable.variableName; (变量的使用 对象.变量)</span><br><span class="line">/* 访问类中的方法 */</span><br><span class="line">referenceVariable.methodName(); (方法的使用 对象.方法)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="JAVA基本数据类型"><a href="#JAVA基本数据类型" class="headerlink" title="JAVA基本数据类型"></a>JAVA基本数据类型</h1><h2 id="JAVA常量"><a href="#JAVA常量" class="headerlink" title="JAVA常量"></a>JAVA常量</h2><p>在 Java 中使用 final 关键字来修饰常量，声明方式和变量类似</p>
-<hr>
-<h3 id="char-a-‘S’-char-后面赋值要用单引号，因为是字符型数据类型"><a href="#char-a-‘S’-char-后面赋值要用单引号，因为是字符型数据类型" class="headerlink" title="char a = ‘S’; char 后面赋值要用单引号，因为是字符型数据类型"></a>char a = ‘S’; char 后面赋值要用单引号，因为是字符型数据类型</h3><h3 id="String-a-“I-AM-FINE”-String-后面赋值要用双引号，因为是字符串数据类型"><a href="#String-a-“I-AM-FINE”-String-后面赋值要用双引号，因为是字符串数据类型" class="headerlink" title="String a = “I AM FINE”; String 后面赋值要用双引号，因为是字符串数据类型"></a>String a = “I AM FINE”; String 后面赋值要用双引号，因为是字符串数据类型</h3><p>（单字符char 用 ‘’ , 字符串String 用 “”）</p>
-<hr>
-<h1 id="JAVA变量类型"><a href="#JAVA变量类型" class="headerlink" title="JAVA变量类型"></a>JAVA变量类型</h1><p>Java语言支持的变量类型有：</p>
-<pre><code>* 类变量：独立于方法之外的变量，用 static 修饰。
-* 实例变量：独立于方法之外的变量，不过没有 static 修饰。
-* 局部变量：类的方法中的变量。
-</code></pre>
-<p>实例</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Variable&#123;</span><br><span class="line">    static int allClicks=0;    // 类变量</span><br><span class="line"> </span><br><span class="line">    String str=&quot;hello world&quot;;  // 实例变量</span><br><span class="line"> </span><br><span class="line">    public void method()&#123;</span><br><span class="line"> </span><br><span class="line">        int i =0;  // 局部变量 （静态变量）</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>** 局部变量没有默认值，所以局部变量被声明后，必须经过初始化，才可以使用。 如果变量没有初始化，所以在编译时会出错**</p>
-<hr>
-<h2 id="Java-中静态变量和实例变量区别"><a href="#Java-中静态变量和实例变量区别" class="headerlink" title="Java 中静态变量和实例变量区别"></a>Java 中静态变量和实例变量区别</h2><pre><code>- 静态变量属于类，该类不生产对象，通过类名就可以调用静态变量。
-- 实例变量属于该类的对象，必须产生该类对象，才能调用实例变量。
-</code></pre>
-<p>在程序运行时的区别：</p>
-<pre><code>- 实例变量属于某个对象的属性，必须创建了实例对象，其中的实例变量才会被分配空间，才能使用这个实例变量。
-- 静态变量不属于某个实例对象，而是属于类，所以也称为类变量，只要程序加载了类的字节码，不用创建任何实例对象，静态变量就会被分配空间，静态变量就可以被使用了。 
-</code></pre>
-<p>总之，实例变量必须创建对象后才可以通过这个对象来使用，静态变量则可以直接使用类名来引用。</p>
-<hr>
-<h1 id="JAVA修饰符"><a href="#JAVA修饰符" class="headerlink" title="JAVA修饰符"></a>JAVA修饰符</h1><p>** 访问控制修饰符 **<br>Java中，可以使用访问控制符来保护对类、变量、方法和构造方法的访问。Java 支持 4 种不同的访问权限。</p>
-<pre><code>- default (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。
-
-- private : 在同一类内可见。使用对象：变量、方法。 注意：不能修饰类（外部类）
-
-- public : 对所有类可见。使用对象：类、接口、变量、方法
-
-- protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。
-</code></pre>
-<hr>
-<h2 id="私有访问修饰符-private"><a href="#私有访问修饰符-private" class="headerlink" title="** 私有访问修饰符-private **"></a>** 私有访问修饰符-private **</h2><p>私有访问修饰符是最严格的访问级别，所以被声明为 private 的方法、变量和构造方法只能被所属类访问， ** 并且类和接口不能声明为 private。 **</p>
-<p>声明为私有访问类型的变量只能通过类中公共的 getter 方法被外部类访问。</p>
-<p>** Private 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。 **</p>
-<hr>
-<h3 id="JAVA的子类"><a href="#JAVA的子类" class="headerlink" title="JAVA的子类"></a>JAVA的子类</h3><p>子类通过extend来继承父类的方法以及变量   Class son extends father;</p>
-<h3 id="JAVA的基类、父类"><a href="#JAVA的基类、父类" class="headerlink" title="JAVA的基类、父类"></a>JAVA的基类、父类</h3><h2 id="访问控制和继承"><a href="#访问控制和继承" class="headerlink" title="访问控制和继承"></a>访问控制和继承</h2><p>请注意以下方法继承的规则：</p>
-<pre><code>- 父类中声明为 public 的方法在子类中也必须为 public。
-
-- 父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public，不能声明为 private。
-
-- 父类中声明为 private 的方法，不能够被子类继承。
-</code></pre>
-<hr>
-<h1 id="非访问修饰符"><a href="#非访问修饰符" class="headerlink" title="非访问修饰符"></a>非访问修饰符</h1><ul>
-<li><p>static 修饰符，用来修饰类方法和类变量。</p>
+<h2 id="Java中的目录"><a href="#Java中的目录" class="headerlink" title="Java中的目录"></a>Java中的目录</h2><h3 id="创建目录："><a href="#创建目录：" class="headerlink" title="创建目录："></a>创建目录：</h3><p>File类中有两个方法可以用来创建文件夹：</p>
+<ul>
+<li><p>mkdir( )方法创建一个文件夹，成功则返回true，失败则返回false。失败表明File对象指定的路径已经存在，或者由于整个路径还不存在，该文件夹不能被创建。</p>
 </li>
-<li><p>final 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。</p>
-</li>
-<li><p>abstract 修饰符，用来创建抽象类和抽象方法。</p>
-</li>
-<li><p>synchronized 和 volatile 修饰符，主要用于线程的编程。</p>
+<li><p>mkdirs()方法创建一个文件夹和它的所有父文件夹。</p>
 </li>
 </ul>
+<hr>
+<h3 id="读取目录"><a href="#读取目录" class="headerlink" title="读取目录"></a>读取目录</h3><p>一个目录其实就是一个 File 对象，它包含其他文件和文件夹。<br>如果创建一个 File 对象并且它是一个目录，那么调用 <code>isDirectory() </code>方法会返回 true。 </p>
+<p>可以通过调用该对象上的  <code>list() </code> 方法，来提取它包含的文件和文件夹的列表。 </p>
+<hr>
+<h2 id="删除目录或文件"><a href="#删除目录或文件" class="headerlink" title="删除目录或文件"></a>删除目录或文件</h2><p>删除文件可以使用 java.io.File.delete() 方法。</p>
 ]]></content>
       <categories>
-        <category>JAVA学习日志</category>
+        <category>Java初级学习</category>
       </categories>
       <tags>
-        <tag>JAVA学习日志</tag>
+        <tag>Java初级学习</tag>
       </tags>
   </entry>
   <entry>
@@ -637,150 +901,6 @@
       </tags>
   </entry>
   <entry>
-    <title>重写与重载</title>
-    <url>/2022/02/13/%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/</url>
-    <content><![CDATA[<h1 id="overload与override"><a href="#overload与override" class="headerlink" title="overload与override"></a>overload与override</h1><ol>
-<li>父类引用指向子类对象，而子类引用不能指向父类对象。</li>
-<li>把子类对象直接赋给父类引用叫 <strong>upcasting向上转型</strong> ，向上转型不用强制转换吗，如：<br><code>Father f1 = new Son();</code></li>
-<li>把指向子类对象的父类引用赋给子类引用叫**向下转型(downcasting)**，要强制转换，如：<br>f1 就是一个指向子类对象的父类引用。把f1赋给子类引用 s1 即 <code>Son s1 = (Son)f1;</code><br>其中 f1 前面的(Son)必须加上，进行强制转换。</li>
-</ol>
-<hr>
-<h2 id="重写-Override"><a href="#重写-Override" class="headerlink" title="重写(Override)"></a>重写(Override)</h2><p><strong>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！</strong> </p>
-<p>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。</p>
-<hr>
-<h3 id="方法的重写规则"><a href="#方法的重写规则" class="headerlink" title="方法的重写规则"></a>方法的重写规则</h3><p>•    参数列表与被重写方法的参数列表必须完全相同。</p>
-<p>•    返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</p>
-<p>•    访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</p>
-<p>•    父类的成员方法只能被它的子类重写。</p>
-<p>•    声明为 final 的方法不能被重写。</p>
-<p>•    声明为 static 的方法不能被重写，但是能够被再次声明。</p>
-<p>•    子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</p>
-<p>•    子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</p>
-<p>•    重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</p>
-<p>•    构造方法不能被重写。</p>
-<p>•    如果不能继承一个类，则不能重写该类的方法。</p>
-<hr>
-<h2 id="重载-Overload"><a href="#重载-Overload" class="headerlink" title="重载(Overload)"></a>重载(Overload)</h2><p><strong>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</strong></p>
-<p>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</p>
-<p>最常用的地方就是构造器的重载。<br>重载规则:</p>
-<p>•    被重载的方法必须改变参数列表(参数个数或类型不一样（包括参数的传递顺序）)； </p>
-<p>•    被重载的方法可以改变返回类型；</p>
-<p>•    被重载的方法可以改变访问修饰符；</p>
-<p>•    被重载的方法可以声明新的或更广的检查异常；</p>
-<p>•    方法能够在同一个类中或者在一个子类中被重载。</p>
-<p>•    无法以返回值类型作为重载函数的区分标准。 </p>
-<hr>
-<p><em>重载就是同样的一个方法能够根据输入数据的不同，做出不同的处理<br>重写就是当子类继承自父类的相同方法，输入数据一样，但要做出有别于父类的响应时，你就要覆盖父类方法</em></p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA运算符</title>
-    <url>/2022/02/04/JAVA%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="JAVA运算符"><a href="#JAVA运算符" class="headerlink" title="JAVA运算符"></a>JAVA运算符</h1><hr>
-<p>| 操作符 | 描述 | 例子 |</p>
-<p>| ＆（与）| 如果相对应位都是1，则结果为1，否则为0 |A＆B）得到12，即0000 1100 |</p>
-<p>|（或）| 如果相对应位都是 0，则结果为 0，否则为 1 |（A | B）得到61，即 0011 1101 |</p>
-<p>| ^（非） |    如果相对应位值相同，则结果为0，否则为1 | （A ^ B）得到49，即 0011 0001 |</p>
-<p>| 〜（取反) | 按位取反运算符翻转操作数的每一位，即0变成1，1变成0。 | （〜A）得到-61，即1100 0011 |</p>
-<p>| &lt;&lt; | 按位左移运算符。左操作数按位左移右操作数指定的位数。|     A &lt;&lt; 2得到240，即 1111 0000 |</p>
-<p>| &gt;&gt; |    按位右移运算符。左操作数按位右移右操作数指定的位数。 | A &gt;&gt; 2得到15即 1111 |</p>
-<p>| &gt;&gt;&gt; | 按位右移补零操作符。左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充。 |     A&gt;&gt;&gt;2得到15即0000 1111 |</p>
-<hr>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假<br>| 操作符  |    描述 | 例子 |<br>|&amp;&amp; | 称为逻辑与运算符。当且仅当两个操作数都为真，条件才为真。| </p>
-<p>|（A &amp;&amp; B）为假。 | 称为逻辑或操作符。如果任何两个操作数任何一个为真，条件为真。     |</p>
-<p>| （A | | B）为真。 |</p>
-<p>| ！ | 称为逻辑非运算符。用来反转操作数的逻辑状态。如果条件为true，则逻辑非运算符将得到false。 |</p>
-<h2 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h2><p>** 条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。 **</p>
-<p>variable x = (expression) ? value if true : value if false</p>
-<hr>
-<h2 id="instanceof-运算符"><a href="#instanceof-运算符" class="headerlink" title="instanceof 运算符"></a>instanceof 运算符</h2><p>该运算符用于操作对象实例，检查该对象是否是一个特定类型（类类型或接口类型）。</p>
-<p>instanceof运算符使用格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">( Object reference variable ) instanceof  (class/interface type)</span><br></pre></td></tr></table></figure>
-
-<p>子类是父类的类型，但父类不是子类的类型。</p>
-<p>子类的实例可以声明为父类型，但父类的实例不能声明为子类型。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java的流Stream、文件和IO</title>
-    <url>/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/</url>
-    <content><![CDATA[<h1 id="Java的流Stream、文件和IO"><a href="#Java的流Stream、文件和IO" class="headerlink" title="Java的流Stream、文件和IO"></a>Java的流Stream、文件和IO</h1><hr>
-<p>流可以理解为一个数据的序列。输入流表示从一个源读取数据，输出流表示向一个目标写数据。 </p>
-<hr>
-<h2 id="读取控制台输入"><a href="#读取控制台输入" class="headerlink" title="读取控制台输入"></a>读取控制台输入</h2><p>Java 的控制台输入由 System.in 完成。<br>为了获得一个绑定到控制台的字符流，你可以把 System.in 包装在一个 BufferedReader 对象中来创建一个字符流。<br>创建BufferedReader的基本语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BufferedRreader name = new BufferedReader(new inputStreamReader(System.in)) //System.in控制着控制台的输入。将System.in包装在BufferedReader之中</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="读取的方法"><a href="#读取的方法" class="headerlink" title="读取的方法:"></a>读取的方法:</h2><ol>
-<li> 使用<code>read()</code> 方法从控制台获取一个字符</li>
-<li>使用<code>readLine() </code> 方法从控制台之中获取一个字符串</li>
-</ol>
-<hr>
-<h2 id="从控制台输出"><a href="#从控制台输出" class="headerlink" title="从控制台输出"></a>从控制台输出</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print()</span><br><span class="line">Printf()</span><br><span class="line">println()</span><br><span class="line">System.out.write();</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><img src="/Users/loverboy98/Documents/Blog/source/_posts/1.png" alt="读取文件"></p>
-<hr>
-<h2 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h2><p>该流用于从文件读取数据，它的对象可以用关键字 new 来创建。<br>构造方法：</p>
-<ol>
-<li><p>字符串类型的文件名来创建一个输入流对象来读取文件：<br><code>InputStream f = new FileInputStream(&quot;C:/java/hello&quot;);</code></p>
-</li>
-<li><p>使用一个文件对象来创建一个输入流对象来读取文件。我们首先得使用 File() 方法来创建一个文件对象： </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">File f = new File(&quot;C:/java/hello&quot;); </span><br><span class="line">InputStream in = new FileInputStream(f);</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="对创建对象可以使用的方法："><a href="#对创建对象可以使用的方法：" class="headerlink" title="对创建对象可以使用的方法："></a>对创建对象可以使用的方法：</h3><ol>
-<li><p><code>public void close() throws IOException&#123;&#125;</code><br>关闭此文件输入流并释放与此流有关的所有系统资源。抛出IOException异常。</p>
-</li>
-<li><p><code>protected void finalize()throws IOException &#123;&#125; </code><br>这个方法清除与该文件的连接。确保在不再引用文件输入流时调用其 close 方法。抛出IOException异常。</p>
-</li>
-<li><p><code>public int read(int r)throws IOException&#123;&#125;</code><br>这个方法从 InputStream 对象读取指定字节的数据。返回为整数值。返回下一字节数据，如果已经到结尾则返回-1。</p>
-</li>
-<li><p><code>public int read(byte[] r) throws IOException&#123;&#125;</code><br>这个方法从输入流读取r.length长度的字节。返回读取的字节数。如果是文件结尾则返回-1。</p>
-</li>
-</ol>
-<ol start="5">
-<li><code>public int available() throws IOException&#123;&#125; </code><br>返回下一次对此输入流调用的方法可以不受阻塞地从此输入流读取的字节数。返回一个整数值。</li>
-</ol>
-<h2 id="FileOutPutStream"><a href="#FileOutPutStream" class="headerlink" title="FileOutPutStream"></a>FileOutPutStream</h2><p> 创建一个文件并向文件中写入数据 如果该流在打开文件进行输出前，目标文件不存在，那么该流会创建该文件。<br>两种创建输出流对象的方法：</p>
-<ol>
-<li><code> OutputStream name = new FileOutputStream(“locate”)</code></li>
-<li><code> File file =new File(“Locate”) OutputStream fOut = new FileOutputStream(f)</code></li>
-</ol>
-<hr>
-<h2 id="Java中的目录"><a href="#Java中的目录" class="headerlink" title="Java中的目录"></a>Java中的目录</h2><h3 id="创建目录："><a href="#创建目录：" class="headerlink" title="创建目录："></a>创建目录：</h3><p>File类中有两个方法可以用来创建文件夹：</p>
-<ul>
-<li><p>mkdir( )方法创建一个文件夹，成功则返回true，失败则返回false。失败表明File对象指定的路径已经存在，或者由于整个路径还不存在，该文件夹不能被创建。</p>
-</li>
-<li><p>mkdirs()方法创建一个文件夹和它的所有父文件夹。</p>
-</li>
-</ul>
-<hr>
-<h3 id="读取目录"><a href="#读取目录" class="headerlink" title="读取目录"></a>读取目录</h3><p>一个目录其实就是一个 File 对象，它包含其他文件和文件夹。<br>如果创建一个 File 对象并且它是一个目录，那么调用 <code>isDirectory() </code>方法会返回 true。 </p>
-<p>可以通过调用该对象上的  <code>list() </code> 方法，来提取它包含的文件和文件夹的列表。 </p>
-<hr>
-<h2 id="删除目录或文件"><a href="#删除目录或文件" class="headerlink" title="删除目录或文件"></a>删除目录或文件</h2><p>删除文件可以使用 java.io.File.delete() 方法。</p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录Mac系统结合Github搭建个人博客之中遇到的一些坑</title>
     <url>/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
     <content><![CDATA[<p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
@@ -818,97 +938,43 @@
       </tags>
   </entry>
   <entry>
-    <title>Java HashSet|HashMap</title>
-    <url>/2022/02/15/Java-HashSet-HashMap/</url>
-    <content><![CDATA[<h1 id="Java-HashSet"><a href="#Java-HashSet" class="headerlink" title="Java HashSet"></a>Java HashSet</h1><p>HashSet 基于 HashMap 来实现的，是一个不允许有重复元素的集合。</p>
-<p>HashSet 允许有 null 值。<br>HashSet 是无序的，即不会记录插入的顺序。</p>
-<p>HashSet 不是线程安全的， 如果多个线程尝试同时修改 HashSet，则最终结果是不确定的。 您必须在多线程访问时显式同步对 HashSet 的并发访问。 </p>
-<h2 id="主要特点：-无序、可为null、不可重复、多线程不安全"><a href="#主要特点：-无序、可为null、不可重复、多线程不安全" class="headerlink" title="主要特点： 无序、可为null、不可重复、多线程不安全"></a>主要特点： 无序、可为null、不可重复、多线程不安全</h2><h1 id="Java-HashMap"><a href="#Java-HashMap" class="headerlink" title="Java HashMap"></a>Java HashMap</h1><p>HashMap 是一个散列表，它存储的内容是键值对(key-value)映射。<br>HashMap 实现了 Map 接口，根据键的 HashCode 值存储数据，具有很快的访问速度，最多允许一条记录的键为 null，不支持线程同步。<br>HashMap 是无序的，即不会记录插入的顺序。</p>
-<h3 id="Java-HashMap的常用方法"><a href="#Java-HashMap的常用方法" class="headerlink" title="Java HashMap的常用方法"></a>Java HashMap的常用方法</h3><ol>
-<li><code>clear()</code>  删除 hashMap 中的所有键/值对 </li>
-<li><code> clone()</code> 复制一份 hashMap</li>
-<li><code>isEmpty()</code> 判断 hashMap 是否为空</li>
-<li><code>size()</code>  计算 hashMap 中键/值对的数量</li>
-<li><code>put()</code>  将键/值对添加到 hashMap 中</li>
-<li><code>putAll()</code>  将所有键/值对添加到 hashMap 中</li>
-<li><code>putIfAbsent()</code>  如果 hashMap 中不存在指定的键，则将指定的键/值对插入到 hashMap 中</li>
-<li><code>remove()</code> 删除 hashMap 中指定键 key 的映射关系</li>
-<li><code>containsKey()</code> 检查 hashMap 中是否存在指定的 key 对应的映射关系。</li>
-<li><code>containsValue()</code>  检查 hashMap 中是否存在指定的 value 对应的映射关系</li>
-<li><code>replace()</code> 替换 hashMap 中是指定的 key 对应的 value。</li>
-<li><code>replaceAll()</code>  将 hashMap 中的所有映射关系替换成给定的函数所执行的结果</li>
-<li><code>getOrDefault()</code> 获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值</li>
-<li><code>forEach()</code>  对 hashMap 中的每个映射执行指定的操作。</li>
-<li><code>enstrySet()</code>  返回 hashMap 中所有映射项的集合集合视图</li>
-<li><code>keySet()</code>  返回 hashMap 中所有 key 组成的集合视图</li>
-<li><code>values()</code>  返回 hashMap 中存在的所有 value 值</li>
-<li><code>merge()</code> 添加键值对到 hashMap 中</li>
-<li><code>compute()</code> 对 hashMap 中指定 key 的值进行重新计算</li>
-<li><code>computeifAbsent()</code> 对 hashMap 中指定 key 的值进行重新计算，如果不存在这个 key，则添加到 hasMap 中</li>
-<li><code>computeifPresent()</code> 对 hashMap 中指定 key 的值进行重新计算，前提是该 key 存在于 hashMap 中</li>
+    <title>重写与重载</title>
+    <url>/2022/02/13/%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="overload与override"><a href="#overload与override" class="headerlink" title="overload与override"></a>overload与override</h1><ol>
+<li>父类引用指向子类对象，而子类引用不能指向父类对象。</li>
+<li>把子类对象直接赋给父类引用叫 <strong>upcasting向上转型</strong> ，向上转型不用强制转换吗，如：<br><code>Father f1 = new Son();</code></li>
+<li>把指向子类对象的父类引用赋给子类引用叫**向下转型(downcasting)**，要强制转换，如：<br>f1 就是一个指向子类对象的父类引用。把f1赋给子类引用 s1 即 <code>Son s1 = (Son)f1;</code><br>其中 f1 前面的(Son)必须加上，进行强制转换。</li>
 </ol>
 <hr>
-<h3 id="有关于-map-entrySet-和-keySet"><a href="#有关于-map-entrySet-和-keySet" class="headerlink" title="有关于 map.entrySet() 和 keySet():"></a>有关于 map.entrySet() 和 keySet():</h3><ol>
-<li><p>如果遍历 hashMap() 时 entrySet() 方法是将 key 和 value 全部取出来,所以性能开销是可以预计的, 而<code> keySet()</code> 方法进行遍历的时候是根据取出的 key 值去查询对应的 value 值, 所以如果 key 值是比较简单的结构(如 1,2,3…)的话性能消耗上是比 <code>entrySet()</code> 方法低, 但随着 key 值得复杂度提高 <code>entrySet()</code> 的优势就会显露出来。</p>
-</li>
-<li><p>综合比较在只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法, 在遍历 key-value 的时候使用 <code>entrySet()</code> 是比较合理的选择。</p>
-</li>
-<li><p>如果遍历 TreeMap 的时候, 不同于 HashMap 在遍历 ThreeMap 的 key-value 时候务必使用 <code>entrySet()</code> 它要远远高于其他两个的性能, 同样只遍历 key 的时候使用 <code>keySet()</code>, 在只遍历 value 的是使用 <code>values()</code> 方法对于 TreeMap 也同样适用。</p>
-</li>
-</ol>
+<h2 id="重写-Override"><a href="#重写-Override" class="headerlink" title="重写(Override)"></a>重写(Override)</h2><p><strong>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！</strong> </p>
+<p>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。</p>
+<hr>
+<h3 id="方法的重写规则"><a href="#方法的重写规则" class="headerlink" title="方法的重写规则"></a>方法的重写规则</h3><p>•    参数列表与被重写方法的参数列表必须完全相同。</p>
+<p>•    返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</p>
+<p>•    访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</p>
+<p>•    父类的成员方法只能被它的子类重写。</p>
+<p>•    声明为 final 的方法不能被重写。</p>
+<p>•    声明为 static 的方法不能被重写，但是能够被再次声明。</p>
+<p>•    子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</p>
+<p>•    子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</p>
+<p>•    重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</p>
+<p>•    构造方法不能被重写。</p>
+<p>•    如果不能继承一个类，则不能重写该类的方法。</p>
+<hr>
+<h2 id="重载-Overload"><a href="#重载-Overload" class="headerlink" title="重载(Overload)"></a>重载(Overload)</h2><p><strong>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</strong></p>
+<p>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。</p>
+<p>最常用的地方就是构造器的重载。<br>重载规则:</p>
+<p>•    被重载的方法必须改变参数列表(参数个数或类型不一样（包括参数的传递顺序）)； </p>
+<p>•    被重载的方法可以改变返回类型；</p>
+<p>•    被重载的方法可以改变访问修饰符；</p>
+<p>•    被重载的方法可以声明新的或更广的检查异常；</p>
+<p>•    方法能够在同一个类中或者在一个子类中被重载。</p>
+<p>•    无法以返回值类型作为重载函数的区分标准。 </p>
+<hr>
+<p><em>重载就是同样的一个方法能够根据输入数据的不同，做出不同的处理<br>重写就是当子类继承自父类的相同方法，输入数据一样，但要做出有别于父类的响应时，你就要覆盖父类方法</em></p>
 ]]></content>
       <categories>
         <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java列表｜链表</title>
-    <url>/2022/02/15/Java%E5%88%97%E8%A1%A8%EF%BD%9C%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="Java-ArrayList-数组列表"><a href="#Java-ArrayList-数组列表" class="headerlink" title="Java ArrayList (数组列表)"></a>Java ArrayList (数组列表)</h1><p>ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。</p>
-<p>ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：<br>`import java.util.ArrayList; // 引入 ArrayList 类</p>
-<p>ArrayList<E> objectName =new ArrayList&lt;&gt;();　 // 初始化`</p>
-<hr>
-<ol>
-<li><p>添加元素<br>ArrayList 类提供了很多有用的方法，添加元素到 ArrayList 可以使用 add() 方法:</p>
-</li>
-<li><p>访问元素<br>访问 ArrayList 中的元素可以使用 get() 方法：</p>
-</li>
-<li><p>修改元素<br>如果要修改 ArrayList 中的元素可以使用 set() 方法：</p>
-</li>
-<li><p>删除元素<br>如果要删除 ArrayList 中的元素可以使用 remove() 方法：</p>
-</li>
-<li><p>计算大小<br>如果要计算 ArrayList 中的元素数量可以使用 size() 方法：</p>
-</li>
-<li><p>ArrayList 排序<br>Collections 类也是一个非常有用的类，位于 java.util 包中，提供的 sort() 方法可以对字符或数字列表进行排序。</p>
-</li>
-</ol>
-<hr>
-<h1 id="Java-LinkedList-链表"><a href="#Java-LinkedList-链表" class="headerlink" title="Java LinkedList (链表)"></a>Java LinkedList (链表)</h1><p>链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的地址。  </p>
-<p>Java LinkedList（链表） 类似于 ArrayList，是一种常用的数据容器。 </p>
-<p>与 ArrayList 相比，LinkedList 的增加和删除的操作效率更高，而查找和修改的操作效率较低。</p>
-<p>以下情况使用 ArrayList :</p>
-<pre><code>•    频繁访问列表中的某一个元素。
-•    只需要在列表末尾进行添加和删除元素操作。
-</code></pre>
-<p>以下情况使用 LinkedList :</p>
-<pre><code>•    你需要通过循环迭代来访问列表中的某些元素。
-•    需要频繁的在列表开头、中间、末尾等位置进行添加和删除元素操作。
-•    
-</code></pre>
-<p>LinkedList 类位于 java.util 包中，使用前需要引入它，语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 引入 LinkedList 类</span><br><span class="line">import java.util.LinkedList; </span><br><span class="line"></span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList&lt;E&gt;();   // 普通创建方法</span><br><span class="line">或者</span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList(Collection&lt;? extends E&gt; c); // 使用集合创建链表`</span><br></pre></td></tr></table></figure>
-
-<p>在列表开头添加元素：<br><code>sites.addFirst(&quot;Wiki&quot;);</code></p>
-<p>在列表结尾添加元素：<br><code>sites.addLast(&quot;Wiki&quot;); </code><br>在列表开头移除元素： <code>sites.removeFirst();</code></p>
-<p>在列表结尾移除元素： <code>sites.removeLast();</code></p>
-<p>获取列表开头的元素：// 使用 <code>getFirst()</code> 获取头部元素</p>
-<p>获取列表结尾的元素：// 使用 <code>getLast()</code> 获取尾部元素</p>
-]]></content>
-      <categories>
-        <category>java初级学习</category>
       </categories>
       <tags>
         <tag>Java初级学习</tag>
