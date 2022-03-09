@@ -37,20 +37,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Java继承 1. 为什么使用继承从已有的类派生出新的类，称为继承。在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。   继承的特性•    子类拥有父类非 private 的属性、方法。">
+  <meta name="description" content="高内聚 低耦合 耦合：就是模块间的关联度，低耦合就是关联度要小（例如减少继承和友元，全局变量） 内聚：模块的功能，高内聚就是模块的功能要尽可能简洁，最好一个模块只完成一个功能  &#x3D;&#x3D; 与equals()的区别&#x3D;&#x3D; 是一个比较运算符 对于基本数据类型  &#x3D;&#x3D; 比较值是否相等 队医引用数据类型  判断两者是否同一个地址  equals()是Object中的方法，只能用于判断引用类型 默认是判断地址相等">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java继承">
-<meta property="og:url" content="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:title" content="3.8.2022学习日志">
+<meta property="og:url" content="http://example.com/2022/03/09/3-8-2022%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/index.html">
 <meta property="og:site_name" content="hustle4fun的博客">
-<meta property="og:description" content="Java继承 1. 为什么使用继承从已有的类派生出新的类，称为继承。在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。   继承的特性•    子类拥有父类非 private 的属性、方法。">
+<meta property="og:description" content="高内聚 低耦合 耦合：就是模块间的关联度，低耦合就是关联度要小（例如减少继承和友元，全局变量） 内聚：模块的功能，高内聚就是模块的功能要尽可能简洁，最好一个模块只完成一个功能  &#x3D;&#x3D; 与equals()的区别&#x3D;&#x3D; 是一个比较运算符 对于基本数据类型  &#x3D;&#x3D; 比较值是否相等 队医引用数据类型  判断两者是否同一个地址  equals()是Object中的方法，只能用于判断引用类型 默认是判断地址相等">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-07T13:25:41.000Z">
-<meta property="article:modified_time" content="2022-02-07T13:26:23.393Z">
+<meta property="article:published_time" content="2022-03-09T01:57:22.000Z">
+<meta property="article:modified_time" content="2022-03-09T01:58:33.655Z">
 <meta property="article:author" content="谭仕麟">
 <meta property="article:tag" content="Java初级学习">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/">
+<link rel="canonical" href="http://example.com/2022/03/09/3-8-2022%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
 
 
 <script id="page-configurations">
@@ -63,7 +63,7 @@
   };
 </script>
 
-  <title>Java继承 | hustle4fun的博客</title>
+  <title>3.8.2022学习日志 | hustle4fun的博客</title>
   
 
 
@@ -214,7 +214,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/09/3-8-2022%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -227,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java继承
+          3.8.2022学习日志
         </h1>
 
         <div class="post-meta">
@@ -238,7 +238,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-07 21:25:41 / 修改时间：21:26:23" itemprop="dateCreated datePublished" datetime="2022-02-07T21:25:41+08:00">2022-02-07</time>
+              <time title="创建时间：2022-03-09 09:57:22 / 修改时间：09:58:33" itemprop="dateCreated datePublished" datetime="2022-03-09T09:57:22+08:00">2022-03-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,7 +256,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>693</span>
+              <span>515</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -275,21 +275,42 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h1><hr>
-<h2 id="1-为什么使用继承"><a href="#1-为什么使用继承" class="headerlink" title="1. 为什么使用继承"></a>1. 为什么使用继承</h2><p>从已有的类派生出新的类，称为继承。<br>在不同的类中也可能会有共同的特征和动作，可以把这些共同的特征和动作放在一个类中，让其它类共享。<br>因此可以定义一个通用类，然后将其扩展为其它多个特定类，这些特定类继承通用类中的特征和动作。<br>继承是 Java 中实现软件重用的重要手段，避免重复，易于维护，易于理解。 </p>
-<hr>
-<h2 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h2><pre><code>•    子类拥有父类非 private 的属性、方法。
-•    子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
-•    子类可以用自己的方式实现父类的方法。
-•    Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
-•    提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）
-</code></pre>
-<hr>
-<h2 id="继承关键字-extends-和-implements"><a href="#继承关键字-extends-和-implements" class="headerlink" title="继承关键字   extends 和 implements"></a>继承关键字   extends 和 implements</h2><h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><p>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。</p>
-<h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）</p>
-<h2 id="super-与-this-关键字"><a href="#super-与-this-关键字" class="headerlink" title="super 与 this 关键字"></a>super 与 this 关键字</h2><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><p>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。</p>
-<h3 id="this关键字：指向自己的引用"><a href="#this关键字：指向自己的引用" class="headerlink" title="this关键字：指向自己的引用"></a>this关键字：指向自己的引用</h3><h2 id="Final关键字"><a href="#Final关键字" class="headerlink" title="Final关键字"></a>Final关键字</h2><p>final 关键字声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写：</p>
-
+        <h3 id="高内聚-低耦合"><a href="#高内聚-低耦合" class="headerlink" title="高内聚 低耦合"></a>高内聚 低耦合</h3><ul>
+<li>耦合：就是模块间的关联度，低耦合就是关联度要小（例如减少继承和友元，全局变量）</li>
+<li>内聚：模块的功能，高内聚就是模块的功能要尽可能简洁，最好一个模块只完成一个功能</li>
+</ul>
+<h3 id="与equals-的区别"><a href="#与equals-的区别" class="headerlink" title="== 与equals()的区别"></a>== 与equals()的区别</h3><h4 id="是一个比较运算符"><a href="#是一个比较运算符" class="headerlink" title="== 是一个比较运算符"></a>== 是一个比较运算符</h4><ul>
+<li>对于基本数据类型  == 比较值是否相等</li>
+<li>队医引用数据类型  判断两者是否同一个地址</li>
+</ul>
+<h4 id="equals-是Object中的方法，只能用于判断引用类型"><a href="#equals-是Object中的方法，只能用于判断引用类型" class="headerlink" title="equals()是Object中的方法，只能用于判断引用类型"></a>equals()是Object中的方法，只能用于判断引用类型</h4><ul>
+<li>默认是判断地址相等 </li>
+<li>但其子类 通常改写equals()方法 ，用来判断属性是否相等。</li>
+</ul>
+<h2 id="什么是多态，那些体现"><a href="#什么是多态，那些体现" class="headerlink" title="什么是多态，那些体现"></a>什么是多态，那些体现</h2><ul>
+<li>多态： 方法或对象具有多种形态，是OOP三大特征(封装、继承、多态)，建立在前两者智商的具体体现。</li>
+</ul>
+<ol>
+<li>方法多态</li>
+</ol>
+<ul>
+<li>（1）重载体现多态 (OverLoad)</li>
+<li>（2） 重写体现多态 （OverWrite）</li>
+</ul>
+<ol start="2">
+<li>对象多态</li>
+</ol>
+<ul>
+<li>(1) 对象的编译类型和运行类型可以不一致，编译类型在定义时，就确定，不可变。</li>
+<li>(2) 对象的运行类型是可以改变的，通过getClass()来查看运行类型</li>
+<li>(3) 编译类型 查看 = 左边； 运行类型查看 = 右边 </li>
+</ul>
+<h3 id="Java动态绑定机制"><a href="#Java动态绑定机制" class="headerlink" title="Java动态绑定机制"></a>Java动态绑定机制</h3><ol>
+<li>当调用对象方法的时候，该方法会和该对象的<em>内存地址/运行类型</em> 绑定</li>
+<li>当调用对象属性时， 没有动态绑定机制，哪里声明，在哪里使用</li>
+</ol>
+<p><code>summon: 属性看编译类 方法看运行类</code></p>
+<h3 id="静态变量-方法-static"><a href="#静态变量-方法-static" class="headerlink" title="静态变量/ 方法 static"></a>静态变量/ 方法 static</h3>
     </div>
 
     
@@ -307,13 +328,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/" rel="prev" title="Java的流Stream、文件和IO">
-      <i class="fa fa-chevron-left"></i> Java的流Stream、文件和IO
+    <a href="/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/" rel="prev" title="单链表原地逆置">
+      <i class="fa fa-chevron-left"></i> 单链表原地逆置
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="next" title="Java异常处理">
-      Java异常处理 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -372,7 +390,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E7%BB%A7%E6%89%BF"><span class="nav-number">1.</span> <span class="nav-text">Java继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么使用继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">继承的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E5%85%B3%E9%94%AE%E5%AD%97-extends-%E5%92%8C-implements"><span class="nav-number">1.3.</span> <span class="nav-text">继承关键字   extends 和 implements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#extends%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.3.1.</span> <span class="nav-text">extends关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#implements%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.3.2.</span> <span class="nav-text">implements关键字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super-%E4%B8%8E-this-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.4.</span> <span class="nav-text">super 与 this 关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#super%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9A"><span class="nav-number">1.4.1.</span> <span class="nav-text">super关键字：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%9A%E6%8C%87%E5%90%91%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">1.4.2.</span> <span class="nav-text">this关键字：指向自己的引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Final%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.5.</span> <span class="nav-text">Final关键字</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E5%86%85%E8%81%9A-%E4%BD%8E%E8%80%A6%E5%90%88"><span class="nav-number">1.</span> <span class="nav-text">高内聚 低耦合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Eequals-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">&#x3D;&#x3D; 与equals()的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%AF%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.</span> <span class="nav-text">&#x3D;&#x3D; 是一个比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#equals-%E6%98%AFObject%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%94%A8%E4%BA%8E%E5%88%A4%E6%96%AD%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">equals()是Object中的方法，只能用于判断引用类型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E6%80%81%EF%BC%8C%E9%82%A3%E4%BA%9B%E4%BD%93%E7%8E%B0"><span class="nav-number"></span> <span class="nav-text">什么是多态，那些体现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%9C%BA%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">Java动态绑定机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F-%E6%96%B9%E6%B3%95-static"><span class="nav-number">2.</span> <span class="nav-text">静态变量&#x2F; 方法 static</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

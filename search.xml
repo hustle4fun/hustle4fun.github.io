@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>1.27JAVA学习日志</title>
+    <url>/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<p>#1.27JAVA学习日志</p>
+<hr>
+<pre><code>1. Java中没有无符号整数存储方式
+2. 算数移位 “&gt;&gt; &lt;&lt;”  / 逻辑移位（带符号位）“&gt;&gt;&gt; &lt;&lt;&lt;”
+3. vscode 中的配置设置快捷键 ctrl + ,
+4. jdk查看版本 /usr/libexec/java_home -V
+5. 整数与浮点数计算时 整数自动转换为浮点数
+6. 整数运算在除数为0时会报错，而浮点数运算在除数为0时，不会报     错，但会返回几个特殊值：
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">NaN表示Not a Number</span><br><span class="line"></span><br><span class="line">Infinity表示无穷大</span><br><span class="line">-Infinity表示负无穷大</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>7. String[] args 表示的是调用main()时候的传递的字符串参数 可以使用args[x]调用   
+8. 一个java程序必须有且仅有一个main方法
+9. java文件在编写时带上package包一行 在terminal之中直接编译 将无法找到主类，可以的选择A：注释掉packag行 B：运行是返回到java类的包的上一级目录之中
+10. java是大小写敏感的    类名应该使用首字母大写开头（每个单词的首字母都需要大写） 方法吗名：首字母必须小写字母开头
+11. java的枚举。enum 只能是事先设置好的
+12. java中的注释： //(单行）。  /*（多行注释）*/
+</code></pre>
+<hr>
+]]></content>
+      <categories>
+        <category>JAVA学习</category>
+      </categories>
+      <tags>
+        <tag>java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.29JAVA学习日志</title>
+    <url>/2022/02/02/1-29JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h2 id="1-29学习日志"><a href="#1-29学习日志" class="headerlink" title="1.29学习日志"></a>1.29学习日志</h2><h2 id="Hexo博客在写Hexo-Deploy之后GitHub界面没有更新"><a href="#Hexo博客在写Hexo-Deploy之后GitHub界面没有更新" class="headerlink" title="Hexo博客在写Hexo Deploy之后GitHub界面没有更新"></a>Hexo博客在写Hexo Deploy之后GitHub界面没有更新</h2><h3 id="1-通过"><a href="#1-通过" class="headerlink" title="1. 通过"></a>1. 通过</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">通过 hexo clean清理hexo的缓存</span><br><span class="line">通过 hexo g</span><br><span class="line">Hexo d 之后同步</span><br></pre></td></tr></table></figure>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
+<li>Hexo clean清理缓存</li>
+<li>ctrl + F5浏览器缓存清理</li>
+</ol>
+<hr>
+<p>Java中默认的整数类型是int，如果要定义为long ，则要在数值后加上L或者l</p>
+<p>默认的浮点型是双精度浮点，如果要定义float，则要在数值后面加上f或者F</p>
+<hr>
+<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><h3 id="1、类注释"><a href="#1、类注释" class="headerlink" title="1、类注释"></a>1、类注释</h3><p>在每个类前面必须加上类注释，注释模板如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line">* Copyright (C), 2006-2010, ChengDu Lovo info. Co., Ltd.</span><br><span class="line">* FileName: Test.java</span><br><span class="line">* 类的详细说明</span><br><span class="line">*</span><br><span class="line">* @author 类创建者姓名</span><br><span class="line">* @Date    创建日期</span><br><span class="line">* @version 1.00</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+<p>###2、属性注释</p>
+<p>在每个属性前面必须加上属性注释，注释模板如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/** 提示信息 */</span><br><span class="line">private String strMsg = null;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、方法注释"><a href="#3、方法注释" class="headerlink" title="3、方法注释"></a>3、方法注释</h3><p>在每个方法前面必须加上方法注释，注释模板如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line">* 类方法的详细使用说明</span><br><span class="line">*</span><br><span class="line">* @param 参数1 参数1的使用说明</span><br><span class="line">* @return 返回结果的说明</span><br><span class="line">* @throws 异常类型.错误代码 注明从此类方法中抛出异常的说明</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<hr>
+]]></content>
+      <categories>
+        <category>JAVA学习日志</category>
+      </categories>
+      <tags>
+        <tag>JAVA学习日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.2.2022JAVA学习日志</title>
     <url>/2022/02/02/2-2-2022JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<hr>
@@ -84,36 +144,6 @@
       </tags>
   </entry>
   <entry>
-    <title>1.29JAVA学习日志</title>
-    <url>/2022/02/02/1-29JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h2 id="1-29学习日志"><a href="#1-29学习日志" class="headerlink" title="1.29学习日志"></a>1.29学习日志</h2><h2 id="Hexo博客在写Hexo-Deploy之后GitHub界面没有更新"><a href="#Hexo博客在写Hexo-Deploy之后GitHub界面没有更新" class="headerlink" title="Hexo博客在写Hexo Deploy之后GitHub界面没有更新"></a>Hexo博客在写Hexo Deploy之后GitHub界面没有更新</h2><h3 id="1-通过"><a href="#1-通过" class="headerlink" title="1. 通过"></a>1. 通过</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">通过 hexo clean清理hexo的缓存</span><br><span class="line">通过 hexo g</span><br><span class="line">Hexo d 之后同步</span><br></pre></td></tr></table></figure>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
-<li>Hexo clean清理缓存</li>
-<li>ctrl + F5浏览器缓存清理</li>
-</ol>
-<hr>
-<p>Java中默认的整数类型是int，如果要定义为long ，则要在数值后加上L或者l</p>
-<p>默认的浮点型是双精度浮点，如果要定义float，则要在数值后面加上f或者F</p>
-<hr>
-<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><h3 id="1、类注释"><a href="#1、类注释" class="headerlink" title="1、类注释"></a>1、类注释</h3><p>在每个类前面必须加上类注释，注释模板如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line">* Copyright (C), 2006-2010, ChengDu Lovo info. Co., Ltd.</span><br><span class="line">* FileName: Test.java</span><br><span class="line">* 类的详细说明</span><br><span class="line">*</span><br><span class="line">* @author 类创建者姓名</span><br><span class="line">* @Date    创建日期</span><br><span class="line">* @version 1.00</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-
-<p>###2、属性注释</p>
-<p>在每个属性前面必须加上属性注释，注释模板如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/** 提示信息 */</span><br><span class="line">private String strMsg = null;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、方法注释"><a href="#3、方法注释" class="headerlink" title="3、方法注释"></a>3、方法注释</h3><p>在每个方法前面必须加上方法注释，注释模板如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line">* 类方法的详细使用说明</span><br><span class="line">*</span><br><span class="line">* @param 参数1 参数1的使用说明</span><br><span class="line">* @return 返回结果的说明</span><br><span class="line">* @throws 异常类型.错误代码 注明从此类方法中抛出异常的说明</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<hr>
-]]></content>
-      <categories>
-        <category>JAVA学习日志</category>
-      </categories>
-      <tags>
-        <tag>JAVA学习日志</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2.4.2022Java学习日志</title>
     <url>/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
     <content><![CDATA[<h1 id="2-4-2022-JAVA学习日志"><a href="#2-4-2022-JAVA学习日志" class="headerlink" title="2.4.2022 JAVA学习日志"></a>2.4.2022 JAVA学习日志</h1><hr>
@@ -168,36 +198,6 @@
       </categories>
       <tags>
         <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.27JAVA学习日志</title>
-    <url>/2022/01/28/1-27JAVA%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<p>#1.27JAVA学习日志</p>
-<hr>
-<pre><code>1. Java中没有无符号整数存储方式
-2. 算数移位 “&gt;&gt; &lt;&lt;”  / 逻辑移位（带符号位）“&gt;&gt;&gt; &lt;&lt;&lt;”
-3. vscode 中的配置设置快捷键 ctrl + ,
-4. jdk查看版本 /usr/libexec/java_home -V
-5. 整数与浮点数计算时 整数自动转换为浮点数
-6. 整数运算在除数为0时会报错，而浮点数运算在除数为0时，不会报     错，但会返回几个特殊值：
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">NaN表示Not a Number</span><br><span class="line"></span><br><span class="line">Infinity表示无穷大</span><br><span class="line">-Infinity表示负无穷大</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>7. String[] args 表示的是调用main()时候的传递的字符串参数 可以使用args[x]调用   
-8. 一个java程序必须有且仅有一个main方法
-9. java文件在编写时带上package包一行 在terminal之中直接编译 将无法找到主类，可以的选择A：注释掉packag行 B：运行是返回到java类的包的上一级目录之中
-10. java是大小写敏感的    类名应该使用首字母大写开头（每个单词的首字母都需要大写） 方法吗名：首字母必须小写字母开头
-11. java的枚举。enum 只能是事先设置好的
-12. java中的注释： //(单行）。  /*（多行注释）*/
-</code></pre>
-<hr>
-]]></content>
-      <categories>
-        <category>JAVA学习</category>
-      </categories>
-      <tags>
-        <tag>java初级学习</tag>
       </tags>
   </entry>
   <entry>
@@ -284,6 +284,43 @@
       </categories>
       <tags>
         <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo引入本地图片问题</title>
+    <url>/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="Hexo博客引用本地图片无法加载"><a href="#Hexo博客引用本地图片无法加载" class="headerlink" title="Hexo博客引用本地图片无法加载"></a>Hexo博客引用本地图片无法加载</h1><p>在使用Hexo时，发现在文章中引用本地图片总是无法正常的显示</p>
+<img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.png" class title="图片无法正常引用">
+
+<h2 id="解决方案：-插件安装与配置"><a href="#解决方案：-插件安装与配置" class="headerlink" title="解决方案： 插件安装与配置"></a>解决方案： 插件安装与配置</h2><ul>
+<li><p>安装图片路径转化插件:<code>**hexo -asset-image**</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line">或</span><br><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure></li>
+<li><p>在根目录下配置文件<code>_config.yml</code><br>配置<code>post_asset_folder:false</code>改为<code>true</code> 。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，可以把与文章所有相关的资源（图片）放在文件夹中，这样就可以使用<em>相对路径</em>来引用</p>
+</li>
+<li><p>在插入图片是使用的格式<br> <code>&#123;% asset_img test.jpg This is an test image %&#125;</code><br>其中asset_img是插件调用; “This is a …”这是图片的描述，可以自己修改</p>
+</li>
+<li><p>不能使用Markdown语法引入<br>  <img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/img.png"></p>
+<p>可以查看官方文档 ： <code>https://hexo.io/zh-cn/docs</code></p>
+</li>
+</ul>
+<h2 id="问题推测"><a href="#问题推测" class="headerlink" title="问题推测"></a>问题推测</h2><ol>
+<li>本体图片没有上传到GitHub仓中，导致引用无效</li>
+</ol>
+<img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/2.png" class title="gitHub中未正常上传">
+
+<p>解决方案： 安装插件</p>
+<ol start="2">
+<li><p>本地上传图片没有放在同名文件夹中。<br> 解决方案： 使用<code>post_asset_folder:false</code>改为<code>true</code>。这样在Hexo new 是会自动创建</p>
+</li>
+<li><p>图片路径出错</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>问题解决</category>
+      </categories>
+      <tags>
+        <tag>问题解决</tag>
       </tags>
   </entry>
   <entry>
@@ -517,6 +554,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Java异常处理</title>
+    <url>/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
+<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
+<p>从大体来分异常为两块：</p>
+<ol>
+<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
+<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
+<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
+</li>
+<li><p>NullpointException（空指针异常</p>
+</li>
+<li><p>ClassCastException（类型转换异常）</p>
+</li>
+<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
+</li>
+<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
+</li>
+<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
+</li>
+<li><p>throw跟throws的区别:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
+<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java数据结构</title>
     <url>/2022/02/15/Java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h1 id="Java数据结构"><a href="#Java数据结构" class="headerlink" title="Java数据结构"></a>Java数据结构</h1><p>Java工具包提供了强大的数据结构。在Java中的数据结构主要包括以下几种接口和类：</p>
@@ -567,42 +640,6 @@
 <p>第二个构造函数创建指定大小的哈希表：<br><code>Hashtable(int size)</code></p>
 <p>第三个构造方法创建了一个指定大小的哈希表，并且通过fillRatio指定填充比例。<br>填充比例必须介于0.0和1.0之间，它决定了哈希表在重新调整大小之前的充满程度：<br><code>Hashtable(int size,float fillRatio)</code></p>
 <p>第四个构造方法创建了一个以M中元素为初始化元素的哈希表。<br>哈希表的容量被设置为M的两倍。<br><code>Hashtable(Map m)</code></p>
-]]></content>
-      <categories>
-        <category>Java初级学习</category>
-      </categories>
-      <tags>
-        <tag>Java初级学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java异常处理</title>
-    <url>/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
-<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
-<p>从大体来分异常为两块：</p>
-<ol>
-<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
-<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
-<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
-</li>
-<li><p>NullpointException（空指针异常</p>
-</li>
-<li><p>ClassCastException（类型转换异常）</p>
-</li>
-<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
-</li>
-<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
-</li>
-<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
-</li>
-<li><p>throw跟throws的区别:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
-<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
 ]]></content>
       <categories>
         <category>Java初级学习</category>
@@ -865,6 +902,39 @@
       </tags>
   </entry>
   <entry>
+    <title>单链表原地逆置</title>
+    <url>/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="单链表原地逆置"><a href="#单链表原地逆置" class="headerlink" title="单链表原地逆置"></a>单链表原地逆置</h2><p>前段时间刷leetcode无意见重新做这道题，在之前408解题的时候有简单学习，但是现在遗忘。温故而知新</p>
+<p>Java代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode reverseList(ListNode head) &#123;</span><br><span class="line">        //前期准备  （1）</span><br><span class="line">        ListNode p = head.next;</span><br><span class="line">         head = null;</span><br><span class="line">        </span><br><span class="line">        //向后遍历 （2）</span><br><span class="line">        while (p != null) &#123;</span><br><span class="line">            ListNode nextTemp = p.next;</span><br><span class="line">            p.next = head.next;</span><br><span class="line">            head.next = p;</span><br><span class="line">            p = nextTemp;</span><br><span class="line">        &#125;</span><br><span class="line">        return p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 代码的前期准备 (1) </p>
+<ul>
+<li> 使建立的ListNode指向head-&gt;next ;使得head-&gt;next = null<img src="/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/01.png" class title="逆置的前期准备"></li>
+</ul>
+<p>执行过程 (2)</p>
+<ul>
+<li>执行 （p != null） 用作判断是否执行到链表结尾</li>
+<li>设置 tmp=p-&gt;next 用于下一次循环的开始</li>
+<li>p.next = l.next 表示这个节点指向上一个节点（构成一个反向链表）</li>
+<li>头节点head.next -&gt; p 表明头节点指向新节点的开头（头插法）</li>
+<li>p=r 开启下一个循环<img src="/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/02.png" class title="逆置头插第一个节点"></li>
+</ul>
+<p>第二轮循环</p>
+<img src="/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/03.png" class title="逆置头插第二个节点">
+
+<p>第三轮循环</p>
+<img src="/2022/03/09/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8E%9F%E5%9C%B0%E9%80%86%E7%BD%AE/04.png" class title="逆置头插第三个节点">
+
+<p>之后（3）<br>一次遍历知道头插到最后一个节点</p>
+]]></content>
+      <categories>
+        <category>算法积累</category>
+      </categories>
+      <tags>
+        <tag>算法积累</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>抽象类与接口总结</title>
     <url>/2022/02/13/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="抽象类总结规定"><a href="#抽象类总结规定" class="headerlink" title="抽象类总结规定"></a>抽象类总结规定</h1><ol>
@@ -981,40 +1051,49 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo引入本地图片问题</title>
-    <url>/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="Hexo博客引用本地图片无法加载"><a href="#Hexo博客引用本地图片无法加载" class="headerlink" title="Hexo博客引用本地图片无法加载"></a>Hexo博客引用本地图片无法加载</h1><p>在使用Hexo时，发现在文章中引用本地图片总是无法正常的显示</p>
-<img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/1.png" class title="图片无法正常引用">
-
-<h2 id="解决方案：-插件安装与配置"><a href="#解决方案：-插件安装与配置" class="headerlink" title="解决方案： 插件安装与配置"></a>解决方案： 插件安装与配置</h2><ul>
-<li><p>安装图片路径转化插件:<code>**hexo -asset-image**</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line">或</span><br><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure></li>
-<li><p>在根目录下配置文件<code>_config.yml</code><br>配置<code>post_asset_folder:false</code>改为<code>true</code> 。这样在建立文件时，Hexo会自动建立一个与文章同名的文件夹，可以把与文章所有相关的资源（图片）放在文件夹中，这样就可以使用<em>相对路径</em>来引用</p>
-</li>
-<li><p>在插入图片是使用的格式<br> <code>&#123;% asset_img test.jpg This is an test image %&#125;</code><br>其中asset_img是插件调用; “This is a …”这是图片的描述，可以自己修改</p>
-</li>
-<li><p>不能使用Markdown语法引入<br>  <img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/img.png"></p>
-<p>可以查看官方文档 ： <code>https://hexo.io/zh-cn/docs</code></p>
-</li>
+    <title>3.8.2022学习日志</title>
+    <url>/2022/03/09/3-8-2022%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h3 id="高内聚-低耦合"><a href="#高内聚-低耦合" class="headerlink" title="高内聚 低耦合"></a>高内聚 低耦合</h3><ul>
+<li>耦合：就是模块间的关联度，低耦合就是关联度要小（例如减少继承和友元，全局变量）</li>
+<li>内聚：模块的功能，高内聚就是模块的功能要尽可能简洁，最好一个模块只完成一个功能</li>
 </ul>
-<h2 id="问题推测"><a href="#问题推测" class="headerlink" title="问题推测"></a>问题推测</h2><ol>
-<li>本体图片没有上传到GitHub仓中，导致引用无效</li>
+<h3 id="与equals-的区别"><a href="#与equals-的区别" class="headerlink" title="== 与equals()的区别"></a>== 与equals()的区别</h3><h4 id="是一个比较运算符"><a href="#是一个比较运算符" class="headerlink" title="== 是一个比较运算符"></a>== 是一个比较运算符</h4><ul>
+<li>对于基本数据类型  == 比较值是否相等</li>
+<li>队医引用数据类型  判断两者是否同一个地址</li>
+</ul>
+<h4 id="equals-是Object中的方法，只能用于判断引用类型"><a href="#equals-是Object中的方法，只能用于判断引用类型" class="headerlink" title="equals()是Object中的方法，只能用于判断引用类型"></a>equals()是Object中的方法，只能用于判断引用类型</h4><ul>
+<li>默认是判断地址相等 </li>
+<li>但其子类 通常改写equals()方法 ，用来判断属性是否相等。</li>
+</ul>
+<h2 id="什么是多态，那些体现"><a href="#什么是多态，那些体现" class="headerlink" title="什么是多态，那些体现"></a>什么是多态，那些体现</h2><ul>
+<li>多态： 方法或对象具有多种形态，是OOP三大特征(封装、继承、多态)，建立在前两者智商的具体体现。</li>
+</ul>
+<ol>
+<li>方法多态</li>
 </ol>
-<img src="/2022/02/26/Hexo%E5%BC%95%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98/2.png" class title="gitHub中未正常上传">
-
-<p>解决方案： 安装插件</p>
+<ul>
+<li>（1）重载体现多态 (OverLoad)</li>
+<li>（2） 重写体现多态 （OverWrite）</li>
+</ul>
 <ol start="2">
-<li><p>本地上传图片没有放在同名文件夹中。<br> 解决方案： 使用<code>post_asset_folder:false</code>改为<code>true</code>。这样在Hexo new 是会自动创建</p>
-</li>
-<li><p>图片路径出错</p>
-</li>
+<li>对象多态</li>
 </ol>
-]]></content>
+<ul>
+<li>(1) 对象的编译类型和运行类型可以不一致，编译类型在定义时，就确定，不可变。</li>
+<li>(2) 对象的运行类型是可以改变的，通过getClass()来查看运行类型</li>
+<li>(3) 编译类型 查看 = 左边； 运行类型查看 = 右边 </li>
+</ul>
+<h3 id="Java动态绑定机制"><a href="#Java动态绑定机制" class="headerlink" title="Java动态绑定机制"></a>Java动态绑定机制</h3><ol>
+<li>当调用对象方法的时候，该方法会和该对象的<em>内存地址/运行类型</em> 绑定</li>
+<li>当调用对象属性时， 没有动态绑定机制，哪里声明，在哪里使用</li>
+</ol>
+<p><code>summon: 属性看编译类 方法看运行类</code></p>
+<h3 id="静态变量-方法-static"><a href="#静态变量-方法-static" class="headerlink" title="静态变量/ 方法 static"></a>静态变量/ 方法 static</h3>]]></content>
       <categories>
-        <category>问题解决</category>
+        <category>Java初级学习</category>
       </categories>
       <tags>
-        <tag>问题解决</tag>
+        <tag>Java初级学习</tag>
       </tags>
   </entry>
 </search>
