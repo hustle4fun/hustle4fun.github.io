@@ -37,20 +37,27 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2.6.2022      Java学习日志 Java 休眠(sleep)sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。代码： Thread.sleep(1000*3)     Java Calendar 创建一个代表系统的当前日期的Calendar对象  12345    calende">
+  <meta name="description" content="Chapter10面向对象编程(高级) 类变量&#x2F;类方法   static 静态变量 是同一个类所有对象共享的 。 static 变量在类加载的时候 就生成了。(jdk7.0以前在类方法区中| jdk8.0及以后 在类堆中存储)  类变量是所有对象共享的，而实例变量是每个对象独享的。  类方法： 当方法中不涉及到任何和对象相关的成员，则可以将方法设计成静态方法，提高开发效率。(不需要创建对象，直接调">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2.6.2022Java学习日志">
-<meta property="og:url" content="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/index.html">
+<meta property="og:title" content="3.16近期总结">
+<meta property="og:url" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="hustle4fun的博客">
-<meta property="og:description" content="2.6.2022      Java学习日志 Java 休眠(sleep)sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。代码： Thread.sleep(1000*3)     Java Calendar 创建一个代表系统的当前日期的Calendar对象  12345    calende">
+<meta property="og:description" content="Chapter10面向对象编程(高级) 类变量&#x2F;类方法   static 静态变量 是同一个类所有对象共享的 。 static 变量在类加载的时候 就生成了。(jdk7.0以前在类方法区中| jdk8.0及以后 在类堆中存储)  类变量是所有对象共享的，而实例变量是每个对象独享的。  类方法： 当方法中不涉及到任何和对象相关的成员，则可以将方法设计成静态方法，提高开发效率。(不需要创建对象，直接调">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-06T13:00:36.000Z">
-<meta property="article:modified_time" content="2022-02-06T13:01:34.144Z">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner01.png">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner02.png">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy01.png">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy02.png">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy03.png">
+<meta property="og:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy04.png">
+<meta property="article:published_time" content="2022-03-17T07:05:27.000Z">
+<meta property="article:modified_time" content="2022-03-17T07:06:52.453Z">
 <meta property="article:author" content="谭仕麟">
 <meta property="article:tag" content="Java初级学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner01.png">
 
-<link rel="canonical" href="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+<link rel="canonical" href="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -63,7 +70,7 @@
   };
 </script>
 
-  <title>2.6.2022Java学习日志 | hustle4fun的博客</title>
+  <title>3.16近期总结 | hustle4fun的博客</title>
   
 
 
@@ -214,7 +221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -227,7 +234,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          2.6.2022Java学习日志
+          3.16近期总结
         </h1>
 
         <div class="post-meta">
@@ -238,7 +245,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-06 21:00:36 / 修改时间：21:01:34" itemprop="dateCreated datePublished" datetime="2022-02-06T21:00:36+08:00">2022-02-06</time>
+              <time title="创建时间：2022-03-17 15:05:27 / 修改时间：15:06:52" itemprop="dateCreated datePublished" datetime="2022-03-17T15:05:27+08:00">2022-03-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,14 +263,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -275,40 +282,138 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
-<h2 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h2><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。<br>代码： <code>Thread.sleep(1000*3)   </code></p>
-<hr>
-<h2 id="Java-Calendar"><a href="#Java-Calendar" class="headerlink" title="Java Calendar"></a>Java Calendar</h2><ol>
-<li><p>创建一个代表系统的当前日期的Calendar对象 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    calender作为一个抽象类，实际使用的时候是子类的对象，不需要 单独的声明</span><br><span class="line"></span><br><span class="line">        Calendar c = Calendar.getInstance(); //</span><br><span class="line">        </span><br><span class="line">2. 创建制定日期的Calendar对象</span><br></pre></td></tr></table></figure>
-<p> Calendar c = Calender.getInstance();<br> C.set(year, month, day)</p>
+        <h3 id="Chapter10面向对象编程-高级"><a href="#Chapter10面向对象编程-高级" class="headerlink" title="Chapter10面向对象编程(高级)"></a>Chapter10面向对象编程(高级)</h3><ol>
+<li>类变量/类方法</li>
+</ol>
+<ul>
+<li><p>static 静态变量 是同一个类所有对象共享的 。 static 变量在类加载的时候 就生成了。(jdk7.0以前在类方法区中| jdk8.0及以后 在类堆中存储)</p>
 </li>
-<li><p>Calendar类对象信息的设置<br>Set设置<br>如：<br><code>Calendar c1 = Calendar.getInstance();</code></p>
+<li><p><code>类变量是所有对象共享的，而实例变量是每个对象独享的。</code></p>
+</li>
+<li><p>类方法： 当方法中不涉及到任何和对象相关的成员，则可以将方法设计成静态方法，提高开发效率。(不需要创建对象，直接调用类使用)</p>
+</li>
+<li><p>类方法(静态方法)中，不能使用和对象相关的关键字，“This”“Super”</p>
+</li>
+<li><p>静态方法只能访问静态成员，非静态方法，都可以访问。</p>
+</li>
+</ul>
+<ol start="2">
+<li>代码块</li>
+</ol>
+<ul>
+<li>称为初始化块， 属于类的成员:<em>(属性、方法、代码块、构造器、内部类)</em><br>可以为静态， 在类加载｜对象声明时，隐式的调用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(static）&#123;</span><br><span class="line">    代码</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><p>类什么时候加载</p>
+<ul>
+<li>创建对象实例时(new)</li>
+<li>创建子类对象实例，父类也会被加载</li>
+<li>使用类的静态成员时(静态属性、静态方法)</li>
+</ul>
+</li>
+<li><p><strong>创建对象时，一个类的调用顺序</strong></p>
 </li>
 </ol>
-<p>调用：<br><code>public final void set(int year,int month,int date)</code><br><code>c1.set(2009, 6, 12);//</code><br>把Calendar对象c1的年月日分别设这为：2009、6、12n</p>
-<ol start="4">
-<li>public void set(int field,int value)</li>
+<ul>
+<li>调用静态代码块和静态属性初始化(优先级相同，顺序执行)</li>
+<li>调用普通代码块和普通属性初始化(优先级相同，顺序执行)</li>
+<li>调用构造方法</li>
+</ul>
+<ol start="5">
+<li><p>构造器前面隐藏了super()和调用普通代码块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public A()&#123;//构造器</span><br><span class="line">    //1.super()</span><br><span class="line">    //2.调用普通代码块</span><br><span class="line">    //最后执行构造器中代码</span><br><span class="line">    代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>单例设计模式</p>
+</li>
 </ol>
-<hr>
-<h2 id="GregorianCalendar类"><a href="#GregorianCalendar类" class="headerlink" title="GregorianCalendar类"></a>GregorianCalendar类</h2><p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。<br>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。 </p>
-<hr>
-<h2 id="程序报错积累："><a href="#程序报错积累：" class="headerlink" title="程序报错积累："></a>程序报错积累：</h2><p>在跟随菜鸟教程gregianCalender练习的过程之中 报错：<code>The method get(int) is undefined for the type GregorianCalendarJava(67108964) </code></p>
-<p>一般报错这种类型：，三种情况：</p>
+<ul>
+<li><p>单例：某个类只能存在一个对象实例，该类只提供一个取得其对象实例的方法。</p>
+</li>
+<li><p>两种方式1) 饿汉式 2） 懒汉式</p>
+</li>
+<li><p>如何保障我们只能创建一个 GirlFriend 对象 </p>
+</li>
+</ul>
+<p>步骤[单例模式-饿汉式]</p>
 <ol>
-<li>倒错包了（一般编译器会提示）</li>
-<li> 在项目中导入的Jar包不是当前版本的jar 无法支持当前方法</li>
-<li>导入了不同版本的同一个Jar包（重要） </li>
+<li>将构造器私有化 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">private A()&#123;</span><br><span class="line">    构造代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在类的内部直接创建对象(该对象是 static)<br><code>private static A a = new A(“构造内容”);</code></li>
+<li>提供一个公共的 static 方法，返回 gf 对象<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static A getInstance()&#123;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p><strong>在拷贝别人的项目的过程中，需要注意，会继续使用项目中的Jar。本次本人遇到的问题属于第三种错误原因。</strong></p>
-<hr>
-<h2 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h2><h3 id="Java方法的重载："><a href="#Java方法的重载：" class="headerlink" title="Java方法的重载："></a>Java方法的重载：</h3><p>方法重载：一个类的两个方法拥有相同的名字，但是有不同的参数列表。<br>Java编译器根据方法签名判断哪个方法应该被调用。 </p>
-<hr>
-<h3 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h3><p>当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，但构造方法没有返回值。 </p>
-<p>通常会使用构造方法给一个类的实例变量赋初值，或者执行其它必要的步骤来创建一个完整的对象。 </p>
-<hr>
-<h2 id="Java-Scanner类"><a href="#Java-Scanner类" class="headerlink" title="Java Scanner类"></a>Java Scanner类</h2><p>创建Scanner 对象的基本语法：<br><code>Scanner scan = new Scanner(System.in) //(调用system.in是控制台输入调用)</code><br>并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
-<hr>
+<p>步骤[单例模式-懒汉式]<br>步骤不同在于2）<br>2) 当用户使用getInstance时，才返回创建对象A，再次使用时，返回上次创建的对象(保证了单例)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private A a;//先声明</span><br><span class="line">public static getInstance()&#123;</span><br><span class="line">    if(a == null)&#123;</span><br><span class="line">        return a = new A(); </span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>final</li>
+</ol>
+<ul>
+<li>修饰类 类不希望被继承</li>
+<li>修饰方法 不希望被子类重写｜改写</li>
+<li>修饰变量 变为常量（赋值，不可被修改）</li>
+</ul>
+<ol start="8">
+<li>接口interface</li>
+</ol>
+<ul>
+<li>接口中的属性，只能是final的，而且是public static final修饰符。 </li>
+<li>访问接口中的属性： 接口名.属性名 </li>
+</ul>
+<h4 id="接口VS继承"><a href="#接口VS继承" class="headerlink" title="接口VS继承"></a>接口VS继承</h4><p>小结: 当子类继承了父类，就自动的拥有父类的功能<br>如果子类需要扩展功能，可以通过实现接口的方式扩展.<br>可以理解 实现接口 是对 java 单继承机制的一种补充.</p>
+<ol start="9">
+<li>内部类<br>定义类在局部位置(方法中/代码块) :(1) 局部内部类<br>(2) 匿名内部类</li>
+</ol>
+<p>定义在成员位置 (1) 成员内部类 (2)静态内部类</p>
+<ul>
+<li>局部内部类的使用<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner01.png" class title="localinner01">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner02.png" class title="localinner02"></li>
+</ul>
+<ul>
+<li>匿名内部类<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy01.png" class title="Annoy">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy02.png" class title="Annoy02">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy03.png" class title="Annoy03">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy04.png" class title="Annoy04"></li>
+</ul>
+<ul>
+<li>成员内部类</li>
+</ul>
+<ol>
+<li>定义在外部类的成员位置， 没有static修饰</li>
+<li>可以直接访问外部类的成员，包含私有的</li>
+<li>可以添加任意的访问修饰符(public protected default private)因为本来就是一个成员</li>
+<li>外部类访问， 先创建对象，再访问</li>
+<li>外部类、内部类重名，就近原则，访问外部类(外部类名.this.成员)</li>
+<li>使用成员内部类的三种方式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一种方式 outer08.new Inner08(); 相当于把 new Inner08()当做是 outer08 成员  |  这就是一个语法，不要特别的纠结.</span><br><span class="line">2. Outer08.Inner08 inner08 = outer08.new Inner08(); inner08.say(); </span><br><span class="line">第二方式 在外部类中，编写一个方法，可以返回 Inner08 对象 </span><br><span class="line"></span><br><span class="line">Outer08.Inner08 inner08Instance = outer08.getInner08Instance(); inner08Instance.say();</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>外部静态类</li>
+</ul>
+<ol>
+<li>可以直接访问外部类的所有静态成员，包含私有的，但是不能访问非静态成员。</li>
+<li>可以添加访问修饰符、</li>
+<li>其他属性与成员内部类相似</li>
+</ol>
+<ul>
+<li>枚举 enum</li>
+</ul>
+<ol>
+<li>构造方式 （1） 构造器私有化，直接实例话特定对象</li>
+<li>enum关键字实现<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//如果使用了 enum 来实现枚举类 </span><br><span class="line">//1. 使用关键字 enum 替代 class </span><br><span class="line">//2. public static final Season SPRING = new Season(&quot;春天&quot;, &quot;温暖&quot;) 直接使用 </span><br><span class="line">// SPRING(&quot;春天&quot;, &quot;温暖&quot;) 解读 常量名(实参列表) </span><br><span class="line">//3. 如果有多个常量(对象)， 使用 ,号间隔即可 //4. 如果使用 enum 来实现枚举，要求将定义常量对象，写在前面 </span><br><span class="line">//5. 如果我们使用的是无参构造器，创建常量对象，则可以省略 ()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>注解<br>三个基本Annotation: </li>
+</ul>
+<ol>
+<li>@Override: 限定某个方法，是重写父类方法, 该注解只能用于方法</li>
+<li> @Deprecated: 用于表示某个程序元素(类, 方法等)已过时<br>@SuppressWarnings: 抑制编译器警告</li>
+</ol>
+<ul>
+<li>元注解（注解的注解</li>
+</ul>
+<ol>
+<li>Retention //指定注解的作用范围，三种 SOURCE,CLASS,RUNTIME </li>
+<li> Target // 指定注解可以在哪些地方使用</li>
+<li>  Documented //指定该注解是否会在 javadoc 体现</li>
+<li>  Inherited //子类会继承父类注解</li>
+</ol>
 
     </div>
 
@@ -327,12 +432,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" rel="prev" title="2.4.2022Java学习日志">
-      <i class="fa fa-chevron-left"></i> 2.4.2022Java学习日志
+    <a href="/2022/03/15/3-15LeetCode%E6%80%BB%E7%BB%93/" rel="prev" title="3.15LeetCode总结">
+      <i class="fa fa-chevron-left"></i> 3.15LeetCode总结
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/" rel="next" title="Java的流Stream、文件和IO">
-      Java的流Stream、文件和IO <i class="fa fa-chevron-right"></i>
+    <a href="/2022/03/19/LeetCode0317/" rel="next" title="LeetCode0317">
+      LeetCode0317 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -392,7 +497,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-6-2022-Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97"><span class="nav-number">1.</span> <span class="nav-text">2.6.2022      Java学习日志</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E4%BC%91%E7%9C%A0-sleep"><span class="nav-number">1.1.</span> <span class="nav-text">Java 休眠(sleep)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Calendar"><span class="nav-number">1.2.</span> <span class="nav-text">Java Calendar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GregorianCalendar%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">GregorianCalendar类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E6%8A%A5%E9%94%99%E7%A7%AF%E7%B4%AF%EF%BC%9A"><span class="nav-number">1.4.</span> <span class="nav-text">程序报错积累：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">Java方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%EF%BC%9A"><span class="nav-number">1.5.1.</span> <span class="nav-text">Java方法的重载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.2.</span> <span class="nav-text">Java构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Scanner%E7%B1%BB"><span class="nav-number">1.6.</span> <span class="nav-text">Java Scanner类</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chapter10%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E9%AB%98%E7%BA%A7"><span class="nav-number">1.</span> <span class="nav-text">Chapter10面向对象编程(高级)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3VS%E7%BB%A7%E6%89%BF"><span class="nav-number">1.1.</span> <span class="nav-text">接口VS继承</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

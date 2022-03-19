@@ -37,20 +37,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2.6.2022      Java学习日志 Java 休眠(sleep)sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。代码： Thread.sleep(1000*3)     Java Calendar 创建一个代表系统的当前日期的Calendar对象  12345    calende">
+  <meta name="description" content="算法积累LeetCode3.18   计算质数  给定整数 n ，返回 所有小于非负整数 n 的质数的数量 解法A： 只需要枚举到Math.sqrt(n)[2,\sqrt{x}]计算结果：  &#x2F;&#x2F;超时 解法 B:埃氏筛  对于每遍历到一个质数 对于这个质数的倍数全部排除掉 计算到Math.sqrt(n)就行，最后在一次遍历统计 质数 数目即可 123456789101112131415161718">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2.6.2022Java学习日志">
-<meta property="og:url" content="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/index.html">
+<meta property="og:title" content="LeetCode0319">
+<meta property="og:url" content="http://example.com/2022/03/19/LeetCode0319/index.html">
 <meta property="og:site_name" content="hustle4fun的博客">
-<meta property="og:description" content="2.6.2022      Java学习日志 Java 休眠(sleep)sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。代码： Thread.sleep(1000*3)     Java Calendar 创建一个代表系统的当前日期的Calendar对象  12345    calende">
+<meta property="og:description" content="算法积累LeetCode3.18   计算质数  给定整数 n ，返回 所有小于非负整数 n 的质数的数量 解法A： 只需要枚举到Math.sqrt(n)[2,\sqrt{x}]计算结果：  &#x2F;&#x2F;超时 解法 B:埃氏筛  对于每遍历到一个质数 对于这个质数的倍数全部排除掉 计算到Math.sqrt(n)就行，最后在一次遍历统计 质数 数目即可 123456789101112131415161718">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-06T13:00:36.000Z">
-<meta property="article:modified_time" content="2022-02-06T13:01:34.144Z">
+<meta property="article:published_time" content="2022-03-19T02:26:55.000Z">
+<meta property="article:modified_time" content="2022-03-19T02:27:48.486Z">
 <meta property="article:author" content="谭仕麟">
-<meta property="article:tag" content="Java初级学习">
+<meta property="article:tag" content="算法积累">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+<link rel="canonical" href="http://example.com/2022/03/19/LeetCode0319/">
 
 
 <script id="page-configurations">
@@ -63,7 +63,7 @@
   };
 </script>
 
-  <title>2.6.2022Java学习日志 | hustle4fun的博客</title>
+  <title>LeetCode0319 | hustle4fun的博客</title>
   
 
 
@@ -214,7 +214,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/06/2-6-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/19/LeetCode0319/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -227,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          2.6.2022Java学习日志
+          LeetCode0319
         </h1>
 
         <div class="post-meta">
@@ -238,7 +238,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-06 21:00:36 / 修改时间：21:01:34" itemprop="dateCreated datePublished" datetime="2022-02-06T21:00:36+08:00">2022-02-06</time>
+              <time title="创建时间：2022-03-19 10:26:55 / 修改时间：10:27:48" itemprop="dateCreated datePublished" datetime="2022-03-19T10:26:55+08:00">2022-03-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -246,7 +246,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%A7%AF%E7%B4%AF/" itemprop="url" rel="index"><span itemprop="name">算法积累</span></a>
                 </span>
             </span>
 
@@ -256,7 +256,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -275,40 +275,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="2-6-2022-Java学习日志"><a href="#2-6-2022-Java学习日志" class="headerlink" title="2.6.2022      Java学习日志"></a>2.6.2022      Java学习日志</h1><hr>
-<h2 id="Java-休眠-sleep"><a href="#Java-休眠-sleep" class="headerlink" title="Java 休眠(sleep)"></a>Java 休眠(sleep)</h2><p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CPU的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。<br>代码： <code>Thread.sleep(1000*3)   </code></p>
+        <h3 id="算法积累"><a href="#算法积累" class="headerlink" title="算法积累"></a>算法积累</h3><h5 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h5><p>3.18 </p>
+<ul>
+<li>计算质数</li>
+</ul>
+<p><em>给定整数 n ，返回 所有小于非负整数 n 的质数的数量</em></p>
+<p>解法A： 只需要枚举到Math.sqrt(n)[2,\sqrt{x}]<br>计算结果：  //超时</p>
+<p>解法 B:埃氏筛 </p>
+<p>对于每遍历到一个质数 对于这个质数的倍数全部排除掉 计算到Math.sqrt(n)就行，最后在一次遍历统计 质数 数目即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public int countPrimes(int n) &#123;</span><br><span class="line">        boolean[] isPrime = new boolean[n];</span><br><span class="line">        //先遍历全部为true</span><br><span class="line">        Arrays.fill(isPrime, true);</span><br><span class="line">        //从2开始遍历</span><br><span class="line">        for (int i = 2; i &lt; Math.sqrt(n); i++) &#123;</span><br><span class="line">            if(isPrime[i])&#123; //开始遍历 将2的倍数全设置为false</span><br><span class="line">                for(int j=i*i; j&lt;n; j+=i)&#123;</span><br><span class="line">                    isPrime[j]=false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int count =0;</span><br><span class="line">        for (int i = 2; i &lt; n; i++) &#123;</span><br><span class="line">            if(isPrime[i])&#123;</span><br><span class="line">                ++count;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <hr>
-<h2 id="Java-Calendar"><a href="#Java-Calendar" class="headerlink" title="Java Calendar"></a>Java Calendar</h2><ol>
-<li><p>创建一个代表系统的当前日期的Calendar对象 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    calender作为一个抽象类，实际使用的时候是子类的对象，不需要 单独的声明</span><br><span class="line"></span><br><span class="line">        Calendar c = Calendar.getInstance(); //</span><br><span class="line">        </span><br><span class="line">2. 创建制定日期的Calendar对象</span><br></pre></td></tr></table></figure>
-<p> Calendar c = Calender.getInstance();<br> C.set(year, month, day)</p>
-</li>
-<li><p>Calendar类对象信息的设置<br>Set设置<br>如：<br><code>Calendar c1 = Calendar.getInstance();</code></p>
-</li>
-</ol>
-<p>调用：<br><code>public final void set(int year,int month,int date)</code><br><code>c1.set(2009, 6, 12);//</code><br>把Calendar对象c1的年月日分别设这为：2009、6、12n</p>
-<ol start="4">
-<li>public void set(int field,int value)</li>
-</ol>
+<ul>
+<li>3的幂</li>
+</ul>
+<p>给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。</p>
+<p>解题思路 ： 当不为3的倍数时 始终 /= 3 最后 判读是否 结果 == 1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPowerOfThree(int n) &#123;</span><br><span class="line">        while(n != 0 &amp;&amp; n%3==0)&#123;</span><br><span class="line">            n /=3;</span><br><span class="line">        &#125;</span><br><span class="line">        return n == 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <hr>
-<h2 id="GregorianCalendar类"><a href="#GregorianCalendar类" class="headerlink" title="GregorianCalendar类"></a>GregorianCalendar类</h2><p>Calendar类实现了公历日历，GregorianCalendar是Calendar类的一个具体实现。<br>Calendar 的getInstance（）方法返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象。GregorianCalendar定义了两个字段：AD和BC。这是代表公历定义的两个时代。 </p>
+<ul>
+<li>罗马数字转换</li>
+</ul>
+<p>将 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M 转换为对应的 数值<br>其中对于<em>I X C</em>放在 比其代表数值大的罗马数字前  表示对于大数值的减法 </p>
 <hr>
-<h2 id="程序报错积累："><a href="#程序报错积累：" class="headerlink" title="程序报错积累："></a>程序报错积累：</h2><p>在跟随菜鸟教程gregianCalender练习的过程之中 报错：<code>The method get(int) is undefined for the type GregorianCalendarJava(67108964) </code></p>
-<p>一般报错这种类型：，三种情况：</p>
-<ol>
-<li>倒错包了（一般编译器会提示）</li>
-<li> 在项目中导入的Jar包不是当前版本的jar 无法支持当前方法</li>
-<li>导入了不同版本的同一个Jar包（重要） </li>
-</ol>
-<p><strong>在拷贝别人的项目的过程中，需要注意，会继续使用项目中的Jar。本次本人遇到的问题属于第三种错误原因。</strong></p>
+<p>3.19 </p>
+<ul>
+<li>位1的个数</li>
+</ul>
+<p>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 ‘1’ 的个数（也被称为汉明重量）。</p>
+<p>解题思路：<br>使用位运算 逻辑右移 忽略符号位 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public int hammingWeight(int n) &#123;</span><br><span class="line">       int count = 0;</span><br><span class="line">       for (int i = 0; i &lt; 32; i++) &#123;</span><br><span class="line">           count += n&amp;1;</span><br><span class="line">           n = n &gt;&gt;&gt; 1; //将n无符号向后移动1位</span><br><span class="line">       &#125;</span><br><span class="line">       return count;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>解法二：</p>
+<p>调用Java API </p>
+<p><code>return Integer.bitCount();</code></p>
 <hr>
-<h2 id="Java方法"><a href="#Java方法" class="headerlink" title="Java方法"></a>Java方法</h2><h3 id="Java方法的重载："><a href="#Java方法的重载：" class="headerlink" title="Java方法的重载："></a>Java方法的重载：</h3><p>方法重载：一个类的两个方法拥有相同的名字，但是有不同的参数列表。<br>Java编译器根据方法签名判断哪个方法应该被调用。 </p>
+<ul>
+<li>汉明距离 Integer.bitCount()</li>
+</ul>
+<p>两个整数之间的 汉明距离 指的是这两个数字对应二进制位不同的位置的数目。</p>
+<p>解题思路：<br>两个数取 ^ 再对结果进行 1 的统计</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public int hammingDistance(int x, int y) &#123;</span><br><span class="line">        int verse = x ^ y;</span><br><span class="line">        //位1的统计</span><br><span class="line">        int count = 0;</span><br><span class="line">        for (int i = 0; i &lt; 32; i++) &#123;</span><br><span class="line">            count += ((verse &amp; 1) == 1) ? 1 : 0;</span><br><span class="line">            verse = verse &gt;&gt;&gt; 1;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="Java构造方法"><a href="#Java构造方法" class="headerlink" title="Java构造方法"></a>Java构造方法</h3><p>当一个对象被创建时候，构造方法用来初始化该对象。构造方法和它所在类的名字相同，但构造方法没有返回值。 </p>
-<p>通常会使用构造方法给一个类的实例变量赋初值，或者执行其它必要的步骤来创建一个完整的对象。 </p>
-<hr>
-<h2 id="Java-Scanner类"><a href="#Java-Scanner类" class="headerlink" title="Java Scanner类"></a>Java Scanner类</h2><p>创建Scanner 对象的基本语法：<br><code>Scanner scan = new Scanner(System.in) //(调用system.in是控制台输入调用)</code><br>并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
-<hr>
+<ul>
+<li>颠倒二进制位</li>
+</ul>
+<p>解题思路 直接调用Java API<br><code>return Integer.reverse(n) //其中API也是调用了分治的思想 对于指定数进行颠倒</code></p>
 
     </div>
 
@@ -318,7 +334,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" rel="tag"># Java初级学习</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95%E7%A7%AF%E7%B4%AF/" rel="tag"># 算法积累</a>
           </div>
 
         
@@ -327,13 +343,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/04/2-4-2022Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97/" rel="prev" title="2.4.2022Java学习日志">
-      <i class="fa fa-chevron-left"></i> 2.4.2022Java学习日志
+    <a href="/2022/03/19/LeetCode0317/" rel="prev" title="LeetCode0317">
+      <i class="fa fa-chevron-left"></i> LeetCode0317
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/02/06/Java%E7%9A%84%E6%B5%81Stream%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8CIO/" rel="next" title="Java的流Stream、文件和IO">
-      Java的流Stream、文件和IO <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -392,7 +405,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-6-2022-Java%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97"><span class="nav-number">1.</span> <span class="nav-text">2.6.2022      Java学习日志</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E4%BC%91%E7%9C%A0-sleep"><span class="nav-number">1.1.</span> <span class="nav-text">Java 休眠(sleep)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Calendar"><span class="nav-number">1.2.</span> <span class="nav-text">Java Calendar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GregorianCalendar%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">GregorianCalendar类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E6%8A%A5%E9%94%99%E7%A7%AF%E7%B4%AF%EF%BC%9A"><span class="nav-number">1.4.</span> <span class="nav-text">程序报错积累：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">Java方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%EF%BC%9A"><span class="nav-number">1.5.1.</span> <span class="nav-text">Java方法的重载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.2.</span> <span class="nav-text">Java构造方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Scanner%E7%B1%BB"><span class="nav-number">1.6.</span> <span class="nav-text">Java Scanner类</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%A7%AF%E7%B4%AF"><span class="nav-number">1.</span> <span class="nav-text">算法积累</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#LeetCode"><span class="nav-number">1.0.1.</span> <span class="nav-text">LeetCode</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

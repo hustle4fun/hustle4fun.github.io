@@ -210,6 +210,463 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/19/LeetCode0319/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/19/LeetCode0319/" class="post-title-link" itemprop="url">LeetCode0319</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-19 10:26:55 / 修改时间：10:27:48" itemprop="dateCreated datePublished" datetime="2022-03-19T10:26:55+08:00">2022-03-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%A7%AF%E7%B4%AF/" itemprop="url" rel="index"><span itemprop="name">算法积累</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="算法积累"><a href="#算法积累" class="headerlink" title="算法积累"></a>算法积累</h3><h5 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h5><p>3.18 </p>
+<ul>
+<li>计算质数</li>
+</ul>
+<p><em>给定整数 n ，返回 所有小于非负整数 n 的质数的数量</em></p>
+<p>解法A： 只需要枚举到Math.sqrt(n)[2,\sqrt{x}]<br>计算结果：  //超时</p>
+<p>解法 B:埃氏筛 </p>
+<p>对于每遍历到一个质数 对于这个质数的倍数全部排除掉 计算到Math.sqrt(n)就行，最后在一次遍历统计 质数 数目即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public int countPrimes(int n) &#123;</span><br><span class="line">        boolean[] isPrime = new boolean[n];</span><br><span class="line">        //先遍历全部为true</span><br><span class="line">        Arrays.fill(isPrime, true);</span><br><span class="line">        //从2开始遍历</span><br><span class="line">        for (int i = 2; i &lt; Math.sqrt(n); i++) &#123;</span><br><span class="line">            if(isPrime[i])&#123; //开始遍历 将2的倍数全设置为false</span><br><span class="line">                for(int j=i*i; j&lt;n; j+=i)&#123;</span><br><span class="line">                    isPrime[j]=false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int count =0;</span><br><span class="line">        for (int i = 2; i &lt; n; i++) &#123;</span><br><span class="line">            if(isPrime[i])&#123;</span><br><span class="line">                ++count;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<ul>
+<li>3的幂</li>
+</ul>
+<p>给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。</p>
+<p>解题思路 ： 当不为3的倍数时 始终 /= 3 最后 判读是否 结果 == 1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isPowerOfThree(int n) &#123;</span><br><span class="line">        while(n != 0 &amp;&amp; n%3==0)&#123;</span><br><span class="line">            n /=3;</span><br><span class="line">        &#125;</span><br><span class="line">        return n == 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<ul>
+<li>罗马数字转换</li>
+</ul>
+<p>将 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M 转换为对应的 数值<br>其中对于<em>I X C</em>放在 比其代表数值大的罗马数字前  表示对于大数值的减法 </p>
+<hr>
+<p>3.19 </p>
+<ul>
+<li>位1的个数</li>
+</ul>
+<p>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 ‘1’ 的个数（也被称为汉明重量）。</p>
+<p>解题思路：<br>使用位运算 逻辑右移 忽略符号位 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public int hammingWeight(int n) &#123;</span><br><span class="line">       int count = 0;</span><br><span class="line">       for (int i = 0; i &lt; 32; i++) &#123;</span><br><span class="line">           count += n&amp;1;</span><br><span class="line">           n = n &gt;&gt;&gt; 1; //将n无符号向后移动1位</span><br><span class="line">       &#125;</span><br><span class="line">       return count;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>解法二：</p>
+<p>调用Java API </p>
+<p><code>return Integer.bitCount();</code></p>
+<hr>
+<ul>
+<li>汉明距离 Integer.bitCount()</li>
+</ul>
+<p>两个整数之间的 汉明距离 指的是这两个数字对应二进制位不同的位置的数目。</p>
+<p>解题思路：<br>两个数取 ^ 再对结果进行 1 的统计</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public int hammingDistance(int x, int y) &#123;</span><br><span class="line">        int verse = x ^ y;</span><br><span class="line">        //位1的统计</span><br><span class="line">        int count = 0;</span><br><span class="line">        for (int i = 0; i &lt; 32; i++) &#123;</span><br><span class="line">            count += ((verse &amp; 1) == 1) ? 1 : 0;</span><br><span class="line">            verse = verse &gt;&gt;&gt; 1;</span><br><span class="line">        &#125;</span><br><span class="line">        return count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>颠倒二进制位</li>
+</ul>
+<p>解题思路 直接调用Java API<br><code>return Integer.reverse(n) //其中API也是调用了分治的思想 对于指定数进行颠倒</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/19/LeetCode0317/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/19/LeetCode0317/" class="post-title-link" itemprop="url">LeetCode0317</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-19 10:26:05 / 修改时间：10:26:42" itemprop="dateCreated datePublished" datetime="2022-03-19T10:26:05+08:00">2022-03-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%A7%AF%E7%B4%AF/" itemprop="url" rel="index"><span itemprop="name">算法积累</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="算法积累"><a href="#算法积累" class="headerlink" title="算法积累"></a>算法积累</h3><h5 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h5><p>3.16</p>
+<ul>
+<li>打家劫舍</li>
+</ul>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。</p>
+<p>解题思路：动态划分</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int first = nums[0], second = Math.max(nums[1],nums[0]);</span><br><span class="line"></span><br><span class="line">        for(int i=2; i&lt;nums.length; i++)&#123;//计划遍历，动态选择最大的到second保存</span><br><span class="line">            int tmp = second;</span><br><span class="line">            second = Math.max(first+nums[i], second);</span><br><span class="line">            first = tmp;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return second;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li>打乱数组</li>
+</ul>
+<p>打乱数组中积累的 <em>乱序方法：抽牌法</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//返回数组随机打乱后的结</span><br><span class="line">    public int[] shuffle() &#123;</span><br><span class="line">        int[] array = num.clone();</span><br><span class="line">        for(int i=0; i&lt;num.length; i++)&#123;</span><br><span class="line">            swap(array, i, i+random.nextInt(num.length-i));</span><br><span class="line">        &#125;</span><br><span class="line">        return array;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    //交换数组元素</span><br><span class="line">    public void swap(int[] nums, int n1, int n2)&#123;</span><br><span class="line">        int tmp= nums[n1];</span><br><span class="line">        nums[n1] = nums[n2];</span><br><span class="line">        nums[n2] = tmp; </span><br></pre></td></tr></table></figure>
+<hr>
+<p>3.17</p>
+<ul>
+<li>最小栈            构造方法：借用一个辅助栈Stack， 将最小的树Math.min(minStack.peek(),Val) 重复的存入minStack中。</li>
+</ul>
+<hr>
+<ul>
+<li>Fizz Buzz</li>
+</ul>
+<p>给你一个整数 n ，找出从 1 到 n 各个整数的 Fizz Buzz 表示，并用字符串数组 answer（下标从 1 开始）返回结果，其中：</p>
+<pre><code>answer[i] == &quot;FizzBuzz&quot; 如果 i 同时是 3 和 5 的倍数。
+answer[i] == &quot;Fizz&quot; 如果 i 是 3 的倍数。
+answer[i] == &quot;Buzz&quot; 如果 i 是 5 的倍数。
+answer[i] == i （以字符串形式）如果上述条件全不满足。
+</code></pre>
+<p>解题思路：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(i:n)&#123;</span><br><span class="line">    StringBuffer sb = new StringBuffer()</span><br><span class="line">    if(i%3 | i%5 |)</span><br><span class="line">    sb.append（&quot;对于每一个sb进行拼接&quot;）;</span><br><span class="line">&#125;</span><br><span class="line">return.add(sb);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">3.16近期总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-17 15:05:27 / 修改时间：15:06:52" itemprop="dateCreated datePublished" datetime="2022-03-17T15:05:27+08:00">2022-03-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Chapter10面向对象编程-高级"><a href="#Chapter10面向对象编程-高级" class="headerlink" title="Chapter10面向对象编程(高级)"></a>Chapter10面向对象编程(高级)</h3><ol>
+<li>类变量/类方法</li>
+</ol>
+<ul>
+<li><p>static 静态变量 是同一个类所有对象共享的 。 static 变量在类加载的时候 就生成了。(jdk7.0以前在类方法区中| jdk8.0及以后 在类堆中存储)</p>
+</li>
+<li><p><code>类变量是所有对象共享的，而实例变量是每个对象独享的。</code></p>
+</li>
+<li><p>类方法： 当方法中不涉及到任何和对象相关的成员，则可以将方法设计成静态方法，提高开发效率。(不需要创建对象，直接调用类使用)</p>
+</li>
+<li><p>类方法(静态方法)中，不能使用和对象相关的关键字，“This”“Super”</p>
+</li>
+<li><p>静态方法只能访问静态成员，非静态方法，都可以访问。</p>
+</li>
+</ul>
+<ol start="2">
+<li>代码块</li>
+</ol>
+<ul>
+<li>称为初始化块， 属于类的成员:<em>(属性、方法、代码块、构造器、内部类)</em><br>可以为静态， 在类加载｜对象声明时，隐式的调用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(static）&#123;</span><br><span class="line">    代码</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><p>类什么时候加载</p>
+<ul>
+<li>创建对象实例时(new)</li>
+<li>创建子类对象实例，父类也会被加载</li>
+<li>使用类的静态成员时(静态属性、静态方法)</li>
+</ul>
+</li>
+<li><p><strong>创建对象时，一个类的调用顺序</strong></p>
+</li>
+</ol>
+<ul>
+<li>调用静态代码块和静态属性初始化(优先级相同，顺序执行)</li>
+<li>调用普通代码块和普通属性初始化(优先级相同，顺序执行)</li>
+<li>调用构造方法</li>
+</ul>
+<ol start="5">
+<li><p>构造器前面隐藏了super()和调用普通代码块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public A()&#123;//构造器</span><br><span class="line">    //1.super()</span><br><span class="line">    //2.调用普通代码块</span><br><span class="line">    //最后执行构造器中代码</span><br><span class="line">    代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>单例设计模式</p>
+</li>
+</ol>
+<ul>
+<li><p>单例：某个类只能存在一个对象实例，该类只提供一个取得其对象实例的方法。</p>
+</li>
+<li><p>两种方式1) 饿汉式 2） 懒汉式</p>
+</li>
+<li><p>如何保障我们只能创建一个 GirlFriend 对象 </p>
+</li>
+</ul>
+<p>步骤[单例模式-饿汉式]</p>
+<ol>
+<li>将构造器私有化 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">private A()&#123;</span><br><span class="line">    构造代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在类的内部直接创建对象(该对象是 static)<br><code>private static A a = new A(“构造内容”);</code></li>
+<li>提供一个公共的 static 方法，返回 gf 对象<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static A getInstance()&#123;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>步骤[单例模式-懒汉式]<br>步骤不同在于2）<br>2) 当用户使用getInstance时，才返回创建对象A，再次使用时，返回上次创建的对象(保证了单例)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">private A a;//先声明</span><br><span class="line">public static getInstance()&#123;</span><br><span class="line">    if(a == null)&#123;</span><br><span class="line">        return a = new A(); </span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>final</li>
+</ol>
+<ul>
+<li>修饰类 类不希望被继承</li>
+<li>修饰方法 不希望被子类重写｜改写</li>
+<li>修饰变量 变为常量（赋值，不可被修改）</li>
+</ul>
+<ol start="8">
+<li>接口interface</li>
+</ol>
+<ul>
+<li>接口中的属性，只能是final的，而且是public static final修饰符。 </li>
+<li>访问接口中的属性： 接口名.属性名 </li>
+</ul>
+<h4 id="接口VS继承"><a href="#接口VS继承" class="headerlink" title="接口VS继承"></a>接口VS继承</h4><p>小结: 当子类继承了父类，就自动的拥有父类的功能<br>如果子类需要扩展功能，可以通过实现接口的方式扩展.<br>可以理解 实现接口 是对 java 单继承机制的一种补充.</p>
+<ol start="9">
+<li>内部类<br>定义类在局部位置(方法中/代码块) :(1) 局部内部类<br>(2) 匿名内部类</li>
+</ol>
+<p>定义在成员位置 (1) 成员内部类 (2)静态内部类</p>
+<ul>
+<li>局部内部类的使用<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner01.png" class title="localinner01">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/localinner02.png" class title="localinner02"></li>
+</ul>
+<ul>
+<li>匿名内部类<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy01.png" class title="Annoy">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy02.png" class title="Annoy02">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy03.png" class title="Annoy03">
+<img src="/2022/03/17/3-16%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/Annoy04.png" class title="Annoy04"></li>
+</ul>
+<ul>
+<li>成员内部类</li>
+</ul>
+<ol>
+<li>定义在外部类的成员位置， 没有static修饰</li>
+<li>可以直接访问外部类的成员，包含私有的</li>
+<li>可以添加任意的访问修饰符(public protected default private)因为本来就是一个成员</li>
+<li>外部类访问， 先创建对象，再访问</li>
+<li>外部类、内部类重名，就近原则，访问外部类(外部类名.this.成员)</li>
+<li>使用成员内部类的三种方式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一种方式 outer08.new Inner08(); 相当于把 new Inner08()当做是 outer08 成员  |  这就是一个语法，不要特别的纠结.</span><br><span class="line">2. Outer08.Inner08 inner08 = outer08.new Inner08(); inner08.say(); </span><br><span class="line">第二方式 在外部类中，编写一个方法，可以返回 Inner08 对象 </span><br><span class="line"></span><br><span class="line">Outer08.Inner08 inner08Instance = outer08.getInner08Instance(); inner08Instance.say();</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>外部静态类</li>
+</ul>
+<ol>
+<li>可以直接访问外部类的所有静态成员，包含私有的，但是不能访问非静态成员。</li>
+<li>可以添加访问修饰符、</li>
+<li>其他属性与成员内部类相似</li>
+</ol>
+<ul>
+<li>枚举 enum</li>
+</ul>
+<ol>
+<li>构造方式 （1） 构造器私有化，直接实例话特定对象</li>
+<li>enum关键字实现<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//如果使用了 enum 来实现枚举类 </span><br><span class="line">//1. 使用关键字 enum 替代 class </span><br><span class="line">//2. public static final Season SPRING = new Season(&quot;春天&quot;, &quot;温暖&quot;) 直接使用 </span><br><span class="line">// SPRING(&quot;春天&quot;, &quot;温暖&quot;) 解读 常量名(实参列表) </span><br><span class="line">//3. 如果有多个常量(对象)， 使用 ,号间隔即可 //4. 如果使用 enum 来实现枚举，要求将定义常量对象，写在前面 </span><br><span class="line">//5. 如果我们使用的是无参构造器，创建常量对象，则可以省略 ()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>注解<br>三个基本Annotation: </li>
+</ul>
+<ol>
+<li>@Override: 限定某个方法，是重写父类方法, 该注解只能用于方法</li>
+<li> @Deprecated: 用于表示某个程序元素(类, 方法等)已过时<br>@SuppressWarnings: 抑制编译器警告</li>
+</ol>
+<ul>
+<li>元注解（注解的注解</li>
+</ul>
+<ol>
+<li>Retention //指定注解的作用范围，三种 SOURCE,CLASS,RUNTIME </li>
+<li> Target // 指定注解可以在哪些地方使用</li>
+<li>  Documented //指定该注解是否会在 javadoc 体现</li>
+<li>  Inherited //子类会继承父类注解</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/15/3-15LeetCode%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1035,411 +1492,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/15/Java%E8%80%A6%E5%90%88%E6%80%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/15/Java%E8%80%A6%E5%90%88%E6%80%A7/" class="post-title-link" itemprop="url">Java耦合性</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-15 11:57:23 / 修改时间：11:58:13" itemprop="dateCreated datePublished" datetime="2022-02-15T11:57:23+08:00">2022-02-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="耦合性"><a href="#耦合性" class="headerlink" title="耦合性"></a>耦合性</h1><p>耦合性(Coupling)</p>
-<pre><code>耦合性(Coupling)，也叫耦合度，是对模块间关联程度的度量。耦合的强弱取决于模块间接口的复杂性、调用模块的方式以及通过界面传送数据的多少。
-模块间的耦合度是指模块之间的依赖关系，包括控制关系、调用关系、数据传递关系。
-模块间联系越多，其耦合性越强，同时表明其独立性越差( 降低耦合性，可以提高其独立性)。
-软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个准则就是高内聚低耦合。
-形象的说，就是要将代码写的和主机的排线一样，低耦合的模块好像你看你主机排线中的随便一条就知道这条线是干啥一样拔掉会不会影响其他排线的功能一样，低耦合的模块就好比鼠标线一样拔掉它只影响它自身的鼠标功能，高耦合的模块就好比主机电源线一拔掉不只影响它自身的功能其他功能也被影响了。
-</code></pre>
-<h4 id="构成耦合性的七种类型"><a href="#构成耦合性的七种类型" class="headerlink" title="构成耦合性的七种类型"></a>构成耦合性的七种类型</h4><p>一般模块之间可能的连接方式有七种，构成耦合性的七种类型。它们之间的关系为（独立性由强到弱）</p>
-<ol>
-<li><p>非直接耦合(Nondirect Coupling)</p>
-<p> 如果两个模块之间没有直接关系，它们之间的联系完全是通过主模块的控制和调用来实现的，这就是非直接耦合。这种耦合的模块独立性最强。</p>
-</li>
-<li><p>数据耦合(Data Coupling)</p>
-<p> 如果一个模块访问另一个模块时，彼此之间是通过数据参数(不是控制参数、公共数据结构或外部变量)来交换输入、输出信息的，则称这种耦合为数据耦合。由于限制了只通过参数表传递数据，按数据耦合开发的程序界面简单、安全可靠。因此，数据耦合是松散的耦合，模块之间的独立性比较强。在软件程序结构中至少必须有这类耦合。</p>
-</li>
-<li><p>印记耦合(Stamp Coupling)</p>
-<p> 如果一组模块通过参数表传递记录信息，就是标记耦合。事实上，这组模块共享了这个记录，它是某一数据结构的子结构，而不是简单变量。这要求这些模块都必须清楚该记录的结构，并按结构要求对此记录进行操作。在设计中应尽量避免这种耦合，它使在数据结构上的操作复杂化了。如果采取“信息隐蔽”的方法，把在数据结构上的操作全部集中。</p>
-</li>
-<li><p>控制耦合(Control Coupling)</p>
-<p> 如果一个模块通过传送开关、标志、名字等控制信息，明显地控制选择另一模块的功能，就是控制耦合。这种耦合的实质是在单一接口上选择多功能模块中的某项功能。因此，对所控制模块的任何修改，都会影响控制模块。另外，控制耦合也意味着控制模块必须知道所控制模块内部的一些逻辑关系，这些都会降低模块的独立性。</p>
-</li>
-<li><p>外部耦合(External Coupling)</p>
-<p> 一组模块都访问同一全局简单变量而不是同一全局数据结构，而且不是通过参数表传递该全局变量的信息，则称之为外部耦合。例如C语言程序中各个模块都访问被说明为extern类型的外部变量。外部耦合引起的问题类似于公共耦合，区别在于在外部耦合中不存在依赖于一个数据结构内部各项的物理安排。</p>
-</li>
-<li><p>公共耦合(Common Coupling)</p>
-<p> 若一组模块都访问同一个公共数据环境，则它们之间的耦合就称为公共耦合。公共的数据环境可以是全局数据结构、共享的通信区、内存的公共覆盖区等。<br> 这种耦合会引起下列问题：</p>
-<p>  所有公共耦合模块都与某一个公共数据环境内部各项的物理安排有关，若修改某个数据的大小，将会影响到所有的模块。<br> 无法控制各个模块对公共数据的存取，严重影响软件模块的可靠性和适应性。 公共数据名的使用，明显降低了程序的可读性。</p>
-</li>
-</ol>
-<pre><code>公共耦合的复杂程度随耦合模块的个数增加而显著增加。若只是两个模块之间有公共数据环境，则公共耦合有两种情况。
-
-
-若一个模块只是往公共数据环境里传送数据，而另一个模块只是从公共数据环境中取数据，则这种公共耦合叫做松散公共耦合。
-
-若两个模块都从公共数据环境中取数据，又都向公共数据环境里送数据，则这种公共耦合叫做紧密公共耦合。只有在模块之间共享的数据很多，且通过参数表传递不方便时，才使用公共耦合。否则，还是使用模块独立性比较高的数据耦合好些。
-</code></pre>
-<ol start="7">
-<li><p>内容耦合(Content Coupling)</p>
-<p> 如果发生下列情形，两个模块之间就发生了内容耦合。 一个模块直接访问另一个模块的内部数据； 一个模块不通过正常入口转到另一模块内部；</p>
-<p> 两个模块有一部分程序代码重叠(只可能出现在汇编语言中)； 一个模块有多个入口。</p>
-<p> 在内容耦合的情形，所访问模块的任何变更，或者用不同的编译器对它再编译，<br> 都会造成程序出错。好在大多数高级程序设计语言已经设计成不允许出现内容 耦合。它一般出现在汇编语言程序中。这种耦合是模块独立性最弱的耦合。<br>————————————————</p>
-</li>
-</ol>
-<p>转载链接： <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43576565/article/details/105906787">https://blog.csdn.net/weixin_43576565/article/details/105906787</a> </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/15/Java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/15/Java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">Java数据结构</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-15 11:52:14 / 修改时间：11:53:19" itemprop="dateCreated datePublished" datetime="2022-02-15T11:52:14+08:00">2022-02-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java数据结构"><a href="#Java数据结构" class="headerlink" title="Java数据结构"></a>Java数据结构</h1><p>Java工具包提供了强大的数据结构。在Java中的数据结构主要包括以下几种接口和类：</p>
-<pre><code>•    枚举（Enumeration）
-•    位集合（BitSet）
-•    向量（Vector）
-•    栈（Stack）
-•    字典（Dictionary）/Map
-•    哈希表（Hashtable）
-•    属性（Properties）
-</code></pre>
-<hr>
-<h3 id="Java-Bitset类"><a href="#Java-Bitset类" class="headerlink" title="Java Bitset类"></a>Java Bitset类</h3><p>一个Bitset类创建一种特殊类型的数组来保存位值。BitSet中数组大小会随需要增加。这和位向量（vector of bits）比较类似。 </p>
-<p>BitSet定义了两个构造方法:</p>
-<p>第一个构造方法创建一个默认的对象：<br><code>BitSet()</code></p>
-<p>第二个方法允许用户指定初始大小。所有位初始化为0。<br><code>BitSet(int size)</code></p>
-<hr>
-<h3 id="Java-Vector类"><a href="#Java-Vector类" class="headerlink" title="Java Vector类"></a>Java Vector类</h3><p>Vector 类实现了一个动态数组。和 ArrayList 很相似，但是两者是不同的：</p>
-<pre><code>•    Vector 是同步访问的。
-•    Vector 包含了许多传统的方法，这些方法不属于集合框架。
-</code></pre>
-<p>Vector 主要用在事先不知道数组的大小，或者只是需要一个可以改变大小的数组的情况。</p>
-<p>Vector 类支持 4 种构造方法。 </p>
-<p>第一种构造方法创建一个默认的向量，默认大小为 10：<br><code>Vector()</code></p>
-<p>第二种构造方法创建指定大小的向量。<br><code>Vector(int size)</code></p>
-<p>第三种构造方法创建指定大小的向量，并且增量用 incr 指定。增量表示向量每次增加的元素数目。<br><code>Vector(int size,int incr)</code></p>
-<p>第四种构造方法创建一个包含集合 c 元素的向量：<br><code>Vector(Collection c)</code></p>
-<hr>
-<h3 id="Java-Stack类"><a href="#Java-Stack类" class="headerlink" title="Java Stack类"></a>Java Stack类</h3><p>Java Stack 类<br>栈是Vector的一个子类，它实现了一个标准的后进先出的栈。<br>堆栈只定义了默认构造函数，用来创建一个空栈。 堆栈除了包括由Vector定义的所有方法，也定义了自己的一些方法。<br><code>Stack()</code></p>
-<p>其他方法：</p>
-<ol>
-<li><p>boolean empty() <br>测试堆栈是否为空。</p>
-</li>
-<li><p>Object peek( )<br>查看堆栈顶部的对象，但不从堆栈中移除它。</p>
-</li>
-<li><p>Object pop( )<br>移除堆栈顶部的对象，并作为此函数的值返回该对象。</p>
-</li>
-<li><p>Object push(Object element)<br>把项压入堆栈顶部。</p>
-</li>
-</ol>
-<ol start="5">
-<li>int search(Object element)<br>返回对象在堆栈中的位置，以 1 为基数。</li>
-</ol>
-<hr>
-<h3 id="Java-HashTable"><a href="#Java-HashTable" class="headerlink" title="Java HashTable"></a>Java HashTable</h3><p>像HashMap一样，Hashtable在哈希表中存储键/值对。</p>
-<p>当使用一个哈希表，要指定用作键的对象，以及要链接到该键的值。<br>然后，该键经过哈希处理，所得到的散列码被用作存储在该表中值的索引。</p>
-<p>Hashtable定义了四个构造方法。<br>第一个是默认构造方法：<br><code>Hashtable()</code></p>
-<p>第二个构造函数创建指定大小的哈希表：<br><code>Hashtable(int size)</code></p>
-<p>第三个构造方法创建了一个指定大小的哈希表，并且通过fillRatio指定填充比例。<br>填充比例必须介于0.0和1.0之间，它决定了哈希表在重新调整大小之前的充满程度：<br><code>Hashtable(int size,float fillRatio)</code></p>
-<p>第四个构造方法创建了一个以M中元素为初始化元素的哈希表。<br>哈希表的容量被设置为M的两倍。<br><code>Hashtable(Map m)</code></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/15/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/15/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" class="post-title-link" itemprop="url">Java集合框架</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-15 11:47:18 / 修改时间：11:48:03" itemprop="dateCreated datePublished" datetime="2022-02-15T11:47:18+08:00">2022-02-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java集合框架"><a href="#Java集合框架" class="headerlink" title="Java集合框架"></a>Java集合框架</h1><hr>
-<p>Java 集合框架主要包括两种类型的容器，一种是集合（Collection），存储一个元素集合，另一种是图（Map），存储键/值对映射。</p>
-<p>Collection 接口又有 3 种子类型，List、Set 和 Queue，再下面是一些抽象类，最后是具体实现类，常用的有 <code>ArrayList、LinkedList、HashSet、LinkedHashSet、HashMap、LinkedHashMap</code> 等</p>
-<hr>
-<h2 id="集合接口："><a href="#集合接口：" class="headerlink" title="集合接口："></a>集合接口：</h2><ol>
-<li><p>Collection 接口<br>Collection 是最基本的集合接口，一个 Collection 代表一组 Object，即 Collection 的元素, Java不提供直接继承自Collection的类，只提供继承于的子接口(如List和set)。Collection 接口存储一组不唯一，无序的对象。</p>
-</li>
-<li><p>List 接口<br>List接口是一个有序的 Collection，使用此接口能够精确的控制每个元素插入的位置，能够通过索引(元素在List中位置，类似于数组的下标)来访问List中的元素，第一个元素的索引为 0，而且允许有相同的元素。<br>List 接口存储一组不唯一，有序（插入顺序）的对象。</p>
-</li>
-<li><p>Set<br>Set 具有与 Collection 完全一样的接口，只是行为上不同，Set 不保存重复的元素。Set 接口存储一组唯一，无序的对象。</p>
-</li>
-</ol>
-<ol start="4">
-<li>SortedSet<br>继承于Set保存有序的集合</li>
-</ol>
-<ol start="5">
-<li><p>Map<br>Map 接口存储一组键值对象，提供key（键）到value（值）的映射。</p>
-</li>
-<li><p>Map.Entry<br>描述在一个Map中的一个元素（键/值对）。是一个 Map 的内部接口。</p>
-</li>
-<li><p>SortedMap<br>继承于 Map，使 Key 保持在升序排列。</p>
-</li>
-<li><p>Enumeration<br>这是一个传统的接口和定义的方法，通过它可以枚举（一次获得一个）对象集合中的元素。这个传统接口已被迭代器取代。</p>
-</li>
-</ol>
-<hr>
-<h2 id="Set和List的区别"><a href="#Set和List的区别" class="headerlink" title="Set和List的区别"></a>Set和List的区别</h2><pre><code>•    1. Set 接口实例存储的是无序的，不重复的数据。List 接口实例存储的是有序的，可以重复的元素。
-•    2. Set检索效率低下，删除和插入效率高，插入和删除不会引起元素位置改变 &lt;实现类有HashSet,TreeSet&gt;。
-•    3. List和数组类似，可以动态增长，根据实际存储的数据的长度自动增长List的长度。查找元素效率高，插入删除效率低，因为会引起其他元素位置改变 &lt;实现类有ArrayList,LinkedList,Vector&gt; 。
-</code></pre>
-<hr>
-<h2 id="集合实现类（集合类）"><a href="#集合实现类（集合类）" class="headerlink" title="集合实现类（集合类）"></a>集合实现类（集合类）</h2><p>Java提供了一套实现了Collection接口的标准集合类。其中一些是具体类，这些类可以直接拿来使用，而另外一些是抽象类，提供了接口的部分实现。 </p>
-<ol>
-<li><p>AbstractCollection <br>实现了大部分的集合接口。</p>
-</li>
-<li><p>AbstractList <br>继承于AbstractCollection 并且实现了大部分List接口。</p>
-</li>
-<li><p>AbstractSequentialList <br>继承于 AbstractList ，提供了对数据元素的链式访问而不是随机访问。</p>
-</li>
-<li><p>LinkedList<br>该类实现了List接口，允许有null（空）元素。主要用于创建链表数据结构，该类没有同步方法，如果多个线程同时访问一个List，则必须自己实现访问同步，解决方法就是在创建List时候构造一个同步的List。例如：<br><code>List list=Collections.synchronizedList(newLinkedList(...));</code></p>
-</li>
-</ol>
-<ol start="5">
-<li>ArrayList<br>该类也是实现了List的接口，实现了可变大小的数组，随机访问和遍历元素时，提供更好的性能。该类也是非同步的,在多线程的情况下不要使用。ArrayList 增长当前长度的50%，插入删除效率低。 </li>
-</ol>
-<ol start="6">
-<li><p> AbstractSet <br>继承于AbstractCollection 并且实现了大部分Set接口。</p>
-</li>
-<li><p> HashSet<br>该类实现了Set接口，不允许出现重复元素，不保证集合中元素的顺序，允许包含值为null的元素，但最多只能一个。</p>
-</li>
-</ol>
-<ol start="8">
-<li><p>LinkedHashSet<br>具有可预知迭代顺序的 Set 接口的哈希表和链接列表实现。</p>
-</li>
-<li><p>HashMap<br>HashMap 是一个散列表，它存储的内容是键值对(key-value)映射。<br>该类实现了Map接口，根据键的HashCode值存储数据，具有很快的访问速度，最多允许一条记录的键为null，不支持线程同步。 </p>
-</li>
-</ol>
-<ol start="10">
-<li><p> TreeMap<br>继承了AbstractMap，并且使用一颗树。</p>
-</li>
-<li><p> WeakHashMap<br>继承AbstractMap类，使用弱密钥的哈希表。</p>
-</li>
-<li><p> LinkedHashMap<br>继承于HashMap，使用元素的自然顺序对元素进行排序.</p>
-</li>
-</ol>
-<ol start="13">
-<li>IdentityHashMap<br>继承AbstractMap类，比较文档时使用引用相等。</li>
-</ol>
-<hr>
-<h3 id="Java-迭代器-Iterator"><a href="#Java-迭代器-Iterator" class="headerlink" title="Java 迭代器 Iterator"></a>Java 迭代器 Iterator</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;String&gt; ite=list.iterator();  //作为iterator的声明</span><br><span class="line">while(ite.hasNext())//判断下一个元素之后有值 &#123; </span><br><span class="line">    System.out.println(ite.next()); &#125; </span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1511,7 +1563,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1563,12 +1615,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">31k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">32 分钟</span>
 </div>
 
 <div class="powered-by">
