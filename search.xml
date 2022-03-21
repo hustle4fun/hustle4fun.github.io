@@ -1471,4 +1471,89 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
         <tag>Java初级学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Collection总结</title>
+    <url>/2022/03/21/Collection%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><ul>
+<li>Java集合的框架两类</li>
+</ul>
+<p>1） Collection</p>
+<img src="/2022/03/21/Collection%E6%80%BB%E7%BB%93/Collection.png" class title="Collection">
+
+<p>2） Map</p>
+<img src="/2022/03/21/Collection%E6%80%BB%E7%BB%93/Map.png" class title="Map">
+
+
+<ul>
+<li>快速生成快捷键<br><code>ctrl+j</code> 显示生成所有快捷键的快捷键</li>
+</ul>
+<ul>
+<li>List <em>有序、可重复、可索引</em></li>
+</ul>
+<ol>
+<li>List集合类中元素有序， 可重复</li>
+<li>List元素每个元素对应顺序索引，支持索引</li>
+<li>List容器中的元素都对应一个序号记载在容器中的位置，可根据序号存取容器中的元素</li>
+</ol>
+<ul>
+<li>ArrayList</li>
+</ul>
+<ol>
+<li>ArrayList维护了一个Object类型数组elementData<br><code>transient Object[] elementData</code></li>
+<li>当创建Arraylist对象时，如使用无参构造器，初始elementData容量为0，第一次扩容为10，再次扩容为elementData为1.5倍</li>
+<li>如果是调用指定大小构造器，之后扩容指定大小的elementData的1.5倍</li>
+</ol>
+<ul>
+<li>ArrayList比较Vector</li>
+</ul>
+<ul>
+<li>LinkedList(双向链表)</li>
+</ul>
+<hr>
+<ul>
+<li>Set接口</li>
+</ul>
+<p>特性： 无序、无索引、无重复、至多一个null</p>
+<p>不能适应索引的方式获取元素</p>
+<ul>
+<li>HashSet</li>
+</ul>
+<ol>
+<li>HashSet实现set接口</li>
+<li>HashSet实际是HashMap<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public HashSet()&#123;</span><br><span class="line">    map = new HashMap&lt;&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>可以存放，但只能有一个null</li>
+<li>HashSet不能保证元素是有序的。取决于Hash之后，再决定索引结果</li>
+<li>不存放重复元素/对象</li>
+</ol>
+<ul>
+<li>HashSet 添加元素底层实现</li>
+</ul>
+<ol>
+<li>HashSet底层是HashMap</li>
+<li>添加一个元素时，先得到Hash值，转成索引值</li>
+<li>找到存储数据表table，看索引位置是否已经有元素</li>
+<li>如果没有，直接加入</li>
+<li>如果有，就调用key.equals()<strong>(可以重写key的equals()方法进行客制方法)</strong>,如果不同，则添加到最后</li>
+<li>Java8中，如果链表的元素个数达到TREEIFY_THRESHHOLD（默认是8),并在table大小 &gt;= MIN_TREEIFY_CAPACITY(默认64)，会进化成红黑树(树化)</li>
+</ol>
+<ul>
+<li>执行 add() public <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">boolean add(E e) &#123;//e = &quot;java&quot; return map.put(e, PRESENT)==null;//(static) PRESENT = new Object(); &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><em>其中PRESENT是Set类中设置的static空值，类比于Map中的K-V</em></p>
+<ul>
+<li>其中当”size“大于ThreshHold是 数组扩容，size指代的是 加入节点总共的大小，不知占table大小。</li>
+</ul>
+<ul>
+<li>LinkedHashSet</li>
+</ul>
+<p>LinkedHashSet是HashSet子类</p>
+<p>底层是一个LinkedHashMap，底层维护了一个<em>数组+双向链表（可以决定维护元素的次序</em>）</p>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
 </search>
