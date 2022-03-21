@@ -1403,4 +1403,72 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
         <tag>算法积累</tag>
       </tags>
   </entry>
+  <entry>
+    <title>3.18近期总结</title>
+    <url>/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h3 id="近期总结"><a href="#近期总结" class="headerlink" title="近期总结"></a>近期总结</h3><h4 id="异常-Exception"><a href="#异常-Exception" class="headerlink" title="异常 Exception"></a>异常 Exception</h4><hr>
+<p>3.17</p>
+<ul>
+<li><p>Mac OS IDEA 快捷键 <em>ctrl+option+t</em><br><code>Surround With 插入ifelse、try-catch-final</code></p>
+</li>
+<li><p>执行过程中所发生的异常事件可以分为两类：</p>
+</li>
+</ul>
+<ol>
+<li>Error(错误)java虚拟机无法解决的错误。StackOverFlow[栈溢出]、OOM(OutOfMemory);程序会崩溃</li>
+<li>Exception: 因为编程错误或者偶然的外在因素导致的一般性问题。可以使用针对性的代码进行处理。</li>
+</ol>
+<ul>
+<li>Exception分类：运行时异常 RuntimeException</li>
+<li>编译时间异常</li>
+</ul>
+<h4 id="异常体系图"><a href="#异常体系图" class="headerlink" title="异常体系图"></a>异常体系图</h4><img src="/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/exception00.png" class title="exception00">
+
+<h4 id="常见的编译异常"><a href="#常见的编译异常" class="headerlink" title="常见的编译异常"></a>常见的编译异常</h4><img src="/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/bianyi.png" class title="bianyi">
+
+<ul>
+<li>处理异常的方法 （2选1）</li>
+</ul>
+<p>1） try-catch-finally</p>
+<ol>
+<li> throws 异常抛出，递交给调用者，最终JVM</li>
+</ol>
+<ul>
+<li>自定义异常<br><code>class a extends Exception(RuntimeException)</code></li>
+</ul>
+<ol>
+<li>继承Exception属于编译异常</li>
+<li>继承RuntimeExcepition属于运行异常，（一般继承RuntimeExcepition，不必编写时处理）</li>
+</ol>
+<hr>
+<p>3.18</p>
+<ul>
+<li>String｜StringBUffer｜StrigBuilder</li>
+</ul>
+<ol>
+<li>String: 不可变字符序列，效率低，但是服用率高</li>
+<li>StringBuffer： 可变字符序列，效率较高，线程安全</li>
+<li>StringBuilder：可变字符序列，效率最高，线程不安全</li>
+</ol>
+<ul>
+<li>Java时间</li>
+</ul>
+<p>1） 一代时期类 Date + SimpleDateFormat </p>
+<ol start="2">
+<li><p>二代时期类 Calendar<br><code>Calendar c = Calender.getInstance()</code><br>获取字段<br><code>c.get(Calendar.YEAR|MONTH|HOUR)</code></p>
+</li>
+<li><p>三代日期类<br>LocalDate| LocalTime| LocalDateTime</p>
+</li>
+</ol>
+<p>获取时间<br><code>LocalDateTime ldf = LocalDateTime.now()</code></p>
+<p>格式化+ <code>dateTimeFormatter</code></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
 </search>

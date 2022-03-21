@@ -210,6 +210,144 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">3.18近期总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-19 21:33:54 / 修改时间：21:34:35" itemprop="dateCreated datePublished" datetime="2022-03-19T21:33:54+08:00">2022-03-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>772</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="近期总结"><a href="#近期总结" class="headerlink" title="近期总结"></a>近期总结</h3><h4 id="异常-Exception"><a href="#异常-Exception" class="headerlink" title="异常 Exception"></a>异常 Exception</h4><hr>
+<p>3.17</p>
+<ul>
+<li><p>Mac OS IDEA 快捷键 <em>ctrl+option+t</em><br><code>Surround With 插入ifelse、try-catch-final</code></p>
+</li>
+<li><p>执行过程中所发生的异常事件可以分为两类：</p>
+</li>
+</ul>
+<ol>
+<li>Error(错误)java虚拟机无法解决的错误。StackOverFlow[栈溢出]、OOM(OutOfMemory);程序会崩溃</li>
+<li>Exception: 因为编程错误或者偶然的外在因素导致的一般性问题。可以使用针对性的代码进行处理。</li>
+</ol>
+<ul>
+<li>Exception分类：运行时异常 RuntimeException</li>
+<li>编译时间异常</li>
+</ul>
+<h4 id="异常体系图"><a href="#异常体系图" class="headerlink" title="异常体系图"></a>异常体系图</h4><img src="/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/exception00.png" class title="exception00">
+
+<h4 id="常见的编译异常"><a href="#常见的编译异常" class="headerlink" title="常见的编译异常"></a>常见的编译异常</h4><img src="/2022/03/19/3-18%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/bianyi.png" class title="bianyi">
+
+<ul>
+<li>处理异常的方法 （2选1）</li>
+</ul>
+<p>1） try-catch-finally</p>
+<ol>
+<li> throws 异常抛出，递交给调用者，最终JVM</li>
+</ol>
+<ul>
+<li>自定义异常<br><code>class a extends Exception(RuntimeException)</code></li>
+</ul>
+<ol>
+<li>继承Exception属于编译异常</li>
+<li>继承RuntimeExcepition属于运行异常，（一般继承RuntimeExcepition，不必编写时处理）</li>
+</ol>
+<hr>
+<p>3.18</p>
+<ul>
+<li>String｜StringBUffer｜StrigBuilder</li>
+</ul>
+<ol>
+<li>String: 不可变字符序列，效率低，但是服用率高</li>
+<li>StringBuffer： 可变字符序列，效率较高，线程安全</li>
+<li>StringBuilder：可变字符序列，效率最高，线程不安全</li>
+</ol>
+<ul>
+<li>Java时间</li>
+</ul>
+<p>1） 一代时期类 Date + SimpleDateFormat </p>
+<ol start="2">
+<li><p>二代时期类 Calendar<br><code>Calendar c = Calender.getInstance()</code><br>获取字段<br><code>c.get(Calendar.YEAR|MONTH|HOUR)</code></p>
+</li>
+<li><p>三代日期类<br>LocalDate| LocalTime| LocalDateTime</p>
+</li>
+</ol>
+<p>获取时间<br><code>LocalDateTime ldf = LocalDateTime.now()</code></p>
+<p>格式化+ <code>dateTimeFormatter</code></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/19/LeetCode0319/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1372,126 +1510,6 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/15/Java%E5%88%97%E8%A1%A8%EF%BD%9C%E9%93%BE%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/15/Java%E5%88%97%E8%A1%A8%EF%BD%9C%E9%93%BE%E8%A1%A8/" class="post-title-link" itemprop="url">Java列表｜链表</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-15 20:09:22 / 修改时间：20:20:13" itemprop="dateCreated datePublished" datetime="2022-02-15T20:09:22+08:00">2022-02-15</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">java初级学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-ArrayList-数组列表"><a href="#Java-ArrayList-数组列表" class="headerlink" title="Java ArrayList (数组列表)"></a>Java ArrayList (数组列表)</h1><p>ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。</p>
-<p>ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：<br>`import java.util.ArrayList; // 引入 ArrayList 类</p>
-<p>ArrayList<E> objectName =new ArrayList&lt;&gt;();　 // 初始化`</E></p>
-<hr>
-<ol>
-<li><p>添加元素<br>ArrayList 类提供了很多有用的方法，添加元素到 ArrayList 可以使用 add() 方法:</p>
-</li>
-<li><p>访问元素<br>访问 ArrayList 中的元素可以使用 get() 方法：</p>
-</li>
-<li><p>修改元素<br>如果要修改 ArrayList 中的元素可以使用 set() 方法：</p>
-</li>
-<li><p>删除元素<br>如果要删除 ArrayList 中的元素可以使用 remove() 方法：</p>
-</li>
-<li><p>计算大小<br>如果要计算 ArrayList 中的元素数量可以使用 size() 方法：</p>
-</li>
-<li><p>ArrayList 排序<br>Collections 类也是一个非常有用的类，位于 java.util 包中，提供的 sort() 方法可以对字符或数字列表进行排序。</p>
-</li>
-</ol>
-<hr>
-<h1 id="Java-LinkedList-链表"><a href="#Java-LinkedList-链表" class="headerlink" title="Java LinkedList (链表)"></a>Java LinkedList (链表)</h1><p>链表（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的地址。  </p>
-<p>Java LinkedList（链表） 类似于 ArrayList，是一种常用的数据容器。 </p>
-<p>与 ArrayList 相比，LinkedList 的增加和删除的操作效率更高，而查找和修改的操作效率较低。</p>
-<p>以下情况使用 ArrayList :</p>
-<pre><code>•    频繁访问列表中的某一个元素。
-•    只需要在列表末尾进行添加和删除元素操作。
-</code></pre>
-<p>以下情况使用 LinkedList :</p>
-<pre><code>•    你需要通过循环迭代来访问列表中的某些元素。
-•    需要频繁的在列表开头、中间、末尾等位置进行添加和删除元素操作。
-•    
-</code></pre>
-<p>LinkedList 类位于 java.util 包中，使用前需要引入它，语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 引入 LinkedList 类</span><br><span class="line">import java.util.LinkedList; </span><br><span class="line"></span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList&lt;E&gt;();   // 普通创建方法</span><br><span class="line">或者</span><br><span class="line">LinkedList&lt;E&gt; list = new LinkedList(Collection&lt;? extends E&gt; c); // 使用集合创建链表`</span><br></pre></td></tr></table></figure>
-
-<p>在列表开头添加元素：<br><code>sites.addFirst(&quot;Wiki&quot;);</code></p>
-<p>在列表结尾添加元素：<br><code>sites.addLast(&quot;Wiki&quot;); </code><br>在列表开头移除元素： <code>sites.removeFirst();</code></p>
-<p>在列表结尾移除元素： <code>sites.removeLast();</code></p>
-<p>获取列表开头的元素：// 使用 <code>getFirst()</code> 获取头部元素</p>
-<p>获取列表结尾的元素：// 使用 <code>getLast()</code> 获取尾部元素</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1563,7 +1581,7 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1620,7 +1638,7 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
 
 <div class="powered-by">
