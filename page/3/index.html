@@ -210,6 +210,112 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="谭仕麟">
+      <meta itemprop="description" content="记录每一次的学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hustle4fun的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/07/Java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Java异常处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-07 21:26:50 / 修改时间：21:27:51" itemprop="dateCreated datePublished" datetime="2022-02-07T21:26:50+08:00">2022-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%88%9D%E7%BA%A7%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">Java初级学习</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>883</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java异常处理"><a href="#Java异常处理" class="headerlink" title="Java异常处理"></a>Java异常处理</h1><hr>
+<h3 id="Throwable类-：-异常-错误"><a href="#Throwable类-：-异常-错误" class="headerlink" title="Throwable类 ： 异常 + 错误"></a>Throwable类 ： 异常 + 错误</h3><p><strong>异常和错误的区别：异常能被程序本身可以处理，错误是无法处理。</strong></p>
+<p>从大体来分异常为两块：</p>
+<ol>
+<li>error—错误 ： 是指程序无法处理的错误，表示应用程序运行时出现的重大错误。例如jvm运行时出现的OutOfMemoryError以及Socket编程时出现的端口占用等程序无法处理的错误。</li>
+<li>Exception — 异常 ：异常可分为运行时异常跟编译异常<ul>
+<li><p>运行时异常：即RuntimeException及其之类的异常。这类异常在代码编写的时候不会被编译器所检测出来，是可以不需要被捕获，但是程序员也可以根据需要进行捕获抛出。常见的<br>RUNtimeException有：</p>
+</li>
+<li><p>NullpointException（空指针异常</p>
+</li>
+<li><p>ClassCastException（类型转换异常）</p>
+</li>
+<li><p>IndexOutOfBoundsException（数组越界异常）**等。</p>
+</li>
+<li><p>编译异常：RuntimeException以外的异常。这类异常在编译时编译器会提示需要捕获，如果不进行捕获则编译错误。常见编译异常有：IOException（流传输异常），SQLException（数据库操作异常）等。</p>
+</li>
+<li><p>java处理异常的机制：抛出异常以及捕获异常 ，一个方法所能捕捉的异常，一定是Java代码在某处所抛出的异常。简单地说，异常总是先被抛出，后被捕捉的。</p>
+</li>
+<li><p>throw跟throws的区别:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void test() throws Exception &#123;</span><br><span class="line">    throw new Exception();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>从上面这一段代码可以明显的看出两者的区别。throws表示一个方法声明可能抛出一个异常，throw表示此处抛出一个已定义的异常（可以是自定义需继承Exception，也可以是java自己给出的异常类）</p>
+<h3 id="Java对于异常捕获"><a href="#Java对于异常捕获" class="headerlink" title="Java对于异常捕获"></a>Java对于异常捕获</h3><p>try—catch或try — catch — finally 代码块，程序会捕获try代码块里面的代码，若捕获到异常则进行catch代码块处理。若有finally则在catch处理后执行finally里面的代码<br><strong>finally永远都会在catch的return前被执行</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/07/Java%E7%BB%A7%E6%89%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1239,117 +1345,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="谭仕麟">
-      <meta itemprop="description" content="记录每一次的学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hustle4fun的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/28/%E8%AE%B0%E5%BD%95Mac%E7%B3%BB%E7%BB%9F%E7%BB%93%E5%90%88Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/" class="post-title-link" itemprop="url">记录Mac系统结合Github搭建个人博客之中遇到的一些坑</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-01-28 21:31:00 / 修改时间：21:32:45" itemprop="dateCreated datePublished" datetime="2022-01-28T21:31:00+08:00">2022-01-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">个人学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>642</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#记录Mac系统结合Github搭建个人博客之中遇到的一些坑</p>
-<hr>
-<p>##hexo的安装</p>
-<ol>
-<li>使用homebrew 或者npm安装node.js 也可以直接下载node.pkg包来安装</li>
-</ol>
-<hr>
-<p>##GitHub与个人pc之间 如果使用hexo来部署自己的博客 Github在21年9月左右已经不支持博客内容通过push来推送：</p>
-<p><strong>解决方法</strong>：</p>
-<p>使用ssh配置 在本地<code>$ ls -al ~/.ssh</code></p>
-<ol>
-<li>生成 ssh key:</li>
-</ol>
-<p><code>$ ssh-keygen -t rsa -C&quot;你的github注册时邮箱“</code></p>
-<ol start="2">
-<li>来生成 id_rsa.pub 和 id_dsa.pub</li>
-</ol>
-<p>将id_rsa.pub之中的内容添加到个人Github主页的settings-&gt;SSH and GPG keys之中</p>
-<p>new SSH key添加之中的内容即可</p>
-<hr>
-<h2 id="hexo的常用命令："><a href="#hexo的常用命令：" class="headerlink" title="hexo的常用命令："></a>hexo的常用命令：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo n &quot;我的博客&quot;==hexo new &quot;我的博客&quot;#新建文章</span><br><span class="line"></span><br><span class="line">hexo p==hexo publish</span><br><span class="line"></span><br><span class="line">hexo g==hexo generate#生成</span><br><span class="line"></span><br><span class="line">hexo s==hexo server#启动服务预览</span><br><span class="line"></span><br><span class="line">hexo d==hexo deploy#部署</span><br><span class="line"></span><br><span class="line">hexo clean#清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>##Markdown编写时的细节：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">title:(文章的标题)</span><br><span class="line"></span><br><span class="line">mp3:所配置音乐的绝对地址</span><br><span class="line"></span><br><span class="line">cover:配置封面(绝对地址)</span><br><span class="line"></span><br><span class="line">date：日期</span><br><span class="line"></span><br><span class="line">categories:&quot;(分类)&quot;</span><br><span class="line"></span><br><span class="line">tags&quot;(标签)&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1417,7 +1416,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1469,12 +1468,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">38k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">34 分钟</span>
+    <span title="站点阅读时长">35 分钟</span>
 </div>
 
 <div class="powered-by">

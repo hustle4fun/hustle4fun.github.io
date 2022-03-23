@@ -1556,4 +1556,96 @@ answer[i] == i （以字符串形式）如果上述条件全不满足。
         <tag>Java初级学习</tag>
       </tags>
   </entry>
+  <entry>
+    <title>3.22近期总结</title>
+    <url>/2022/03/23/3-22%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h4 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h4><ul>
+<li>JDK8中Map接口特点</li>
+</ul>
+<ol>
+<li>Map与Collection并列存在，用于保存具有映射关系的数据:Key-Value</li>
+<li>Map中的K-V可以是任何<em>引用类型</em>的数据，封装到HashMap对象中<em>HashMap$Node</em></li>
+<li>Key不允许重复</li>
+<li>Value可以重复</li>
+<li>Key有且仅有一个为null，Value可以有多个null</li>
+<li> Key—Value之间单向一一对应</li>
+</ol>
+<ul>
+<li>Map遍历方法</li>
+</ul>
+<ol>
+<li>containsKey查看是否村子啊key</li>
+<li>KeySet获取所有的Key</li>
+<li>entrySet获取所有关系的K-V</li>
+<li>values获取所有的value</li>
+</ol>
+<p>遍历方法：</p>
+<ol>
+<li>通过value获取有所有的value</li>
+<li>通过keySet获取key Set，然后keyset.for遍历 通过get()获取值</li>
+<li>通过entrySet遍历得到所有的键值对entry 然后转型 <code>(Map.entry) entry = (Map.entry)object</code> 转换为entry类型<br>在通过entry提供的<code>getkey()|getvalue()</code>获取</li>
+</ol>
+<ul>
+<li>HashTable </li>
+</ul>
+<ol>
+<li>存放K-V</li>
+<li>HashTable的K-V都不能为null，否则会抛出NullPointerEception</li>
+<li>HashTable是线程安全的(Synchronized)，HashMap是线程不安全的</li>
+</ol>
+<ul>
+<li>Properties</li>
+</ul>
+<ol>
+<li>Properties继承自 – &gt;HashTable </li>
+<li>Properties用于从xxx.properties文件中，记载数据到Properites然后进行读取和修改</li>
+<li>xxx.properties文件通常为配置文件</li>
+</ol>
+<ul>
+<li>TreeSet｜TreeMap<br>TreeSet底层就死活TreeMap</li>
+</ul>
+<ol>
+<li>使用TreeSet提供的一个构造器，可以传入一个比较器(匿名内部类)<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">publicTreeMap(Comparator&lt;?superK&gt;comparator)&#123;</span><br><span class="line">    this.comparator=comparator;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>Collections工具类<br>提供方法（static)</li>
+</ul>
+<ol>
+<li>reverse(List)翻转</li>
+<li>shuffle(List)list中元素进行随机排序</li>
+<li>sort(list,(Comparator))根据自然(所指定的顺序)对list集合进行排序</li>
+<li>swap(List, int, int)将list中的i和j处元素进行交换</li>
+<li>max|min(new Comparator)</li>
+<li>frequency（collection,Object)</li>
+</ol>
+<hr>
+<ul>
+<li>泛型 Generic<br>1） 自定义泛型类<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class 类名&lt;T,R...&gt;&#123;</span><br><span class="line">    成员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol>
+<li>使用泛型数组，不能初始化</li>
+<li>静态方法中不能使用类的泛型</li>
+<li>泛型类的类型，是在创建对象的时候确定的</li>
+</ol>
+<p>2） 自定义泛型接口<br><code>interface 接口名&lt;T,R...&gt;&#123;&#125;</code></p>
+<ol>
+<li>接口中 静态成员(接口中的成员皆为常量)不能使用泛型</li>
+<li>接口的类型，在继承接口或者实现接口时确定</li>
+</ol>
+<p>3） 自定义泛型方法<br><code>修饰符&lt;T,R&gt;返回类型 方法名(参数)&#123;&#125;</code></p>
+<p>public void eat(E e){}是<em>使用了泛型，是不泛型方法</em></p>
+<ul>
+<li><p>泛型的继承和通配符<br>1） &lt;?&gt;支持任意泛型类型<br>2） &lt;? extends A&gt;直接A以及A的子类，规定了泛型的上限<br>3） &lt;? super A &gt;支持A以及A的父类，不限于父类，规定了泛型的下限</p>
+</li>
+<li><p>JUnit<br>测试单元代码前添加<code>@Test</code>导入Junit包</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java初级学习</category>
+      </categories>
+      <tags>
+        <tag>Java初级学习</tag>
+      </tags>
+  </entry>
 </search>
